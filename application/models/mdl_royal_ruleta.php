@@ -1,5 +1,5 @@
 <?php
-class Mdl_samsung_karaoke_galaxya extends CI_Model{
+class Mdl_royal_ruleta extends CI_Model{
     var $registro;
     var $galeria;
     var $baul;
@@ -11,7 +11,7 @@ class Mdl_samsung_karaoke_galaxya extends CI_Model{
         $this->galeria = 'royal_ruleta';
         $this->baul = 'royal_ruleta';
         $this->usuarios = 'usuarios';
-        $this->load->database('samsung');
+        $this->load->database('royal');
     }
      
     

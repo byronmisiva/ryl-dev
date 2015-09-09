@@ -1,9 +1,9 @@
 <?php
-class Samsung_Usuario extends CI_Model{
+class Royal_Usuario extends CI_Model{
 
 	function __construct(){
 		parent::__construct();
-		$this->load->database('samsung');
+		$this->load->database('royal');
 	}
 	
 	function newRegister($data){
