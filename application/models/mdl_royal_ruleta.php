@@ -13,8 +13,20 @@ class Mdl_royal_ruleta extends CI_Model{
         $this->usuarios = 'usuarios';
         $this->load->database('royal');
     }
-     
-    
+
+	//recupera info del premio
+	function getCodigo($codigo){
+
+		$this->db->where('codigo',$codigo);
+		$codData=$this->db->get('ruleta_serial');
+		if ($codData->num_rows()>0)
+			return current($codData->result());
+		else
+			return "0";
+	}
+
+ ////////
+
     function verificarUser($id){
     	$this->db->select('*');
     	$this->db->from($this->registro);

@@ -1,5 +1,4 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 /*
 |--------------------------------------------------------------------------
 | File and Directory Modes
@@ -39,11 +38,3 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */
-
-/* SAMSUNG SANTA APP MENSAJES */
-define('SANTA_MESSAGE', ' envió su lista de regalos a Santa y está participando por un');
-define('SANTA_LINK', 'https://apps.facebook.com/samsung_santa');
-define('SANTA_PICTURE', 'http://appss.misiva.com.ec/imagenes/samsung_santa/75x75.jpg?referhs=123456789');
-define('SANTA_NAME', 'La Lista de Santa');
-define('SANTA_DESCRIPTION', 'Esta Navidad envía tu lista de regalos a Santa para participar por el sorteo de una GALAXY Tab 2 7.0, un GALAXY S4 Zoom o una GALAXY Note 8.0');
-define('SANTA_TITLE', 'La Lista de Santa');

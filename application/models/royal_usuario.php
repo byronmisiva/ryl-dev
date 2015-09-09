@@ -5,6 +5,19 @@ class Royal_Usuario extends CI_Model{
 		parent::__construct();
 		$this->load->database('royal');
 	}
+
+
+	function getUser($cedula){
+		$this->db->where('cedula',$cedula);
+		$user=$this->db->get('usuarios');
+		if ($user->num_rows()>0)
+			return current($user->result());
+		else
+			return "0";
+	}
+
+	///////////////////////////////////////////
+
 	
 	function newRegister($data){
 		$user=$this->getUserFbid($data['fbid']);

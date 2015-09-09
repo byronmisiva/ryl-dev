@@ -283,7 +283,7 @@ ul.login_wid {
 
 .botontexto, .botontextorojo, .botontextoazul, .btn-primary {
 
-    background-color: rgba(217, 56, 138, 0.8);
+    background-color: rgba(255, 0, 0, 0.8);
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
@@ -300,7 +300,7 @@ ul.login_wid {
 
 .btn:focus, .btn:hover {
     color: #ffff00;
-    background-color: rgba(217, 56, 138, 0.8);
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 .btn-primary {
@@ -308,11 +308,11 @@ ul.login_wid {
 }
 
 .botontextoazul {
-    background-color: rgba(1, 169, 206, 0.8);
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 .botontextorojo {
-    background-color: rgba(171, 0, 32, 0.8);
+    background-color: rgba(255, 0, 0, 0.8);
 }
 
 .botontexto:hover, .botontextoazul:hover, .botontextorojo:hover {

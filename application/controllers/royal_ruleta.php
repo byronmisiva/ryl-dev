@@ -30,7 +30,7 @@ class Royal_ruleta extends CI_Controller
         if ($this->agent->is_mobile())
             $this->movil();
         else {
-            echo $this->folderView;
+
             $this->data['dispositivo'] = "normal";
             $this->load->view($this->folderView . '/index', array('data' => $this->data));
         }
@@ -49,40 +49,34 @@ class Royal_ruleta extends CI_Controller
 
     function verificarParticipante()
     {
-        $id = $_POST["idParticipante"];
-        $participante = $this->usuario_samsung->getUserFbid($id);
+        $cedula = $_POST["cedula"];
+        $participante = $this->usuario_royal->getUser($cedula);
         if ($participante == "0") {
             echo "F";
         } else {
             echo json_encode($participante);
         }
     }
-
-    function savePuntage()
+    function validarCodigo()
     {
-        if (isset($_POST['puntos'])) {
-            $this->db->where("fbid", $_POST['participante']);
-            $this->db->update("karaoke_galaxya_registro", array("puntaje" => $_POST['puntos']));
-
-            $this->db->select('edad');
-            $this->db->where("fbid", $_POST['participante']);
-            $this->db->from("karaoke_galaxya_registro");
-            $consulta = $this->db->get();
-            $registro = current($consulta->result());
-            echo $registro->edad;
-
+        $codigo = $_POST["codigo"];
+        $codData = $this->modelo->getCodigo($codigo);
+        if ($codData == "0") {
+            echo "F";
+        } else {
+            echo json_encode($codData);
         }
     }
 
     function register()
     {
-        $resp = "0";
+
         if (isset($_POST['nombre'])) {
-            if ($this->usuario_samsung->alreadyRegistrer('usuarios', array('fbid' => $_POST['fbid'])) == "y") {
+            if ($this->usuario_royal->alreadyRegistrer('usuarios', array('cedula' => $_POST['cedula'])) == "y") {
                 $updateUser = array(
                     'nombre' => $_POST['nombre'], 'apellido' => $_POST['apellido'],
                     'completo' => $_POST['nombre'] . " " . $_POST['apellido'],
-                    'mail' => $_POST['mail'], 'ultima_app' => "galaxy-a",
+                    'mail' => $_POST['mail'], 'ultima_app' => "Ruleta 2015",
                     'ciudad' => $_POST['ciudad'], 'cedula' => $_POST['cedula'],
                     'telefono' => $_POST['telefono']
                 );
@@ -111,7 +105,26 @@ class Royal_ruleta extends CI_Controller
 
     }
 
-    /**************************************************************/
+
+    /*---------------------------*/
+
+    function savePuntage()
+    {
+        if (isset($_POST['puntos'])) {
+            $this->db->where("fbid", $_POST['participante']);
+            $this->db->update("karaoke_galaxya_registro", array("puntaje" => $_POST['puntos']));
+
+            $this->db->select('edad');
+            $this->db->where("fbid", $_POST['participante']);
+            $this->db->from("karaoke_galaxya_registro");
+            $consulta = $this->db->get();
+            $registro = current($consulta->result());
+            echo $registro->edad;
+
+        }
+    }
+
+     /**************************************************************/
 
     function ingresoActividad($sw = "0")
     {

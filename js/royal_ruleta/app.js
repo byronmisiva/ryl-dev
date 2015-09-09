@@ -1,26 +1,40 @@
 //funciones scriptcam
 $(document).ready(function () {
-
+    iniciaFormulario()
     //llamada para mostrar webcam en div, incluye botones
     crearBotonesInterface();
-    iniciaFormulario()
-    //$("input.file").si();
-
-   // $('#recorder').height(screen.height);
-
-/*    document.getElementById("uploadBtn").onchange = function () {
-        document.getElementById("uploadFile").value = this.value;
-    };*/
-
 });
 
 
 
 function iniciaFormulario() {
+    $( "#cedula" ).change(function() {
+        verificarParticipante ($( "#cedula" ).val());
+    });
+
+    $("#registroform").submit(function (event) {
+        var url = accion + controladorApp + "/register";
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            DataType : "jsonp",
+            success: function (data) {
+                ocultarTodosSeccion();
+                $("#ingresocodigo").removeClass("hidden").show();
+
+            }
+        });
+        event.preventDefault();
+        return false;
+    });
+
     $("#formuploadvideo").submit(function (event) {
+
         //ocultamos el boton y mostramos el loader
-
-
         $('.loader-lineal').removeClass("hidden").show();
         $('.btn-subir-video').hide();
 
@@ -53,43 +67,67 @@ function iniciaFormulario() {
         event.preventDefault();
         return false;
     });
-    $("#registroform").submit(function (event) {
-        var url = accion + controladorApp + "/register";
-        $.ajax({
-            url: url,
-            type: "POST",
-            data: new FormData(this),
-            contentType: false,
-            cache: false,
-            processData: false,
-            DataType : "jsonp",
-            success: function (data) {
-                ocultarTodosSeccion();
-                $("#recorder").removeClass("hidden").show();
-                $('#loadergif').hide();
 
-                $('#menuvideo-container').removeClass("hidden").show();
-                $('#webcam-container').hide();
-                $('#mediaplayer-container').hide();
-                $('#uploadFileContainer').hide();
+}
 
+function verificarParticipante (cedula ) {
+    $.post(accion +   controladorApp + "/verificarParticipante", {cedula: cedula})
+        .done(function (data) {
+            if (data == 'F'){
+                mostrarFormRegistro ()
+            } else {
+                mostrarFormCompleto (data)
             }
         });
-        event.preventDefault();
-        return false;
-
-    });
 }
+
+function mostrarFormRegistro () {
+    $('#complete_register').removeClass("hidden").show();
+    $('.portabotones').removeClass("hidden").show();
+
+    $('#nombre').val("");
+    $('#apellido').val("");
+    $('#mail').val("");
+    $('#telefono').val("");
+    $('#ciudad').val("");
+}
+
+function mostrarFormCompleto (data) {
+    $('#complete_register').removeClass("hidden").show();
+    $('.portabotones').removeClass("hidden").show();
+    var data = JSON.parse(data);
+    $('#nombre').val(data['nombre']);
+    $('#apellido').val(data['apellido']);
+    $('#mail').val(data['mail']);
+    $('#telefono').val(data['telefono']);
+    $('#ciudad').val(data['ciudad']);
+}
+
+
+function mostrarCodigoErrado() {
+    console.log ("Error");
+}
+function    mostrarCodigoCorrecto(data) {
+    console.log ("Siguiente " );
+    console.log (    data);
+}
+
 function crearBotonesInterface() {
 
-    $('#btnwebcam').click(function () {
-        $('#menuvideo-container').hide();
-        $('#webcam-container').removeClass("hidden").show();
-        $('#mediaplayer-container').hide();
-        $('#uploadFileContainer').hide();
-
-        cargarWebCam();
+    $('#btnvalidacodigo').click(function () {
+        $.post(accion + controladorApp + "/validarCodigo", {codigo: $('#box-codigo1').val()})
+            .done(function (data) {
+                if (data == 'F') {
+                    mostrarCodigoErrado()
+                } else {
+                    mostrarCodigoCorrecto(data)
+                }
+            });
     })
+
+
+
+    ///////////////////////////
 
     $('#subirVideo').click(function () {
         $('#menuvideo-container').hide();
@@ -115,7 +153,7 @@ function crearBotonesInterface() {
                 .done(function (data) {
                     if (data != 'F') {
                         ocultarTodosSeccion();
-                        $("#recorder").removeClass("hidden").show();
+                        $("#ingresocodigo").removeClass("hidden").show();
 
                         $('#menuvideo-container').removeClass("hidden").show();
                         $('#webcam-container').hide();
@@ -185,7 +223,7 @@ function crearBotonesInterface() {
     })
     $('#btnContinuarSubir').click(function () {
         $('#recordStartButton').removeClass("hidden").show();
-        $('#recorder').hide();
+        $('#ingresocodigo').hide();
         $('#galeria').removeClass("hidden").show();
         grabarImagen();
     })
@@ -208,7 +246,7 @@ function crearBotonesInterface() {
 
     });
 
-    if (vervideo > 0 )
+    /*if (vervideo > 0 )
     {
         ocultarTodosSeccion();
         $("#galeria").removeClass("hidden").show();
@@ -219,7 +257,7 @@ function crearBotonesInterface() {
 
 
 
-    };
+    };*/
 }
 
 function ocultarTodosSeccion() {
@@ -289,11 +327,11 @@ function callbackFunction() {
 var nombrevideoinput = '';
 function grabarImagen() {
     // Generate the image data
-    nombre1 = $('#box-nombre-video').val();
+    nombre1 = $('#box-codigo').val();
     if (nombre1 == "undefined")
         nombre1 = "";
 
-    nombre2 = $('#box-nombre-video1').val();
+    nombre2 = $('#box-codigo1').val();
     if (nombre2 == "undefined")
         nombre2 = "";
 
@@ -453,7 +491,7 @@ function pauseResumeCamera() {
 var fileNameSolo = "";
 var fileName = "";
 function fileReady(fileName) {
-    //$('#recorder').hide();
+    //$('#ingresocodigo').hide();
     $('#mediaplayer-container').removeClass("hidden").show();
     $('#loadergif').removeClass("hidden").show();
     $('#loadergif').hide();
