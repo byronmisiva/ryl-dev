@@ -15,15 +15,11 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="site__header island">
-    <div class="wrap">
-        <span id="animationSandbox" style="display: block;"><img src="GelatinaMini.png"></span>
+
+<span id="animationSandbox" style="display: block;"><img src="GelatinaMini.png"></span>
 
 
-    </div>
-</header><!-- /.site__header -->
 
-<main class="site__content island" role="content">
     <div class="wrap">
         <form>
             <select class="input input--dropdown js--animations">
@@ -42,32 +38,10 @@
         <hr />
 
     </div>
-</main><!-- /.site__content -->
 
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script>
-    function testAnim(x) {
-        $('#animationSandbox').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-             $(this).removeClass().addClass('inicial');
 
-            console.log ("xx");
-
-        });
-    };
-
-    $(document).ready(function(){
-        $('.js--triggerAnimation').click(function(e){
-            $('#animationSandbox').removeClass();
-            e.preventDefault();
-            var anim = $('.js--animations').val();
-            testAnim(anim);
-        });
-
-        $('.js--animations').change(function(){
-            var anim = $(this).val();
-            testAnim(anim);
-        });
-    });
 
 </script>
 

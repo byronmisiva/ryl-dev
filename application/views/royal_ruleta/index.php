@@ -29,13 +29,14 @@
     <link href="<?php echo base_url() ?>css/royal_ruleta/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>js/royal_ruleta/ligthbox/ekko-lightbox.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>css/royal_ruleta/style.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo base_url() ?>css/royal_ruleta/animate.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 </head>
 
 <body>
 
-<div id="registro" class="  seccion fondo-registro">
+<div id="registro" class="hidden  seccion fondo-registro">
     <div class="container vertical-center">
         <div class="cien ">
             <div class="col-md-12 col-sm-12">
@@ -102,7 +103,7 @@
         </div>
 
 
-       </div>
+    </div>
 
 </div>
 
@@ -112,21 +113,20 @@
             <div class="col-md-12 col-sm-12">
                 <div class="col-md-12 col-sm-12">
                     <div class="logo-karaoke-galeria">
-                        <!--<img src="<?php /*echo base_url() */?>imagenes/royal_ruleta/web-cam/logo_karaoke.png"
+                        <!--<img src="<?php /*echo base_url() */ ?>imagenes/royal_ruleta/web-cam/logo_karaoke.png"
                              class="img-responsive"/>-->
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12  ">
-                    <div class="  roboto-bold titulo text-center hidden-xs"><p>Ingresa el código de tu producto</p></div>
+                    <div class="  roboto-bold titulo text-center hidden-xs"><p>Ingresa el código de tu producto</p>
+                    </div>
                 </div>
 
                 <div class="col-md-12 col-sm-12 col-xs-12 center-block text-center">
-                    <div id="menuvideo-container" class="center-block">
-                        <!--botones grabar -->
+                    <div id="ingresolote-container" class="center-block">
                         <div class="col-md-12 col-sm-12 col-xs-12 text-center margen-0 center-block">
-
                             <div
-                                class="col-center-block col-md-7 col-sm-8 col-xs-12 menuvideo-container-pop">
+                                class="col-center-block col-md-7 col-sm-8 col-xs-12 ingresolote-container-pop">
                                 <div class="col-md-12 col-sm-12 col-xs-12 margen-0 " style="margin-top: 12px">
                                     <input class="" type="text" id="box-codigo1" maxlength="60"
                                            name="box-codigo"
@@ -135,7 +135,11 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="portabotones center-block">
                                         <class id="btnvalidacodigo" class="botontexto hidden-xs ">Continuar</class>
-
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="portabotones center-block textoIngresoLote hidden">
+                                        <class class="text-center">Ingrese el número de lote</class>
                                     </div>
                                 </div>
                             </div>
@@ -143,80 +147,19 @@
                         </div>
                     </div>
 
-                    <div id="webcam-container" class="center-block hidden">
-                        <div id="loadergif" class="hidden"><img
-                                src="<?php echo base_url() ?>imagenes/royal_ruleta/loader.gif"></div>
-                        <div id="webcam"></div>
-                        <!--botones grabar -->
-                        <div class="col-md-12 col-sm-12 col-xs-12 text-center margen-0">
-                            <div class="portabotones center-block">
-                                <class id="recordStartButton" class="botontexto">Grabar</class>
-                                <class id="recordPauseResumeButton" class="botontexto  ">Pausar</class>
-                                <class id="recordStopButton" class="botontexto  ">Finalizar</class>
+                    <div id="mensaje-error" class="center-block hidden">
+                        <div class="col-center-block col-md-7 col-sm-8 col-xs-12 ingresolote-container-pop">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div id="messageerror" class="roboto-light text-center texto-interno">Número de lote
+                                    inválido
+                                </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div id="message" class="roboto-light text-center texto-interno"></div>
-                            </div>
-                        </div>
-                    </div>
+                                <div class="portabotones center-block">
+                                    <class id="btnRegresarIntento" class="botontexto hidden-xs ">Volver a intentarlo
+                                    </class>
 
-                    <div id="uploadFileContainer" class="center-block hidden">
-                        <div id="uploadFile" class="center-block">
-                            <div class="col-md-6 col-sm-6 col-xs-12  col-center-bloc text-center formuploadfile">
-
-                                <form id="formuploadvideo"
-                                      action="<?php echo base_url() ?>samsung_karaoke_galaxya/uploadvideo"
-                                      method="post"
-                                      enctype="multipart/form-data">
-                                    <p class="texto-interno">
-                                        <span class="roboto-light text-center">Selecciona un video tuyo cantando las canciones del </span><span
-                                            class="roboto-bold">#KaraokeGalaxyA</span><span>, súbelo y guárdalo en tu Galería</span>
-                                    </p>
-
-                                    <p class="text-center">Peso máximo de archivo 5MB</p>
-
-
-                                    <p class="texto-interno">
-
-                                    <div class="fileUpload btn btn-primary">
-                                        <span>1. Seleccione</span>
-                                        <input type="file" name="fileToUpload" id="fileToUpload"
-                                               accept=".mp4, .mov, .mpg, .3gp" class="upload"/>
-                                    </div>
-                                    </p>
-                                    <div class="col-center-bloc"><input type="submit" value="2. Subir video"
-                                                                        name="submit"
-                                                                        class="btn-subir-video botontexto hidden">
-                                    </div>
-
-                                    <div class="loader-lineal hidden"><p>
-                                            <img src="<?php echo base_url() ?>imagenes/royal_ruleta/loader-lineal.gif"
-                                                 class="img-responsive center-img">
-                                        </p>
-                                    </div>
-                                </form>
-
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12  center-block text-center formuploadfile  ">
-                                <img
-                                    src="<?php echo base_url() ?>imagenes/royal_ruleta/web-cam/fotoejemplocarga.png"
-                                    class="img-responsive hidden-xs">
-                            </div>
-
-                            <div class="col-md-12 col-sm-12 col-xs-12  center-block text-center hidden formuploadenvio">
-                                <div class="videoSubido">
                                 </div>
-
-                                <div class="col-md-12 col-sm-12 col-xs-12 margen-0 ">
-                                    <input class="" type="text" id="box-codigo" maxlength="60"
-                                           name="box-codigo"
-                                           placeholder="Nombre del video">
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12 margen-0-md ">
-                                    <div id="btnContinuarSubir" class="botontexto col-center-block  ">3. Enviar</div>
-                                </div>
-                                <canvas id="canvas" class="hidden" style="width: 480px; height: 386px"></canvas>
-
                             </div>
                         </div>
                     </div>
@@ -226,67 +169,34 @@
     </div>
 </div>
 
-<div id="home" class=" seccion fondo-home hidden">
+<div class="contenedorGelatina">
+
+
+</div>
+
+<div id="home" class=" seccion fondo-home ">
     <div class="container vertical-center">
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <div class="logo-karaoke">
-                    <img src="<?php echo base_url() ?>imagenes/royal_ruleta/home/logo_karaoke.png"
-                         class="img-responsive"/>
+                    <!--<img src="<?php /*echo base_url() */ ?>imagenes/royal_ruleta/home/logo_karaoke.png"
+                         class="img-responsive"/>-->
                 </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12  ">
+                    <div class="portabotones center-block">
+                        <class class="botontexto js--triggerAnimation1">Iniciar</class>
+                    </div>
+                    <div class="portabotones center-block">
+                        <class class="botontexto js--triggerAnimation2">Detener</class>
+                    </div>
             </div>
 
-            <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
-            </div>
-            <div class="col-md-10 col-sm-10 col-xs-10  ">
-                <div class="col-md-4 col-sm-4 col-xs-12  margen-0-md">
-                    <div class="row">
-                        <div class="col-xs-1 margen-0"></div>
-                        <div class="col-xs-10 margen-0-md">
-                            <div class="btn-home-instrucciones ">
-                                <img src="<?php echo base_url() ?>imagenes/royal_ruleta/home/boton_instrucciones.png"
-                                     class="img-responsive "/>
-                            </div>
-                        </div>
-                        <div class="col-xs-1 margen-0"></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 margen-0-md">
-                    <div class="row">
-                        <div class="col-xs-1 margen-0"></div>
-                        <div class="col-xs-10 margen-0-md">
-                            <div class="btn-home-subir-video">
-                                <img src="<?php echo base_url() ?>imagenes/royal_ruleta/home/boton_subirvideo.png"
-                                     class="img-responsive"/>
-                            </div>
-                        </div>
-                        <div class="col-xs-1"></div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12 margen-0-md">
-                    <div class="row">
-                        <div class="col-xs-1 margen-0"></div>
-                        <div class="col-xs-10 margen-0-md">
-                            <div class="btn-home-galeria">
-                                <img src="<?php echo base_url() ?>imagenes/royal_ruleta/home/boton_galeria.png"
-                                     class="img-responsive"/>
-                            </div>
-                        </div>
-                        <div class="col-xs-1 margen-0"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
-            </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <p class="roboto-light texto-home text-center">
-                    Canta como si nadie estuviera viendo con el <span class="roboto-bold"> #KaraokeGalaxyA.</span> Sube
-                    tu video, compártelo con tus
-                    amigos y revive los 90s como un verdadero A de corazón.
+                    Pulsa sobre el boton para detener el envio
                 </p>
-
             </div>
-
         </div>
 
     </div>
@@ -371,7 +281,7 @@
                 </div>
             </div>
         </div>
-      </div>
+    </div>
 </div>
 
 <div id="galeria" class="hidden seccion fondo-galeria">
@@ -426,7 +336,7 @@
                 </div>
             </div>
 
-          </div>
+        </div>
 
 
     </div>

@@ -4,6 +4,13 @@ body {
     background-color: #000000;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+}
+
+.contenedorGelatina span {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
 }
 
 a, a:hover, a:visited {
@@ -51,9 +58,9 @@ a:hover, a:visited {
 }
 
 .fondo-home {
-    background-image: url("../../imagenes/karaokegalaxya/home/fondo_home.png");
+    /*background-image: url("../../imagenes/karaokegalaxya/home/fondo_home.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center;*/
 }
 
 .fondo-instrucciones {
@@ -320,7 +327,8 @@ ul.login_wid {
 }
 
 .portabotones {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: table;
 }
 
 #uploadFile {
@@ -349,7 +357,7 @@ ul.login_wid {
     border-radius: 9px;
 }
 
-.menuvideo-container-pop {
+.ingresolote-container-pop {
     background-color: rgba(1, 169, 206, 0.71);
     padding: 100px 0 150px;
     border-radius: 5px;
@@ -474,7 +482,7 @@ ul.login_wid {
         width: 90%;
     }
 
-    .menuvideo-container-pop {
+    .ingresolote-container-pop {
         padding: 40px 0;
         float: inherit !important;
     }
