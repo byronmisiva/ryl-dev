@@ -38,8 +38,8 @@
 |
 */
 
-$route['default_controller'] = "";
-$route['404_override'] = '';
+$route['default_controller'] = "royal_ruleta";
+$route['404_override'] = 'royal_ruleta';
 
 
 /* End of file routes.php */
