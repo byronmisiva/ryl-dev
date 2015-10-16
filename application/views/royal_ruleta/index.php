@@ -6,7 +6,7 @@
     <meta http-equiv="content-language" content="es"/>
     <meta name="robots" content="follow,index,nocache"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="description" content="SAMSUNG :: Karaoke"/>
+    <meta name="description" content="Royal :: Ruleta de la Suerte"/>
     <meta name="author" content="Misiva Corp"/>
 
     <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -16,8 +16,6 @@
     <script src="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.js" type="text/javascript"></script>
 
 
-    <script type="text/javascript" src="<?php echo base_url() ?>js/royal_ruleta/jwplayer/jwplayer.js"></script>
-    <script language="JavaScript" src="<?php echo base_url() ?>js/royal_ruleta/scriptcam/scriptcam.js"></script>
     <script type="text/javascript" src="<?php echo base_url('js/general/validate.js') ?>"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/bootstrap.min.js"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/ligthbox/ekko-lightbox.min.js"></script>
@@ -36,73 +34,74 @@
 
 <body>
 
-<div id="registro" class="hidden  seccion fondo-registro">
-    <div class="container vertical-center">
-        <div class="cien ">
-            <div class="col-md-12 col-sm-12">
+<div id="registro" class="  seccion fondo-registro">
+    <div class="fondo-registro2  ">
+        <div class="container center-block">
+            <div class="espacio74 ">
                 <div class="col-md-12 col-sm-12">
-                    <div class="logo-karaoke">
-                        <!--<img src="<?php /*echo base_url() */ ?>imagenes/royal_ruleta/home/logo_karaoke.png"
-                             class="img-responsive"/>-->
+                    <div class="col-md-12 col-sm-12">
+                    <div class="col-sm-offset-2 col-md-offset-2 col-xs-offset-2  col-md-8 col-sm-8">
+                        <div class="titulares-registro titulares text-center">
+                            <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por un
+                                viaje a Fox Studios en Los Ángeles.</p>
+
+                            <p>También puedes jugar y ganar premios instáneos.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="roboto-bold titulo text-center"><p>REGISTRO</p></div>
-                </div>
-                <div class="col-md-2 col-sm-2">
-                </div>
+                    </div>
+                    <div class="col-sm-offset-7 col-md-offset-7 col-xs-offset-7 col-md-5 col-sm-5 col-xs-5">
+                        <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
+                            <div class="titulares titulo text-center"><p>REGISTRO</p></div>
+                        </div>
+                        <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-7 col-sm-7 col-xs-7">
+                            <form id="registroform"
+                                  action=""
+                                  method="post"
+                                  enctype="multipart/form-data">
+                                <ul class="login_wid">
+                                    <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
+                                               required="required"
+                                               placeholder="Cédula:"></li>
+                                    <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
+                                               required="required"
+                                               placeholder="Nombre:">
+                                    </li>
+                                    <li><input class="box-text" type="text" id="apellido" name="apellido"
+                                               maxlength="20"
+                                               required="required"
+                                               placeholder="Apellido:">
+                                    </li>
+                                    <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
+                                               required="required"
+                                               placeholder="Email:">
+                                    </li>
+                                    <li><input class="box-text" type="text" id="telefono" name="telefono"
+                                               maxlength="10"
+                                               required="required"
+                                               placeholder="Teléfono:"></li>
+                                    <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
+                                               required="required"
+                                               placeholder="Ciudad:">
+                                    </li>
+                                    <li class="text-center">
+                                        <div class="portabotones center-block ">
+                                            <input type="submit" value="Continuar" name="login"
+                                                   class="btn-ingreso botontexto"
+                                                   style="">
+                                        </div>
 
-                <div class="col-md-8 col-sm-8 col-xs-12">
-                    <form id="registroform"
-                          action=""
-                          method="post"
-                          enctype="multipart/form-data">
-                        <ul class="login_wid">
-                            <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
-                                       required="required"
-                                       placeholder="Cédula:"></li>
-
-                            <div id="complete_register" class="hidden">
-                                <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
-                                           required="required"
-                                           placeholder="Nombre:">
-                                </li>
-                                <li><input class="box-text" type="text" id="apellido" name="apellido" maxlength="20"
-                                           required="required"
-                                           placeholder="Apellido:">
-                                </li>
-                                <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
-                                           required="required"
-                                           placeholder="Email:">
-                                </li>
-                                <li><input class="box-text" type="text" id="telefono" name="telefono" maxlength="10"
-                                           required="required"
-                                           placeholder="Teléfono:"></li>
-                                <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
-                                           required="required"
-                                           placeholder="Ciudad:">
-                                </li>
-                            </div>
-                            <li class="text-center">
-                                <div class="portabotones center-block hidden    ">
-                                    <input type="submit" value="Continuar" name="login" class="btn-ingreso botontexto"
-                                           style="">
-                                </div>
-
-                            </li>
-                            <li class="text-center">
-                                <div id="mensaje-envio"></div>
-                            </li>
-                        </ul>
-                        <input type="text" id="fbid" name="fbid" class="hidden">
-                    </form>
-                </div>
-                <div class="col-md-2 col-sm-2">
+                                    </li>
+                                    <li class="text-center">
+                                        <div id="mensaje-envio"></div>
+                                    </li>
+                                </ul>
+                                <input type="text" id="fbid" name="fbid" class="hidden">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 
 </div>
@@ -174,7 +173,7 @@
 
 </div>
 
-<div id="home" class=" seccion fondo-home ">
+<div id="home" class="hidden seccion fondo-home ">
     <div class="container vertical-center">
         <div class="row">
             <div class="col-md-12 col-sm-12">
@@ -184,12 +183,12 @@
                 </div>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12  ">
-                    <div class="portabotones center-block">
-                        <class class="botontexto js--triggerAnimation1">Iniciar</class>
-                    </div>
-                    <div class="portabotones center-block">
-                        <class class="botontexto js--triggerAnimation2">Detener</class>
-                    </div>
+                <div class="portabotones center-block">
+                    <class class="botontexto js--triggerAnimation1">Iniciar</class>
+                </div>
+                <div class="portabotones center-block">
+                    <class class="botontexto js--triggerAnimation2">Detener</class>
+                </div>
             </div>
 
             <div class="col-md-12 col-sm-12 col-xs-12">

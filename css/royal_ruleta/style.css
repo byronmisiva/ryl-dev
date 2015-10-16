@@ -29,20 +29,27 @@ a:hover, a:visited {
     font-family: 'Roboto-Bold';
 }
 
-#webcam {
-    float: left;
+.titulares {
+    font-family: 'Roboto-Light';
+    font-size: 19px;
+    font-weight: bold;
 }
 
 .fondo-home,
 .fondo-instrucciones,
 .fondo-ingresocodigo,
 .fondo-galeria,
-.fondo-registro {
+.fondo-registro,
+.fondo-registro2 {
     width: 100%;
     height: 100%;
     background-size: cover;
     position: absolute;
     padding-top: 5%;
+}
+
+.fondo-registro2 {
+    padding-top: 200px;
 }
 
 .fondo-registro {
@@ -51,6 +58,10 @@ a:hover, a:visited {
 
 .cien {
     width: 100%;
+}
+
+.espacio74 {
+    width: 89%;
 }
 
 .fondo-ingresocodigo {
@@ -82,9 +93,15 @@ a:hover, a:visited {
 }
 
 .fondo-registro {
-    /*background-image: url("../../imagenes/karaokegalaxya/registro/fondo_registro.png");
+    background-image: url("../../imagenes/royal_ruleta/snoopy-registro/background.jpg");
     background-repeat: no-repeat;
-    background-position: center center;*/
+    background-position: center center;
+}
+
+.fondo-registro2 {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-registro/background2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .logo-samsung-galaxya {
@@ -132,12 +149,13 @@ a:hover, a:visited {
 
 }
 
-.logo-karaoke img, .logo-karaoke-galeria img, .btn-home-instrucciones img, .btn-home-subir-video img, .btn-home-galeria img, .btn-home-home img {
+.titulares-registro img, .logo-karaoke-galeria img, .btn-home-instrucciones img, .btn-home-subir-video img, .btn-home-galeria img, .btn-home-home img {
     margin: 0 auto;
 }
 
-.logo-karaoke {
+.titulares-registro {
     padding-bottom: 40px;
+    padding-top: 20px;
 }
 
 .logo-karaoke-galeria {
@@ -194,17 +212,42 @@ p.texto-interno, .texto-interno {
 }
 
 input[type="text"], input[type="email"] {
-    background-color: rgba(30, 30, 30, 0.5);
-    border: medium none;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
     box-shadow: none;
     color: #ffffff;
     display: block;
     font-family: sans-serif;
     font-size: 13px;
-    margin: 0 0 5px;
-    padding: 8px;
+    padding: 3px 0px 3px 3px;
+    margin: 14px 1px 3px 0px;
     text-align: center;
     width: 100%;
+}
+
+input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 1);
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color:rgba(255, 255, 255, 1);
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 1);
+
+}
+
+:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 1);
 }
 
 ul.login_wid li {
@@ -289,21 +332,28 @@ ul.login_wid {
 }
 
 .botontexto, .botontextorojo, .botontextoazul, .btn-primary {
-
-    background-color: rgba(255, 0, 0, 0.8);
-    color: #ffffff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Roboto-Light';
-    font-size: 16px;
-    height: 41px;
-    line-height: 41px;
-    margin: 5px 5px;
-    width: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #3f3f3f;
+    display: block;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 3px 0px 3px 3px;
+    margin: 25px 1px 3px 0px;
     text-align: center;
-    border-radius: 4px;
-    border: none;
+    width: 100%;
+
 }
+
+.botontexto:focus, .botontextorojo:focus, .botontextoazul:focus, .btn-primary:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+     border: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+
 
 .btn:focus, .btn:hover {
     color: #ffff00;
@@ -323,7 +373,7 @@ ul.login_wid {
 }
 
 .botontexto:hover, .botontextoazul:hover, .botontextorojo:hover {
-    color: #ffff00;
+    color: #3e3e3e;
 }
 
 .portabotones {
@@ -468,7 +518,7 @@ ul.login_wid {
         margin-bottom: 10px;
     }
 
-    .logo-karaoke {
+    .titulares-registro {
         padding-bottom: 10px;
         padding: 0px 20px 10px;
     }
@@ -495,13 +545,13 @@ ul.login_wid {
         font-size: 20px;
     }
 
-    .icono-instrucciones, .icono-subir-video,.icono-galeria {
+    .icono-instrucciones, .icono-subir-video, .icono-galeria {
         background-size: 15px 15px;
         background-position: 12px 14px;
         font-size: 12px;
     }
 
-    .icono-subir-video  {
+    .icono-subir-video {
         background-position: 5px 14px;
     }
 }
@@ -511,6 +561,18 @@ ul.login_wid {
 
         min-height: 100%; /* Fallback for browsers do NOT support vh unit */
         min-height: 85vh; /* These two lines are counted as one :-)       */
+
+        display: flex;
+        align-items: center;
+
+        margin: 0 auto;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+
+        display: -webkit-box;
+    }
+
+    .center-block {
 
         display: flex;
         align-items: center;
