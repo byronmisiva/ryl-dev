@@ -62,6 +62,7 @@
                                     <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
                                                required="required"
                                                placeholder="Cédula:"></li>
+
                                     <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
                                                required="required"
                                                placeholder="Nombre:">

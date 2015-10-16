@@ -62,6 +62,7 @@
                                     <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
                                                required="required"
                                                placeholder="Cédula:"></li>
+                                    <div id="complete_register" class="hidden">
                                     <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
                                                required="required"
                                                placeholder="Nombre:">
@@ -94,6 +95,7 @@
                                     <li class="text-center">
                                         <div id="mensaje-envio"></div>
                                     </li>
+                                     </div>
                                 </ul>
                                 <input type="text" id="fbid" name="fbid" class="hidden">
                             </form>
