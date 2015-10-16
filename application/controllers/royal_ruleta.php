@@ -27,7 +27,7 @@ class Royal_ruleta extends CI_Controller
     {
         $this->load->library('user_agent');
         $mobiles = array('Apple iPhone', 'Apple iPod Touch', 'Android', 'Apple iPad');
-        if ($this->agent->is_mobile())
+        if ($this->agent->is_mobile($mobiles))
             $this->movil();
         else {
 
