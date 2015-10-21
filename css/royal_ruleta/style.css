@@ -36,6 +36,7 @@ a:hover, a:visited {
 }
 
 .fondo-home,
+.fondo-home2,
 .fondo-instrucciones,
 .fondo-ingresocodigo,
 .fondo-galeria,
@@ -45,7 +46,7 @@ a:hover, a:visited {
     height: 100%;
     background-size: cover;
     position: absolute;
-    padding-top: 5%;
+
 }
 
 .fondo-registro2 {
@@ -54,6 +55,26 @@ a:hover, a:visited {
 
 .fondo-registro {
     padding-top: 0;
+}
+
+.snoopy-juego {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/snopy-frente.png");
+    width: 294px;
+    height: 337px;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+}
+
+.boton-juego {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton-detener-on.png");
+    width: 65px;
+    height: 46px;
+    position: absolute;
+    bottom: 100px;
+    left: auto;
+    right: auto;
+    cursor: pointer;
 }
 
 .cien {
@@ -69,15 +90,21 @@ a:hover, a:visited {
 }
 
 .fondo-home {
-    /*background-image: url("../../imagenes/karaokegalaxya/home/fondo_home.png");
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/background-only.jpg");
     background-repeat: no-repeat;
-    background-position: center center;*/
+    background-position: center center;
+}
+
+.fondo-home2 {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/background2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .fondo-instrucciones {
-    background-image: url("../../imagenes/karaokegalaxya/intrucciones/fondo_intrucciones.png");
+    /*background-image: url("../../imagenes/karaokegalaxya/intrucciones/fondo_intrucciones.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center;*/
 }
 
 .fondo-ingresocodigo {
@@ -87,9 +114,9 @@ a:hover, a:visited {
 }
 
 .fondo-galeria {
-    background-image: url("../../imagenes/karaokegalaxya/galeria/fondo_galeria.jpg");
+    /*background-image: url("../../imagenes/karaokegalaxya/galeria/fondo_galeria.jpg");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center;*/
 }
 
 .fondo-registro {
@@ -128,24 +155,24 @@ a:hover, a:visited {
 }
 
 .icono-galeria {
-    background-image: url("../../imagenes/karaokegalaxya/galeria.png");
+    /*background-image: url("../../imagenes/karaokegalaxya/galeria.png");
     background-repeat: no-repeat;
     background-size: 25px 25px;
-    background-position: 20px 8px;
+    background-position: 20px 8px;*/
 }
 
 .icono-instrucciones {
-    background-image: url("../../imagenes/karaokegalaxya/intrucciones.png");
+    /*background-image: url("../../imagenes/karaokegalaxya/intrucciones.png");
     background-repeat: no-repeat;
     background-size: 25px 25px;
-    background-position: 20px 8px;
+    background-position: 20px 8px;*/
 }
 
 .icono-subir-video {
-    background-image: url("../../imagenes/karaokegalaxya/subir_video.png");
+    /*background-image: url("../../imagenes/karaokegalaxya/subir_video.png");
     background-repeat: no-repeat;
     background-size: 24px 20px;
-    background-position: 8px 12px;
+    background-position: 8px 12px;*/
 
 }
 
@@ -237,7 +264,7 @@ input[type=text]:focus, textarea:focus {
 
 :-moz-placeholder {
     /* Firefox 18- */
-    color:rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 ::-moz-placeholder {
@@ -349,11 +376,8 @@ ul.login_wid {
 
 .botontexto:focus, .botontextorojo:focus, .botontextoazul:focus, .btn-primary:focus {
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
-     border: 1px solid rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
 }
-
-
-
 
 .btn:focus, .btn:hover {
     color: #ffff00;
@@ -506,7 +530,7 @@ ul.login_wid {
         margin: 50px 0 0;
     }
 
-    .fondo-home, .fondo-instrucciones, .fondo-ingresocodigo, .fondo-galeria, .fondo-registro {
+    .fondo-home, .fondo-home2, .fondo-instrucciones, .fondo-ingresocodigo, .fondo-galeria, .fondo-registro {
         position: inherit;
     }
 
