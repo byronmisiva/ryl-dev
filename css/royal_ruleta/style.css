@@ -13,6 +13,11 @@ body {
     position: absolute;
 }
 
+
+.contenedorGelatina {
+    bottom: -260px;
+    position: absolute;
+}
 a, a:hover, a:visited {
     color: #ffffff;
 }
@@ -64,6 +69,7 @@ a:hover, a:visited {
     position: absolute;
     bottom: 0;
     left: 10px;
+    z-index: 10;
 }
 
 .boton-juego {
@@ -72,9 +78,10 @@ a:hover, a:visited {
     height: 46px;
     position: absolute;
     bottom: 100px;
-    left: auto;
-    right: auto;
+    left: 700px;
     cursor: pointer;
+    z-index: 10;
+
 }
 
 .cien {

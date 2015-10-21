@@ -9,13 +9,6 @@ $(document).ready(function () {
 /// fin actividad gelatinas
 function animGelatina(x, animationDiv) {
     $(animationDiv).removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-
-        if (ultimo) {
-            console.log($(this).attr('id'))
-            $(this).removeClass().addClass('present');
-        } else {
-            $(this).removeClass().addClass('inicial');
-        }
     });
 };
 
@@ -26,55 +19,77 @@ function animGelatina(x, animationDiv) {
 
 // variable de intervalo de lanzar gelatinas
 var lanzaGelatina;
-var ultimo = false;
+var ultimo = true;
 
 var numeroGelatina = 1;
 var ultimoidgelatina;
 
+var animGelatinasActive = 1;
+
 $(document).ready(function () {
+
+    //todo al incio
+
+    var anim = "crossscreen";
+    animGelatinas(anim, "#animationGelatina1");
+
     $('.js--triggerAnimation1').click(function (e) {
-        ultimo = false;
+
         $('#animationSandbox').removeClass();
         e.preventDefault();
-        var anim = "crossscreen";
-        lanzaGelatinas(anim, "#animationGelatina1");
-        lanzaGelatina = setInterval(lanzaGelatinas, 300);
+        animGelatinasActive = 0;
+        /*
+         var anim = "crossscreen";
+         lanzaGelatinas(anim, "#animationGelatina1");
+         lanzaGelatina = setInterval(lanzaGelatinas, 400);
+         */
     });
 
     $('.js--triggerAnimation2').click(function (e) {
         setTimeout(disparaDetener, 1000)
     });
-
 });
+
+function animGelatinas() {
+    var anim = "crossscreen";
+    lanzaGelatinas(anim, "#animationGelatina1");
+    lanzaGelatina = setInterval(lanzaGelatinas, 400);
+}
 
 function disparaDetener() {
     console.log("envio a detener");
-    ultimo = true;
+
     window.clearInterval(lanzaGelatina)
 }
 
 function lanzaGelatinas() {
-        var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/naranja.png", "snoopy-juego\/uva.png"];
-    var divSeleccion = getRandomInt(0, 4);
-    var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
-        'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
-        'class="img-responsive"/></span>';
-    $(".contenedorGelatina").append(nuevaGelatina);
-
-    if (!ultimo) {
-
+    if (animGelatinasActive == 1) {
+        var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
+        var divSeleccion = getRandomInt(0, 3);
+        var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
+            'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
+            'class="img-responsive"/></span>';
+        $(".contenedorGelatina").append(nuevaGelatina);
         var anim = "crossscreen";
         animGelatina(anim, "#animationGelatina" + numeroGelatina);
+        numeroGelatina = numeroGelatina + 1;
     } else {
-
-        var anim = "crossscreen";
-        ultimoidgelatina = "animationGelatina" + numeroGelatina
-        animGelatina(anim, "#animationGelatina" + numeroGelatina);
+        if (ultimo) {
+            var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
+            var divSeleccion = 4;
+            var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
+                'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
+                'class="img-responsive"/></span>';
+            $(".contenedorGelatina").append(nuevaGelatina);
+            var anim = "crossscreen1";
+            animGelatina(anim, "#animationGelatina" + numeroGelatina);
+            numeroGelatina = numeroGelatina + 1;
+            ultimo = false;
+        }
     }
-
-    numeroGelatina = numeroGelatina + 1;
 }
-/// fin actividad gelatinas
+// fin actividad gelatinas
+
 /**
  * Returns a random integer between min (inclusive) and max (inclusive)
  * Using Math.round() will give you a non-uniform distribution!
@@ -105,8 +120,8 @@ function iniciaFormulario() {
                             // validamos el codigo del producto
 
                             console.log("validamos el producto")
-            //              ocultarTodosSeccion();
-            //              $("#ingresocodigo").removeClass("hidden").show();
+                            //              ocultarTodosSeccion();
+                            //              $("#ingresocodigo").removeClass("hidden").show();
 
                             $.post(accion + controladorApp + "/validarCodigo", {codigo: $('#box-codigo1').val()})
                                 .done(function (data) {

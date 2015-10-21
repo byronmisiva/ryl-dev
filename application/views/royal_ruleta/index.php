@@ -126,20 +126,24 @@
 <div id="home" class="  seccion fondo-home ">
     <div class="fondo-home2">
         <div class="container vertical-center">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <p class="roboto-light texto-home text-center">
-                        Pulsa sobre el boton para detener el envio
-                    </p>
-                </div>
-            </div>
+
             <div class="boton-juego js--triggerAnimation1">
             </div>
             <div class="snoopy-juego js--triggerAnimation2">
             </div>
-            <div class="contenedorGelatina">
+            <div class=" col-md-12 col-sm-12 col-xs-12">
+                <!--<div class="col-md-12 col-sm-12 col-xs-12">
+                    <p class="roboto-light texto-home text-center">
+                        Pulsa sobre el boton para detener el envio
+                    </p>
+                </div>-->
+                <div class="contenedorGelatina col-md-12 col-sm-12 col-xs-12">
 
-                <span id="animationGelatina' + numeroGelatina + '"><img  src="imagenes/royal_ruleta/snoopy-juego/uva.png" class="img-responsive"/></span>
+                <span id="animationGelatina' + numeroGelatina + '"><img src="imagenes/royal_ruleta/snoopy-juego/uva.png"
+                                                                        class="img-responsive"/>
+                </span>
+
+                </div>
             </div>
 
         </div>
