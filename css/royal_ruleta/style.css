@@ -10,8 +10,6 @@
     font-family: snoopyregular, Arial, sans-serif
 }
 
-
-
 body {
     font-family: 'snoopyregular';
     color: #fff;
@@ -50,7 +48,7 @@ a:hover, a:visited {
 
 .titulares {
     font-family: 'snoopyregular';
-    font-size:23px;
+    font-size: 23px;
 
 }
 
