@@ -54,7 +54,7 @@
             <div class="espacio74 ">
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="col-sm-offset-7 col-md-offset-7 col-xs-offset-7 col-md-5 col-sm-5 col-xs-5">
+                    <div class="col-sm-offset-6 col-md-offset-6 col-xs-offset-6 col-md-5 col-sm-5 col-xs-5">
                         <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
                             <div class="titulares titulo text-center"><p>REGISTRO</p></div>
                         </div>
