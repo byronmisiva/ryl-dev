@@ -1,3 +1,16 @@
+// variable de intervalo de lanzar gelatinas
+var lanzaGelatina;
+var ultimo = true;
+
+var numeroGelatina = 1;
+var animGelatinasActive = 1;
+var gelatinaPremio = 1;
+var gelPremio = getRandomInt(0, 4);
+
+var ganapremio = 0;
+
+var sabores = [];
+
 //funciones scriptcam
 $(document).ready(function () {
     iniciaFormulario()
@@ -11,29 +24,14 @@ function animGelatina(x, animationDiv) {
     });
 };
 
-// variable de intervalo de lanzar gelatinas
-var lanzaGelatina;
-var ultimo = true;
-
-var numeroGelatina = 1;
-var ultimoidgelatina;
-
-var animGelatinasActive = 1;
-
 $(document).ready(function () {
     var anim = "crossscreen";
     animGelatinas(anim, "#animationGelatina1");
 
     $('.js--triggerAnimation1').click(function (e) {
-
         $('#animationSandbox').removeClass();
         e.preventDefault();
         animGelatinasActive = 0;
-        /*
-         var anim = "crossscreen";
-         lanzaGelatinas(anim, "#animationGelatina1");
-         lanzaGelatina = setInterval(lanzaGelatinas, 400);
-         */
     });
 
     $('.js--triggerAnimation2').click(function (e) {
@@ -53,12 +51,10 @@ function disparaDetener() {
     window.clearInterval(lanzaGelatina)
 }
 
-var gelatinaPremio = 1;
-
 function lanzaGelatinas() {
     if (animGelatinasActive == 1) {
         var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
-        var divSeleccion = getRandomInt(0, 3);
+        var divSeleccion = getRandomInt(0, 4);
         var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
             'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
             'class="img-responsive"/></span>';
@@ -69,14 +65,23 @@ function lanzaGelatinas() {
     } else {
         if (ultimo) {
             var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
-            var divSeleccion = 4;
+            if (ganapremio == 1) {
+                var divSeleccion = gelPremio;
+            } else {
+                do {
+                    var divSeleccion = getRandomInt(0, 4);
+                }
+                while (isInArray(divSeleccion, sabores));
+                // ponemos los sabores que salen
+                sabores.push(divSeleccion);
+            }
+
             var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
                 'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
                 'class="img-responsive"/></span>';
             $(".contenedorGelatina").append(nuevaGelatina);
             var anim = "crossscreen" + gelatinaPremio;
             gelatinaPremio++;
-
             animGelatina(anim, "#animationGelatina" + numeroGelatina);
             numeroGelatina = numeroGelatina + 1;
             //ultimo = false;
@@ -84,7 +89,7 @@ function lanzaGelatinas() {
             if (gelatinaPremio > 3) {
                 ultimo = false;
                 animGelatinasActive = 0;
-                console.log (gelatinaPremio)
+
             }
         }
     }
@@ -274,3 +279,6 @@ function ocultarTodosSeccion() {
     $('.seccion').hide();
 }
 
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
