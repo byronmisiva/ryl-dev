@@ -7,6 +7,7 @@ var animGelatinasActive = 1;
 var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
+var pruebas  = 0;
 var ganapremio = 0;
 
 var sabores = [];
@@ -25,8 +26,10 @@ function animGelatina(x, animationDiv) {
 };
 
 $(document).ready(function () {
-    var anim = "crossscreen";
-    animGelatinas(anim, "#animationGelatina1");
+    if (pruebas== 1){
+        var anim = "crossscreen";
+        animGelatinas(anim, "#animationGelatina1");
+    }
 
     $('.js--triggerAnimation1').click(function (e) {
 
@@ -124,12 +127,6 @@ function iniciaFormulario() {
                         processData: false,
                         DataType: "jsonp",
                         success: function (data) {
-                            // validamos el codigo del producto
-
-                            console.log("validamos el producto")
-                            //              ocultarTodosSeccion();
-                            //              $("#ingresocodigo").removeClass("hidden").show();
-
                             $.post(accion + controladorApp + "/validarCodigo", {codigo: $('#box-codigo1').val()})
                                 .done(function (data) {
                                     if (data == 'F') {
@@ -233,8 +230,16 @@ function mostrarCodigoErrado() {
     $('#mensaje-envio').html("Código Incorrecto");
 }
 function mostrarCodigoCorrecto(data) {
+    obj = JSON.parse(data);
+    if (obj.id_premio == 1) {
+        ganapremio = 0;
+    } else {
+        ganapremio = 1;
+    }
     ocultarTodosSeccion();
     $('#home').removeClass("hidden").show();
+    var anim = "crossscreen";
+    animGelatinas(anim, "#animationGelatina1");
 }
 
 function crearBotonesInterface() {

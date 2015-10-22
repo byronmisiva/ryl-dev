@@ -106,6 +106,11 @@
                                         <li class="text-center">
                                             <div id="mensaje-envio"></div>
                                         </li>
+                                        <li class="text-center">
+                                            <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf"
+                                               target="_blank">Términos y
+                                                condiciones</a>
+                                        </li>
                                     </div>
                                 </ul>
                                 <input type="text" id="fbid" name="fbid" class="hidden">
@@ -116,10 +121,7 @@
             </div>
         </div>
     </div>
-    <div id="" class="roboto-light terminos-condiciones">
-        <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf" target="_blank">Términos y
-            condiciones</a>
-    </div>
+
 </div>
 
 
@@ -139,9 +141,9 @@
                 </div>-->
                 <div class="contenedorGelatina col-md-12 col-sm-12 col-xs-12">
 
-<!--                <span id="animationGelatina' + numeroGelatina + '"><img src="imagenes/royal_ruleta/snoopy-juego/uva.png"
-                                                                        class="img-responsive"/>-->
-                </span>
+                    <!--                <span id="animationGelatina' + numeroGelatina + '"><img src="imagenes/royal_ruleta/snoopy-juego/uva.png"
+                                                                                            class="img-responsive"/>-->
+                    </span>
 
                 </div>
             </div>
