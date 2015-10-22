@@ -1,12 +1,4 @@
 @charset "UTF-8";
-
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-
-Copyright (c) 2015 Daniel Eden
-*/
-
 .inicial {
     opacity: 1;
     left: 23%;
@@ -85,8 +77,8 @@ Copyright (c) 2015 Daniel Eden
         transform: translate3d(25%, 0, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(20%, -70px, 0) ;
-        transform: translate3d(20%, -70px, 0)  ;
+        -webkit-transform: translate3d(34%, -70px, 0) ;
+        transform: translate3d(34%, -10%, 0)  ;
         opacity: 1;
     }
 }
@@ -106,8 +98,8 @@ Copyright (c) 2015 Daniel Eden
         transform: translate3d(25%, 0, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(20%, -70px, 0) ;
-        transform: translate3d(20%, -70px, 0)  ;
+        -webkit-transform: translate3d(30%, -70px, 0) ;
+        transform: translate3d(30%, -70px, 0)  ;
         opacity: 1;
     }
 }
@@ -138,8 +130,8 @@ Copyright (c) 2015 Daniel Eden
         transform: translate3d(50%, -70px, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(50%, -70px, 0) ;
-        transform: translate3d(50%, -70px, 0)  ;
+        -webkit-transform: translate3d(47%, -70px, 0) ;
+        transform: translate3d(47%, -70px, 0)  ;
         opacity: 1;
     }
 }
@@ -159,12 +151,12 @@ Copyright (c) 2015 Daniel Eden
         transform: translate3d(45%, 0, 0)  ;
     }
     70% {
-        -webkit-transform: translate3d(50%, -70px, 0) ;
-        transform: translate3d(50%, -70px, 0)  ;
+        -webkit-transform: translate3d(47%, -70px, 0) ;
+        transform: translate3d(47%, -70px, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(50%, -70px, 0) ;
-        transform: translate3d(50%, -70px, 0)  ;
+        -webkit-transform: translate3d(47%, -70px, 0) ;
+        transform: translate3d(47%, -70px, 0)  ;
     }
 }
 
@@ -187,17 +179,17 @@ Copyright (c) 2015 Daniel Eden
     }
 
     40% {
-        -webkit-transform: translate3d(70%,  0, 0) ;
-        transform: translate3d(70%, 0, 0)  ;
+        -webkit-transform: translate3d(80%,  0, 0) ;
+        transform: translate3d(80%, 0, 0)  ;
     }
     70% {
-        -webkit-transform: translate3d(75%, -70px, 0) ;
-        transform: translate3d(75%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -70px, 0) ;
+        transform: translate3d(64%, -70px, 0)  ;
         opacity: 1;
     }
     to {
-        -webkit-transform: translate3d(75%, -70px, 0) ;
-        transform: translate3d(75%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -70px, 0) ;
+        transform: translate3d(64%, -70px, 0)  ;
         opacity: 1;
     }
 }
@@ -213,17 +205,17 @@ Copyright (c) 2015 Daniel Eden
     }
 
     40% {
-        -webkit-transform: translate3d(70%,  0, 0) ;
-        transform: translate3d(70%, 0, 0)  ;
+        -webkit-transform: translate3d(80%,  0, 0) ;
+        transform: translate3d(80%, 0, 0)  ;
     }
     70% {
-        -webkit-transform: translate3d(75%, -70px, 0) ;
-        transform: translate3d(75%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -70px, 0) ;
+        transform: translate3d(64%, -70px, 0)  ;
         opacity: 1;
     }
     to {
-        -webkit-transform: translate3d(75%, -70px, 0) ;
-        transform: translate3d(75%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -70px, 0) ;
+        transform: translate3d(64%, -70px, 0)  ;
         opacity: 1;
     }
 }

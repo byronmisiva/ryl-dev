@@ -26,8 +26,9 @@ body {
 }
 
 .contenedorGelatina {
-    bottom: -260px;
+    bottom: 22%;
     position: absolute;
+    padding: 0;
 }
 
 a, a:hover, a:visited {
