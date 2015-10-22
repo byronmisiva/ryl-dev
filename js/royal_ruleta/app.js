@@ -29,6 +29,7 @@ $(document).ready(function () {
     animGelatinas(anim, "#animationGelatina1");
 
     $('.js--triggerAnimation1').click(function (e) {
+
         $('#animationSandbox').removeClass();
         e.preventDefault();
         animGelatinasActive = 0;
@@ -42,7 +43,7 @@ $(document).ready(function () {
 function animGelatinas() {
     var anim = "crossscreen";
 
-    lanzaGelatina = setInterval(lanzaGelatinas, 400);
+    lanzaGelatina = setInterval(lanzaGelatinas, 250);
 }
 
 function disparaDetener() {
