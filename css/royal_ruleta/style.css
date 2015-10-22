@@ -93,7 +93,7 @@ a:hover, a:visited {
 
     position: absolute;
     bottom: 100px;
-    left: 700px;
+    right: 20px;
     cursor: pointer;
     z-index: 10;
 }
