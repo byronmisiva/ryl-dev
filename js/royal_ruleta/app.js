@@ -5,17 +5,11 @@ $(document).ready(function () {
     crearBotonesInterface();
 });
 
-
 /// fin actividad gelatinas
 function animGelatina(x, animationDiv) {
     $(animationDiv).removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
     });
 };
-
-// efectos
-// lightSpeedIn
-// lightSpeedOut
-// lightSpeed
 
 // variable de intervalo de lanzar gelatinas
 var lanzaGelatina;
@@ -27,9 +21,6 @@ var ultimoidgelatina;
 var animGelatinasActive = 1;
 
 $(document).ready(function () {
-
-    //todo al incio
-
     var anim = "crossscreen";
     animGelatinas(anim, "#animationGelatina1");
 
@@ -52,7 +43,7 @@ $(document).ready(function () {
 
 function animGelatinas() {
     var anim = "crossscreen";
-    lanzaGelatinas(anim, "#animationGelatina1");
+
     lanzaGelatina = setInterval(lanzaGelatinas, 400);
 }
 
@@ -61,6 +52,8 @@ function disparaDetener() {
 
     window.clearInterval(lanzaGelatina)
 }
+
+var gelatinaPremio = 1;
 
 function lanzaGelatinas() {
     if (animGelatinasActive == 1) {
@@ -81,10 +74,18 @@ function lanzaGelatinas() {
                 'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
                 'class="img-responsive"/></span>';
             $(".contenedorGelatina").append(nuevaGelatina);
-            var anim = "crossscreen1";
+            var anim = "crossscreen" + gelatinaPremio;
+            gelatinaPremio++;
+
             animGelatina(anim, "#animationGelatina" + numeroGelatina);
             numeroGelatina = numeroGelatina + 1;
-            ultimo = false;
+            //ultimo = false;
+            animGelatinasActive = 1;
+            if (gelatinaPremio > 3) {
+                ultimo = false;
+                animGelatinasActive = 0;
+                console.log (gelatinaPremio)
+            }
         }
     }
 }

@@ -139,8 +139,8 @@
                 </div>-->
                 <div class="contenedorGelatina col-md-12 col-sm-12 col-xs-12">
 
-                <span id="animationGelatina' + numeroGelatina + '"><img src="imagenes/royal_ruleta/snoopy-juego/uva.png"
-                                                                        class="img-responsive"/>
+<!--                <span id="animationGelatina' + numeroGelatina + '"><img src="imagenes/royal_ruleta/snoopy-juego/uva.png"
+                                                                        class="img-responsive"/>-->
                 </span>
 
                 </div>

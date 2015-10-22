@@ -18,20 +18,10 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .animated {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-}
-
-.animated.infinite {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
 }
 
 @-webkit-keyframes crossscreen {
@@ -43,11 +33,33 @@ Copyright (c) 2015 Daniel Eden
     10% {
         opacity: 1;
     }
+    95% {
+        opacity: 1;
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0) skewX(0deg);
+        transform: translate3d(0, 0, 0) skewX(0deg);
+        opacity: 0;
+    }
+}
+
+@keyframes crossscreen {
+    from {
+        -webkit-transform: translate3d(105%, 0, 0) skewX(0deg);
+        transform: translate3d(105%, 0, 0) skewX(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
 
     to {
         -webkit-transform: translate3d(0, 0, 0) skewX(0deg);
         transform: translate3d(0, 0, 0) skewX(0deg);
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -69,8 +81,29 @@ Copyright (c) 2015 Daniel Eden
     }
 
     80% {
-        -webkit-transform: translate3d(30%,  0, 0) ;
-        transform: translate3d(30%, 0, 0)  ;
+        -webkit-transform: translate3d(25%,  0, 0) ;
+        transform: translate3d(25%, 0, 0)  ;
+    }
+    to {
+        -webkit-transform: translate3d(20%, -70px, 0) ;
+        transform: translate3d(20%, -70px, 0)  ;
+        opacity: 1;
+    }
+}
+
+@keyframes crossscreen1 {
+    from {
+        -webkit-transform: translate3d(105%, 0, 0)  ;
+        transform: translate3d(105%, 0, 0) ;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        -webkit-transform: translate3d(25%,  0, 0) ;
+        transform: translate3d(25%, 0, 0)  ;
     }
     to {
         -webkit-transform: translate3d(20%, -70px, 0) ;
@@ -86,173 +119,119 @@ Copyright (c) 2015 Daniel Eden
     animation-timing-function: linear;
 }
 
-@-webkit-keyframes lightSpeedIn {
+@-webkit-keyframes crossscreen2 {
     from {
-        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        -webkit-transform: translate3d(105%, 0, 0)  ;
+        transform: translate3d(105%, 0, 0) ;
         opacity: 0;
     }
-
-    60% {
-        -webkit-transform: skewX(20deg);
-        transform: translate3d(0, 0, 0) skewX(20deg);
+    10% {
         opacity: 1;
     }
 
-    80% {
-        -webkit-transform: skewX(-5deg);
-        transform: skewX(-5deg);
-        opacity: 1;
+    50% {
+        -webkit-transform: translate3d(50%,  0, 0) ;
+        transform: translate3d(50%, 0, 0)  ;
     }
-
+    70% {
+        -webkit-transform: translate3d(55%, -70px, 0) ;
+        transform: translate3d(20%, -70px, 0)  ;
+    }
     to {
-        -webkit-transform: none;
-        transform: none;
+        -webkit-transform: translate3d(55%, -70px, 0) ;
+        transform: translate3d(20%, -70px, 0)  ;
         opacity: 1;
     }
 }
 
-@keyframes lightSpeedIn {
+@keyframes crossscreen2 {
     from {
-        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        -webkit-transform: translate3d(105%, 0, 0)  ;
+        transform: translate3d(105%, 0, 0) ;
         opacity: 0;
     }
-
-    60% {
-        -webkit-transform: skewX(20deg);
-        transform: skewX(20deg);
+    10% {
         opacity: 1;
     }
 
-    80% {
-        -webkit-transform: skewX(-5deg);
-        transform: skewX(-5deg);
-        opacity: 1;
+    50% {
+        -webkit-transform: translate3d(55%,  0, 0) ;
+        transform: translate3d(55%, 0, 0)  ;
     }
-
+    70% {
+        -webkit-transform: translate3d(50%, -70px, 0) ;
+        transform: translate3d(50%, -70px, 0)  ;
+    }
     to {
-        -webkit-transform: none;
-        transform: none;
-        opacity: 1;
+        -webkit-transform: translate3d(50%, -70px, 0) ;
+        transform: translate3d(50%, -70px, 0)  ;
     }
 }
 
-.lightSpeedIn {
-    -webkit-animation-name: lightSpeedIn;
-    animation-name: lightSpeedIn;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+.crossscreen2 {
+    -webkit-animation-name: crossscreen2;
+    animation-name: crossscreen2;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
 }
 
-@-webkit-keyframes lightSpeedOut {
+
+@-webkit-keyframes crossscreen3 {
     from {
-        opacity: 1;
-    }
-
-    to {
-        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-        transform: translate3d(100%, 0, 0) skewX(30deg);
+        -webkit-transform: translate3d(105%, 0, 0)  ;
+        transform: translate3d(105%, 0, 0) ;
         opacity: 0;
     }
-}
-
-@keyframes lightSpeedOut {
-    from {
+    10% {
         opacity: 1;
-    }
-
-    to {
-        -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-        transform: translate3d(100%, 0, 0) skewX(30deg);
-        opacity: 0;
-    }
-}
-
-.lightSpeedOut {
-    -webkit-animation-name: lightSpeedOut;
-    animation-name: lightSpeedOut;
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-}
-
-/* New */
-
-@-webkit-keyframes lightSpeed {
-    from {
-        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-        transform: translate3d(100%, 0, 0) skewX(-30deg);
-        opacity: 0;
     }
 
     40% {
-        -webkit-transform: skewX(20deg);
-        transform: translate3d(0, 0, 0) skewX(20deg);
-        opacity: 1;
+        -webkit-transform: translate3d(70%,  0, 0) ;
+        transform: translate3d(70%, 0, 0)  ;
     }
-
     60% {
-        -webkit-transform: skewX(-5deg);
-        transform: skewX(-5deg);
+        -webkit-transform: translate3d(75%, -70px, 0) ;
+        transform: translate3d(75%, -70px, 0)  ;
         opacity: 1;
     }
-
-    80% {
-        -webkit-transform: none;
-        transform: none;
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-
     to {
-        -webkit-transform: translate3d(-100%, 0, 0) skewX(-30deg);
-        transform: translate3d(-100%, 0, 0) skewX(-30deg);
-        opacity: 0;
+        -webkit-transform: translate3d(75%, -70px, 0) ;
+        transform: translate3d(75%, -70px, 0)  ;
+        opacity: 1;
     }
 }
 
-@keyframes lightSpeed {
+@keyframes crossscreen3 {
     from {
-        -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-        transform: translate3d(100%, 0, 0) skewX(-30deg);
+        -webkit-transform: translate3d(105%, 0, 0)  ;
+        transform: translate3d(105%, 0, 0) ;
         opacity: 0;
+    }
+    10% {
+        opacity: 1;
     }
 
     40% {
-        -webkit-transform: skewX(20deg);
-        transform: skewX(20deg);
+        -webkit-transform: translate3d(70%,  0, 0) ;
+        transform: translate3d(70%, 0, 0)  ;
+    }
+    50% {
+        -webkit-transform: translate3d(75%, -70px, 0) ;
+        transform: translate3d(75%, -70px, 0)  ;
         opacity: 1;
     }
-
-    60% {
-        -webkit-transform: skewX(-5deg);
-        transform: skewX(-5deg);
-        opacity: 1;
-    }
-
-    80% {
-        -webkit-transform: none;
-        transform: none;
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-
     to {
-        -webkit-transform: translate3d(-100%, 0, 0) skewX(-30deg);
-        transform: translate3d(-100%, 0, 0) skewX(-30deg);
-        opacity: 0;
+        -webkit-transform: translate3d(75%, -70px, 0) ;
+        transform: translate3d(75%, -70px, 0)  ;
+        opacity: 1;
     }
 }
 
-.lightSpeed {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-name: lightSpeed;
-    animation-name: lightSpeed;
-    -webkit-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
+.crossscreen3 {
+    -webkit-animation-name: crossscreen3;
+    animation-name: crossscreen3;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
 }
+
