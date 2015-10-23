@@ -34,7 +34,17 @@
 
 <body>
 
-<div id="registro" class="hidden   seccion fondo-registro">
+<audio id="bgAudio" autoplay="autoplay" loop="loop" src="linus-and-lucy_part_2.mp3"></audio>
+
+<!--<div>
+    <button onclick="document.getElementById('player').play()">Play</button>
+    <button onclick="document.getElementById('player').pause()">Pause</button>
+    <button onclick="document.getElementById('player').volume += 0.1">Vol+ </button>
+    <button onclick="document.getElementById('player').volume -= 0.1">Vol- </button>
+</div>-->
+
+
+<div id="registro" class="   seccion fondo-registro">
     <div class="fondo-registro2  ">
         <div class="container center-block">
             <div class="col-md-12 col-sm-12">
@@ -125,7 +135,7 @@
 </div>
 
 
-<div id="home" class="     seccion fondo-home ">
+<div id="home" class="hidden     seccion fondo-home ">
     <div class="fondo-home2">
 
         <div class="container vertical-center">

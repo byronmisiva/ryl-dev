@@ -12,12 +12,26 @@ var ganapremio = 0;
 
 var sabores = [];
 
+
+window.onload = function() {
+    var backgroundAudio=document.getElementById("bgAudio");
+    backgroundAudio.volume=0.1;
+    backgroundAudio.src="linus-and-lucy_part_1.mp3"
+}
+
 //funciones scriptcam
 $(document).ready(function () {
+
+
     iniciaFormulario()
     //llamada para mostrar webcam en div, incluye botones
     crearBotonesInterface();
+
+
+
 });
+
+
 
 /// fin actividad gelatinas
 function animGelatina(x, animationDiv) {
