@@ -34,7 +34,7 @@
 
 <body>
 
-<audio id="bgAudio" autoplay="autoplay" loop="loop" ></audio>
+<audio id="bgAudio" autoplay="autoplay" loop="loop"></audio>
 
 <!--<div>
     <button onclick="document.getElementById('player').play()">Play</button>
@@ -136,26 +136,41 @@
 
 
 <div id="home" class="seccion fondo-home ">
-    <div class="fondo-home2">
+
+    <div class="fondo-home2 home ">
 
         <div class="container vertical-center">
 
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
             <div class="mensajeSeleccion1 mensaje hidden">
-                <div class="titulo">LINUS TIENE UNA GELATINA DE </div>
+                <div class="titulo">LINUS TIENE UNA GELATINA DE</div>
             </div>
             <div class="mensajeSeleccion2 mensaje hidden">
-                <div class="titulo">CHARLIE TIENE UNA GELATINA DE </div>
+                <div class="titulo">CHARLIE TIENE UNA GELATINA DE</div>
             </div>
             <div class="mensajeSeleccion3 mensaje hidden">
-                <div class="titulo">LUCY TIENE UNA GELATINA DE </div>
+                <div class="titulo">LUCY TIENE UNA GELATINA DE</div>
             </div>
 
         </div>
+
+
         <div class="   contenedorGelatina col-md-12 col-sm-12 col-xs-12">
         </div>
     </div>
+
+    <div class="container vertical-center pierde hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/pierde.png" class="img-responsive">
+        </div>
+    </div>
+    <div class="container vertical-center gana  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana.png" class="img-responsive">
+        </div>
+    </div>
+
 </div>
 
 <div id="instrucciones" class="hidden seccion fondo-instrucciones">

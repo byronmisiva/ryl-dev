@@ -8,7 +8,7 @@ var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
 var pruebas = 1;
-var ganapremio = 0;
+var ganapremio = 1;
 
 //pausa en el juego
 var pausa = false;
@@ -155,9 +155,14 @@ function ocultaNube (selector){
 function cierre() {
     pausa = true;
     if (ganapremio == 0) {
-        alert("Usted a perdido");
+        $('.home').fadeOut();
+        $('.gana').fadeOut();
+        $('.pierde').removeClass("hidden").fadeIn();
+
     } else {
-        alert("Usted a ganado");
+        $('.home').fadeOut();
+        $('.gana').removeClass("hidden").fadeIn();
+        $('.pierde').fadeOut();
     }
 }
 /**

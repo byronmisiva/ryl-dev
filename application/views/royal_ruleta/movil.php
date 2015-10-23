@@ -34,22 +34,37 @@
 
 <body>
 
-<div id="registro" class="  seccion fondo-registro">
+<audio id="bgAudio" autoplay="autoplay" loop="loop" ></audio>
+
+<!--<div>
+    <button onclick="document.getElementById('player').play()">Play</button>
+    <button onclick="document.getElementById('player').pause()">Pause</button>
+    <button onclick="document.getElementById('player').volume += 0.1">Vol+ </button>
+    <button onclick="document.getElementById('player').volume -= 0.1">Vol- </button>
+</div>-->
+
+
+<div id="registro" class="hidden seccion fondo-registro">
     <div class="fondo-registro2  ">
+        <div class="container center-block">
+            <div class="col-md-12 col-sm-12">
+                <div class="col-sm-offset-2 col-md-offset-2 col-xs-offset-2  col-md-8 col-sm-8">
+                    <div class="titulares-registro titulares text-center">
+                        <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
+                            un
+                            viaje a Fox Studios en Los Ángeles.</p>
+
+                        <p>También puedes jugar y ganar premios instáneos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container center-block">
             <div class="espacio74 ">
                 <div class="col-md-12 col-sm-12">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="col-sm-offset-2 col-md-offset-2 col-xs-offset-2  col-md-8 col-sm-8">
-                            <div class="titulares-registro titulares text-center">
-                                <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por un
-                                    viaje a Fox Studios en Los Ángeles.</p>
 
-                                <p>También puedes jugar y ganar premios instáneos.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-offset-7 col-md-offset-7 col-xs-offset-7 col-md-5 col-sm-5 col-xs-5">
+                    <div class="col-sm-offset-6 col-md-offset-6 col-xs-offset-6 col-md-5 col-sm-5 col-xs-5">
                         <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
                             <div class="titulares titulo text-center"><p>REGISTRO</p></div>
                         </div>
@@ -62,39 +77,51 @@
                                     <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
                                                required="required"
                                                placeholder="Cédula:"></li>
+                                    <div id="complete_register" class="hidden">
+                                        <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
+                                                   required="required"
+                                                   placeholder="Nombre:">
+                                        </li>
+                                        <li><input class="box-text" type="text" id="apellido" name="apellido"
+                                                   maxlength="20"
+                                                   required="required"
+                                                   placeholder="Apellido:">
+                                        </li>
+                                        <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
+                                                   required="required"
+                                                   placeholder="Email:">
+                                        </li>
+                                        <li><input class="box-text" type="text" id="telefono" name="telefono"
+                                                   maxlength="10"
+                                                   required="required"
+                                                   placeholder="Teléfono:"></li>
+                                        <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
+                                                   required="required"
+                                                   placeholder="Ciudad:">
+                                        </li>
 
-                                    <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
-                                               required="required"
-                                               placeholder="Nombre:">
-                                    </li>
-                                    <li><input class="box-text" type="text" id="apellido" name="apellido"
-                                               maxlength="20"
-                                               required="required"
-                                               placeholder="Apellido:">
-                                    </li>
-                                    <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
-                                               required="required"
-                                               placeholder="Email:">
-                                    </li>
-                                    <li><input class="box-text" type="text" id="telefono" name="telefono"
-                                               maxlength="10"
-                                               required="required"
-                                               placeholder="Teléfono:"></li>
-                                    <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
-                                               required="required"
-                                               placeholder="Ciudad:">
-                                    </li>
-                                    <li class="text-center">
-                                        <div class="portabotones center-block ">
-                                            <input type="submit" value="Continuar" name="login"
-                                                   class="btn-ingreso botontexto"
-                                                   style="">
-                                        </div>
+                                        <li><input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
+                                                   maxlength="20"
+                                                   required="required"
+                                                   placeholder="Código de tu producto:">
+                                        </li>
 
-                                    </li>
-                                    <li class="text-center">
-                                        <div id="mensaje-envio"></div>
-                                    </li>
+                                        <li class="text-center">
+                                            <div class="portabotones center-block ">
+                                                <input type="submit" value="Continuar" name="login"
+                                                       class="btn-ingreso botontexto"
+                                                       style="">
+                                            </div>
+                                        </li>
+                                        <li class="text-center">
+                                            <div id="mensaje-envio"></div>
+                                        </li>
+                                        <li class="text-center">
+                                            <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf"
+                                               target="_blank">Términos y
+                                                condiciones</a>
+                                        </li>
+                                    </div>
                                 </ul>
                                 <input type="text" id="fbid" name="fbid" class="hidden">
                             </form>
@@ -107,98 +134,27 @@
 
 </div>
 
-<div id="ingresocodigo" class="hidden seccion fondo-ingresocodigo">
-    <div class="container vertical-center">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="col-md-12 col-sm-12">
-                    <div class="logo-karaoke-galeria">
-                        <!--<img src="<?php /*echo base_url() */ ?>imagenes/royal_ruleta/web-cam/logo_karaoke.png"
-                             class="img-responsive"/>-->
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12  ">
-                    <div class="  roboto-bold titulo text-center hidden-xs"><p>Ingresa el código de tu producto</p>
-                    </div>
-                </div>
 
-                <div class="col-md-12 col-sm-12 col-xs-12 center-block text-center">
-                    <div id="ingresolote-container" class="center-block">
-                        <div class="col-md-12 col-sm-12 col-xs-12 text-center margen-0 center-block">
-                            <div
-                                class="col-center-block col-md-7 col-sm-8 col-xs-12 ingresolote-container-pop">
-                                <div class="col-md-12 col-sm-12 col-xs-12 margen-0 " style="margin-top: 12px">
-                                    <input class="" type="text" id="box-codigo1" maxlength="60"
-                                           name="box-codigo"
-                                           placeholder="Escribe aqui el codigo de tu producto">
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="portabotones center-block">
-                                        <class id="btnvalidacodigo" class="botontexto hidden-xs ">Continuar</class>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="portabotones center-block textoIngresoLote hidden">
-                                        <class class="text-center">Ingrese el número de lote</class>
-                                    </div>
-                                </div>
-                            </div>
+<div id="home" class="seccion fondo-home ">
+    <div class="fondo-home2">
 
-                        </div>
-                    </div>
+        <div class="container vertical-center">
 
-                    <div id="mensaje-error" class="center-block hidden">
-                        <div class="col-center-block col-md-7 col-sm-8 col-xs-12 ingresolote-container-pop">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div id="messageerror" class="roboto-light text-center texto-interno">Número de lote
-                                    inválido
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="portabotones center-block">
-                                    <class id="btnRegresarIntento" class="botontexto hidden-xs ">Volver a intentarlo
-                                    </class>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="boton-juego js--triggerAnimation1"></div>
+            <div class="snoopy-juego"></div>
+            <div class="mensajeSeleccion1 mensaje hidden">
+                <div class="titulo">LINUS TIENE UNA GELATINA DE </div>
             </div>
+            <div class="mensajeSeleccion2 mensaje hidden">
+                <div class="titulo">CHARLIE TIENE UNA GELATINA DE </div>
+            </div>
+            <div class="mensajeSeleccion3 mensaje hidden">
+                <div class="titulo">LUCY TIENE UNA GELATINA DE </div>
+            </div>
+
         </div>
-    </div>
-</div>
-
-<div class="contenedorGelatina">
-
-
-</div>
-
-<div id="home" class="hidden seccion fondo-home ">
-    <div class="container vertical-center">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="logo-karaoke">
-                    <!--<img src="<?php /*echo base_url() */ ?>imagenes/royal_ruleta/home/logo_karaoke.png"
-                         class="img-responsive"/>-->
-                </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12  ">
-                <div class="portabotones center-block">
-                    <class class="botontexto js--triggerAnimation1">Iniciar</class>
-                </div>
-                <div class="portabotones center-block">
-                    <class class="botontexto js--triggerAnimation2">Detener</class>
-                </div>
-            </div>
-
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <p class="roboto-light texto-home text-center">
-                    Pulsa sobre el boton para detener el envio
-                </p>
-            </div>
+        <div class="   contenedorGelatina col-md-12 col-sm-12 col-xs-12">
         </div>
-
     </div>
 </div>
 
@@ -342,28 +298,6 @@
     </div>
 </div>
 
-<div id="comunes" class="hidden-xs">
-    <div class="col-md-4 col-sm-4 col-xs-5">
-        <div class="logo-samsung-galaxya ">
-            <!--            <img
-                src="<?php /*echo base_url() */ ?>imagenes/royal_ruleta/home/logo_galaxya.png"
-                class="img-responsive">-->
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-2">
-    </div>
-    <div class="col-md-4 col-sm-4 col-xs-5">
-        <div class="logo-samsung pull-right ">
-            <!--<img
-                src="<?php /*echo base_url() */ ?>imagenes/royal_ruleta/home/logo_samsung.png"
-                class="img-responsive">-->
-        </div>
-    </div>
-
-    <div id="" class="roboto-light terminos-condiciones"><a
-            href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf" target="_blank">Términos y
-            condiciones</a></div>
-</div>
 
 <script type="text/javascript" charset="utf-8">
     var idParticipante = 0;

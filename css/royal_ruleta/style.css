@@ -88,6 +88,7 @@ a:hover, a:visited {
     z-index: 10;
 }
 
+
 .mensajeSeleccion1, .mensajeSeleccion2, .mensajeSeleccion3 {
     color: #000000;
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/nube.png");
