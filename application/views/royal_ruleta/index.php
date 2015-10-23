@@ -140,17 +140,16 @@
 
         <div class="container vertical-center">
 
-            <div class="boton-juego js--triggerAnimation1 ">
+            <div class="boton-juego js--triggerAnimation1"></div>
+            <div class="snoopy-juego"></div>
+            <div class="mensajeSeleccion1 mensaje hidden">
+                <div class="titulo">LINUS TIENE UNA GELATINA DE UVA</div>
             </div>
-            <div class="snoopy-juego js--triggerAnimation2">
+            <div class="mensajeSeleccion2 mensaje hidden">
+                <div class="titulo">CHARLIE TIENE UNA GELATINA DE UVA</div>
             </div>
-            <div class=" col-md-12 col-sm-12 col-xs-12">
-                <!--<div class="col-md-12 col-sm-12 col-xs-12">
-                    <p class="roboto-light texto-home text-center">
-                        Pulsa sobre el boton para detener el envio
-                    </p>
-                </div>-->
-
+            <div class="mensajeSeleccion3 mensaje hidden">
+                <div class="titulo">LUCY TIENE UNA GELATINA DE UVA</div>
             </div>
 
         </div>

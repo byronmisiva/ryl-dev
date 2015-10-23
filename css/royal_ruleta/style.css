@@ -85,6 +85,36 @@ a:hover, a:visited {
     z-index: 10;
 }
 
+.mensajeSeleccion1, .mensajeSeleccion2, .mensajeSeleccion3 {
+    color: #000000;
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/nube.png");
+    width: 249px;
+    height: 181px;
+    position: absolute;
+    top: 47%;
+    z-index: 10;
+}
+
+.mensajeSeleccion1 {
+    left: 16%;
+}
+.mensajeSeleccion2 {
+    left: 34%;
+}
+.mensajeSeleccion3 {
+    left: 50%;
+}
+
+
+.mensaje .titulo {
+    position: absolute;
+    top: 35px;
+    left: 32px;
+    z-index: 11;
+    line-height: 27px;
+}
+
+
 .boton-juego, .boton-juego-click {
     position: absolute;
     bottom:200px;

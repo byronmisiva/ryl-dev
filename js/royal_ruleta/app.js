@@ -15,6 +15,7 @@ var pausa = false;
 var tiempoPausa = 3000;
 
 var sabores = [];
+var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
 
 
 window.onload = function () {
@@ -25,13 +26,9 @@ window.onload = function () {
 
 //funciones scriptcam
 $(document).ready(function () {
-
-
     iniciaFormulario()
     //llamada para mostrar webcam en div, incluye botones
     crearBotonesInterface();
-
-
 });
 
 
@@ -46,7 +43,6 @@ $(document).ready(function () {
         var anim = "crossscreen";
         animGelatinas(anim, "#animationGelatina1");
     }
-
     $('.js--triggerAnimation1').click(function (e) {
         if (!pausa) {
             $('#animationSandbox').removeClass();
@@ -76,7 +72,6 @@ function animGelatinas() {
 function lanzaGelatinas() {
     if (!pausa) {
         if (animGelatinasActive == 1) {
-            var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
             var divSeleccion = getRandomInt(0, 4);
             var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
                 'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
@@ -87,7 +82,7 @@ function lanzaGelatinas() {
             numeroGelatina = numeroGelatina + 1;
         } else {
             if (ultimo) {
-                var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
+
                 if (ganapremio == 1) {
                     var divSeleccion = gelPremio;
                 } else {
@@ -121,7 +116,7 @@ function lanzaGelatinas() {
                 // activamos la pausa
                 pausa = true;
                 setTimeout(function () {
-                    continuaJuego ()
+                    continuaJuego()
                 }, tiempoPausa)
 
             }
@@ -131,8 +126,13 @@ function lanzaGelatinas() {
 // fin actividad gelatinas
 
 
-function continuaJuego () {
+function continuaJuego() {
     pausa = false
+    mostraMensajeSeleecion
+
+}
+
+function mostraMensajeSeleecion() {
 
 }
 function cierre() {

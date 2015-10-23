@@ -77,8 +77,8 @@
         transform: translate3d(25%, 0, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(34%, -70px, 0) ;
-        transform: translate3d(34%, -10%, 0)  ;
+        -webkit-transform: translate3d(34%, -100px, 0) ;
+        transform: translate3d(34%, -100px, 0)  ;
         opacity: 1;
     }
 }
@@ -98,8 +98,8 @@
         transform: translate3d(25%, 0, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(30%, -70px, 0) ;
-        transform: translate3d(30%, -70px, 0)  ;
+        -webkit-transform: translate3d(30%, -100px, 0) ;
+        transform: translate3d(30%, -100px, 0)  ;
         opacity: 1;
     }
 }
@@ -126,12 +126,12 @@
         transform: translate3d(45%, 0, 0)  ;
     }
     70% {
-        -webkit-transform: translate3d(50%, -70px, 0) ;
-        transform: translate3d(50%, -70px, 0)  ;
+        -webkit-transform: translate3d(50%, -100px, 0) ;
+        transform: translate3d(50%, -100px, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(47%, -70px, 0) ;
-        transform: translate3d(47%, -70px, 0)  ;
+        -webkit-transform: translate3d(47%, -100px, 0) ;
+        transform: translate3d(47%, -100px, 0)  ;
         opacity: 1;
     }
 }
@@ -151,12 +151,12 @@
         transform: translate3d(45%, 0, 0)  ;
     }
     70% {
-        -webkit-transform: translate3d(47%, -70px, 0) ;
-        transform: translate3d(47%, -70px, 0)  ;
+        -webkit-transform: translate3d(47%, -100px, 0) ;
+        transform: translate3d(47%, -100px, 0)  ;
     }
     to {
-        -webkit-transform: translate3d(47%, -70px, 0) ;
-        transform: translate3d(47%, -70px, 0)  ;
+        -webkit-transform: translate3d(47%, -100px, 0) ;
+        transform: translate3d(47%, -100px, 0)  ;
     }
 }
 
@@ -183,13 +183,13 @@
         transform: translate3d(80%, 0, 0)  ;
     }
     70% {
-        -webkit-transform: translate3d(64%, -70px, 0) ;
-        transform: translate3d(64%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -100px, 0) ;
+        transform: translate3d(64%, -100px, 0)  ;
         opacity: 1;
     }
     to {
-        -webkit-transform: translate3d(64%, -70px, 0) ;
-        transform: translate3d(64%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -100px, 0) ;
+        transform: translate3d(64%, -100px, 0)  ;
         opacity: 1;
     }
 }
@@ -209,13 +209,13 @@
         transform: translate3d(80%, 0, 0)  ;
     }
     70% {
-        -webkit-transform: translate3d(64%, -70px, 0) ;
-        transform: translate3d(64%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -100px, 0) ;
+        transform: translate3d(64%, -100px, 0)  ;
         opacity: 1;
     }
     to {
-        -webkit-transform: translate3d(64%, -70px, 0) ;
-        transform: translate3d(64%, -70px, 0)  ;
+        -webkit-transform: translate3d(64%, -100px, 0) ;
+        transform: translate3d(64%, -100px, 0)  ;
         opacity: 1;
     }
 }
