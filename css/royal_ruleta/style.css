@@ -85,11 +85,7 @@ a:hover, a:visited {
     z-index: 10;
 }
 
-.boton-juego {
-    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton-detener.png");
-    width: 96px;
-    height: 96px;
-
+.boton-juego, .boton-juego-click {
     position: absolute;
     bottom: 100px;
     right: 20px;
@@ -97,60 +93,117 @@ a:hover, a:visited {
     z-index: 10;
 }
 
-.hi {
-    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton-detener.png");
+.boton-juego {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton.png");
     width: 96px;
     height: 96px;
 
-    -webkit-animation: play .8s steps(5);
-    -moz-animation: play .8s steps(5);
-    -ms-animation: play .8s steps(5);
-    -o-animation: play .8s steps(5);
-    animation: play .8s steps(5);
+    -webkit-animation: playboton .8s steps(10) infinite;
+    -moz-animation: playboton .8s steps(10)infinite
+    -ms-animation: playboton .8s steps(10)infinite
+    -o-animation: playboton .8s steps(10)infinite
+    animation: playboton .8s steps(10)infinite
+}
+@-webkit-keyframes playboton {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -960px;
+    }
+}
+
+@-moz-keyframes playboton {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -960px;
+    }
+}
+
+@-ms-keyframes playboton {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -960px;
+    }
+}
+
+@-o-keyframes playboton {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -960px;
+    }
+}
+
+@keyframes playboton {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -960px;
+    }
+}
+
+
+.boton-juego-click{
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton_push.png");
+    width: 96px;
+    height: 96px;
+
+    -webkit-animation: play  .8s steps(10) ;
+    -moz-animation: play .8s steps(10)
+-ms-animation: play .8s steps(10)
+-o-animation: play .8s steps(10)
+animation: play .8s steps(10)
 }
 
 @-webkit-keyframes play {
     from {
-        background-position: -384px;
+        background-position: 0;
     }
     to {
-        background-position: 96px;
+        background-position: -960px;
     }
 }
 
 @-moz-keyframes play {
     from {
-        background-position: -384px;
+        background-position: 0px;
     }
     to {
-        background-position: 96px;
+        background-position: -960px;
     }
 }
 
 @-ms-keyframes play {
     from {
-        background-position: -384px;
+        background-position: 0px;
     }
     to {
-        background-position: 96px;
+        background-position: -960px;
     }
 }
 
 @-o-keyframes play {
     from {
-        background-position: -384px;
+        background-position: 0px;
     }
     to {
-        background-position: 96px;
+        background-position: -960px;
     }
 }
 
 @keyframes play {
     from {
-        background-position: -384px;
+        background-position: 0px;
     }
     to {
-        background-position: 96px;
+        background-position: -960px;
     }
 }
 

@@ -36,24 +36,25 @@ $(document).ready(function () {
         $('#animationSandbox').removeClass();
         e.preventDefault();
         animGelatinasActive = 0;
+
+        $('.js--triggerAnimation1').removeClass('boton-juego').addClass('boton-juego-click');
+        setTimeout(function(){
+            $('.js--triggerAnimation1').removeClass('boton-juego-click').addClass('boton-juego')
+        } , 800)
     });
 
-    $('.js--triggerAnimation2').click(function (e) {
-        setTimeout(disparaDetener, 1000)
-    });
+
 });
 
+function muestraBotonOriginal () {
+
+}
 function animGelatinas() {
     var anim = "crossscreen";
 
     lanzaGelatina = setInterval(lanzaGelatinas, 250);
 }
 
-function disparaDetener() {
-    console.log("envio a detener");
-
-    window.clearInterval(lanzaGelatina)
-}
 
 function lanzaGelatinas() {
     if (animGelatinasActive == 1) {

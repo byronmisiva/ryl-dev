@@ -130,7 +130,7 @@
 
         <div class="container vertical-center">
 
-            <div class="boton-juego js--triggerAnimation1 hi">
+            <div class="boton-juego js--triggerAnimation1 ">
             </div>
             <div class="snoopy-juego js--triggerAnimation2">
             </div>
