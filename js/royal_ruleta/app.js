@@ -7,7 +7,7 @@ var animGelatinasActive = 1;
 var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
-var pruebas  = 0;
+var pruebas  = 1;
 var ganapremio = 0;
 
 var sabores = [];
