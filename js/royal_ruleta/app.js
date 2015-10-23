@@ -16,7 +16,7 @@ var sabores = [];
 window.onload = function() {
     var backgroundAudio=document.getElementById("bgAudio");
     backgroundAudio.volume=0.1;
-    backgroundAudio.src="linus-and-lucy_part_1.mp3"
+    backgroundAudio.src="linus-and-lucy_part_2.mp3"
 }
 
 //funciones scriptcam

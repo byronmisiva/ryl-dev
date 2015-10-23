@@ -44,7 +44,7 @@
 </div>-->
 
 
-<div id="registro" class="   seccion fondo-registro">
+<div id="registro" class="hidden seccion fondo-registro">
     <div class="fondo-registro2  ">
         <div class="container center-block">
             <div class="col-md-12 col-sm-12">
@@ -135,7 +135,7 @@
 </div>
 
 
-<div id="home" class="hidden     seccion fondo-home ">
+<div id="home" class="seccion fondo-home ">
     <div class="fondo-home2">
 
         <div class="container vertical-center">
