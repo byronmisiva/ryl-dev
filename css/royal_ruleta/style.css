@@ -74,6 +74,9 @@ a:hover, a:visited {
 .fondo-registro {
     padding-top: 0;
 }
+.titulo {
+    font-size: 22px;
+}
 
 .snoopy-juego {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/snopy-frente.png");
@@ -354,9 +357,6 @@ p.texto-home {
     padding-top: 60px;
 }
 
-.titulo {
-    font-size: 24px;
-}
 
 .titulo-der {
     font-size: 24px;

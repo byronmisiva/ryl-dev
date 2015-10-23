@@ -18,6 +18,7 @@ var divSeleccion
 
 var sabores = [];
 var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
+var gelatinasNombre = ["CEREZA", "FRAMBUESA", "LIMÓN", "UVA", "NARANJA"];
 
 
 window.onload = function () {
@@ -136,11 +137,20 @@ function continuaJuego() {
 }
 
 function mostraMensajeSeleecion() {
-    console.log (divSeleccion)
-    console.log (gelatinaPremio)
-    mensajeSeleccion1
-    $('.mensajeSeleccion1').fadeIn();
 
+    muestra = gelatinaPremio - 1 ;
+    textoOriginal = $('.mensajeSeleccion' + muestra + " .titulo").html() + gelatinasNombre[divSeleccion];
+    $('.mensajeSeleccion' + muestra + " .titulo").html(textoOriginal );
+    $('.mensajeSeleccion' + muestra).removeClass("hidden").fadeIn();
+    // esperamos para continuar
+    setTimeout(function () {
+        ocultaNube ('.mensajeSeleccion' + muestra)
+    }, 2000)
+
+}
+
+function ocultaNube (selector){
+    $(selector).fadeOut();
 }
 function cierre() {
     pausa = true;
