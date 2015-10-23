@@ -12,7 +12,7 @@ var ganapremio = 0;
 
 //pausa en el juego
 var pausa = false;
-var tiempoPausa = 3000;
+var tiempoPausa = 4000;
 
 var divSeleccion
 
@@ -23,7 +23,7 @@ var gelatinasNombre = ["CEREZA", "FRAMBUESA", "LIMÓN", "UVA", "NARANJA"];
 
 window.onload = function () {
     var backgroundAudio = document.getElementById("bgAudio");
-    backgroundAudio.volume = 0;
+    backgroundAudio.volume = 0.2;
     backgroundAudio.src = "linus-and-lucy_part_2.mp3"
 }
 
