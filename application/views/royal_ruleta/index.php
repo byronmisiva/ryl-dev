@@ -34,7 +34,7 @@
 
 <body>
 
-<audio id="bgAudio" autoplay="autoplay" loop="loop" src="linus-and-lucy_part_2.mp3"></audio>
+<audio id="bgAudio" autoplay="autoplay" loop="loop" ></audio>
 
 <!--<div>
     <button onclick="document.getElementById('player').play()">Play</button>
