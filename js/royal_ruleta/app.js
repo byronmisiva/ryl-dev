@@ -18,7 +18,7 @@ var divSeleccion
 
 var sabores = [];
 var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
-var gelatinasNombre = ["CEREZA", "FRAMBUESA", "LIMÓN", "UVA", "NARANJA"];
+var gelatinasNombre = [" CEREZA", " FRAMBUESA", " LIMÓN", " UVA", " NARANJA"];
 
 
 window.onload = function () {
