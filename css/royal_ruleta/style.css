@@ -87,7 +87,7 @@ a:hover, a:visited {
 
 .boton-juego, .boton-juego-click {
     position: absolute;
-    bottom: 100px;
+    bottom:200px;
     right: 20px;
     cursor: pointer;
     z-index: 10;

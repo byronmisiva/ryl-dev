@@ -7,7 +7,7 @@ var animGelatinasActive = 1;
 var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
-var pruebas  = 1;
+var pruebas  = 0;
 var ganapremio = 0;
 
 var sabores = [];
@@ -95,12 +95,23 @@ function lanzaGelatinas() {
                 ultimo = false;
                 animGelatinasActive = 0;
 
+                setTimeout(function(){
+                    cierre ()
+                } , 2000)
+
             }
         }
     }
 }
 // fin actividad gelatinas
 
+function cierre () {
+    if (ganapremio == 0) {
+        alert ("Usted a perdido");
+    } else {
+        alert ("Usted a ganado");
+    }
+}
 /**
  * Returns a random integer between min (inclusive) and max (inclusive)
  * Using Math.round() will give you a non-uniform distribution!
