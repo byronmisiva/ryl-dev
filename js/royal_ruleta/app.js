@@ -14,6 +14,8 @@ var ganapremio = 0;
 var pausa = false;
 var tiempoPausa = 3000;
 
+var divSeleccion
+
 var sabores = [];
 var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
 
@@ -72,7 +74,7 @@ function animGelatinas() {
 function lanzaGelatinas() {
     if (!pausa) {
         if (animGelatinasActive == 1) {
-            var divSeleccion = getRandomInt(0, 4);
+            divSeleccion = getRandomInt(0, 4);
             var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
                 'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
                 'class="img-responsive"/></span>';
@@ -82,12 +84,11 @@ function lanzaGelatinas() {
             numeroGelatina = numeroGelatina + 1;
         } else {
             if (ultimo) {
-
                 if (ganapremio == 1) {
-                    var divSeleccion = gelPremio;
+                    divSeleccion = gelPremio;
                 } else {
                     do {
-                        var divSeleccion = getRandomInt(0, 4);
+                        divSeleccion = getRandomInt(0, 4);
                     }
                     while (isInArray(divSeleccion, sabores));
                     // ponemos los sabores que salen
@@ -115,10 +116,14 @@ function lanzaGelatinas() {
                 }
                 // activamos la pausa
                 pausa = true;
+                //mostramos mensaje
+                setTimeout(function () {
+                    mostraMensajeSeleecion()
+                }, 1200)
+                // esperamos para continuar
                 setTimeout(function () {
                     continuaJuego()
                 }, tiempoPausa)
-
             }
         }
     }
@@ -127,12 +132,14 @@ function lanzaGelatinas() {
 
 
 function continuaJuego() {
-    pausa = false
-    mostraMensajeSeleecion
-
+    pausa = false;
 }
 
 function mostraMensajeSeleecion() {
+    console.log (divSeleccion)
+    console.log (gelatinaPremio)
+    mensajeSeleccion1
+    $('.mensajeSeleccion1').fadeIn();
 
 }
 function cierre() {
