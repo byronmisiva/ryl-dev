@@ -113,9 +113,11 @@ a:hover, a:visited {
 .mensaje .titulo {
     position: absolute;
     top: 35px;
-    left: 32px;
+    /*left: 32px;*/
+    padding: 0 20px;
     z-index: 11;
     line-height: 27px;
+    text-align: center;
 }
 
 
