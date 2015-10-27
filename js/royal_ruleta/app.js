@@ -144,7 +144,7 @@ function mostraMensajeSeleecion() {
     muestra = gelatinaPremio - 1 ;
     textoOriginal = $('.mensajeSeleccion' + muestra + " .titulo").html() + gelatinasNombre[divSeleccion];
     $('.mensajeSeleccion' + muestra + " .titulo").html(textoOriginal );
-    $('.mensajeSeleccion' + muestra).removeClass("hidden").fadeIn();
+   // $('.mensajeSeleccion' + muestra).removeClass("hidden").fadeIn();
     // esperamos para continuar
     setTimeout(function () {
         ocultaNube ('.mensajeSeleccion' + muestra)
