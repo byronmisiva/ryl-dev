@@ -7,8 +7,9 @@ var animGelatinasActive = 1;
 var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
-var pruebas = 1;
+var pruebas = 0;
 var ganapremio = 1;
+var premioganado = 1;
 
 //pausa en el juego
 var pausa = false;
@@ -24,7 +25,8 @@ var gelatinasNombre = [" CEREZA", " FRAMBUESA", " LIMÓN", " UVA", " NARANJA"];
 
 window.onload = function () {
     var backgroundAudio = document.getElementById("bgAudio");
-    backgroundAudio.volume = 0.2;
+    //backgroundAudio.volume = 0.2;
+    backgroundAudio.volume = 0;
     backgroundAudio.src = "linus-and-lucy_part_2.mp3"
 }
 
@@ -159,13 +161,24 @@ function cierre() {
     pausa = true;
     if (ganapremio == 0) {
         $('.home').fadeOut();
-        $('.gana').fadeOut();
+        $('.ganacamiseta').fadeOut();
         $('.pierde').removeClass("hidden").fadeIn();
 
     } else {
         $('.home').fadeOut();
-        $('.gana').removeClass("hidden").fadeIn();
-        $('.pierde').fadeOut();
+        $('.pierde').hide();
+        $('.ganacamiseta').hide();
+        $('.ganagorra').hide();
+        $('.ganaentrada').hide();
+        if (premioganado == 2) {
+            $('.ganacamiseta').removeClass("hidden").fadeIn();
+        }
+        if (premioganado == 3) {
+            $('.ganagorra').removeClass("hidden").fadeIn();
+        }
+        if (premioganado == 4) {
+            $('.ganaentrada').removeClass("hidden").fadeIn();
+        }
     }
 }
 /**
@@ -304,6 +317,7 @@ function mostrarCodigoCorrecto(data) {
     } else {
         ganapremio = 1;
     }
+    premioganado = obj.id_premio;
     ocultarTodosSeccion();
     $('#home').removeClass("hidden").show();
     var anim = "crossscreen";

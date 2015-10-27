@@ -49,7 +49,7 @@
 </div>-->
 
 
-<div id="registro" class="hidden seccion fondo-registro">
+<div id="registro" class="seccion fondo-registro">
     <div class="fondo-registro2  ">
         <div class="container center-block">
             <div class="col-md-12 col-sm-12">
@@ -140,7 +140,7 @@
 </div>
 
 
-<div id="home" class="seccion fondo-home ">
+<div id="home" class="hidden seccion fondo-home ">
 
     <div class="fondo-home2 home ">
 
@@ -171,12 +171,21 @@
             <img src="imagenes/royal_ruleta/snoopy-juego/pierde.png" class="img-responsive">
         </div>
     </div>
-    <div class="container vertical-center gana  hidden">
+    <div class="container vertical-center ganacamiseta  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="imagenes/royal_ruleta/snoopy-juego/gana.png" class="img-responsive">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_camiseta.png" class="img-responsive">
         </div>
     </div>
-
+    <div class="container vertical-center ganagorra  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_gorra.png" class="img-responsive">
+        </div>
+    </div>
+    <div class="container vertical-center ganaentrada  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive">
+        </div>
+    </div>
 </div>
 
 <div id="instrucciones" class="hidden seccion fondo-instrucciones">
