@@ -24,7 +24,7 @@ var gelatinasNombre = [" CEREZA", " FRAMBUESA", " LIMÓN", " UVA", " NARANJA"];
 
 window.onload = function () {
     var backgroundAudio = document.getElementById("bgAudio");
-    backgroundAudio.volume = 0;
+    backgroundAudio.volume = 0.2;
     backgroundAudio.src = "linus-and-lucy_part_2.mp3"
 }
 
