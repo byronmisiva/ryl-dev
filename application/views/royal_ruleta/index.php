@@ -148,7 +148,7 @@
 
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
-            <div class="mensajeSeleccion1 mensaje hidden">
+<!--            <div class="mensajeSeleccion1 mensaje hidden">
                 <div class="titulo">LINUS TIENE UNA GELATINA DE</div>
             </div>
             <div class="mensajeSeleccion2 mensaje hidden">
@@ -157,7 +157,7 @@
             <div class="mensajeSeleccion3 mensaje hidden">
                 <div class="titulo">LUCY TIENE UNA GELATINA DE</div>
             </div>
-
+-->
         </div>
 
 
