@@ -30,10 +30,10 @@
     <link href="<?php echo base_url() ?>css/royal_ruleta/animate.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/royal_ruleta/favicon/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/royal_ruleta/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/royal_ruleta/favicon/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="imagenes/royal_ruleta/favicon/apple-touch-114x114.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/royal_ruleta/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/royal_ruleta/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/royal_ruleta/favicon/favicon-16x16.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="imagenes/royal_ruleta/favicon/apple-touch-114x114.png"/>
 
 </head>
 
@@ -161,7 +161,8 @@
         </div>
 
 
-        <div class="   contenedorGelatina col-md-12 col-sm-12 col-xs-12">
+        <div class="contenedorGelatina col-md-12 col-sm-12 col-xs-12">
+
         </div>
     </div>
 

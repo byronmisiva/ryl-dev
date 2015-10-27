@@ -74,6 +74,7 @@ a:hover, a:visited {
 .fondo-registro {
     padding-top: 0;
 }
+
 .titulo {
     font-size: 22px;
 }
@@ -88,7 +89,6 @@ a:hover, a:visited {
     z-index: 10;
 }
 
-
 .mensajeSeleccion1, .mensajeSeleccion2, .mensajeSeleccion3 {
     color: #000000;
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/nube.png");
@@ -102,13 +102,14 @@ a:hover, a:visited {
 .mensajeSeleccion1 {
     left: 16%;
 }
+
 .mensajeSeleccion2 {
     left: 34%;
 }
+
 .mensajeSeleccion3 {
     left: 50%;
 }
-
 
 .mensaje .titulo {
     position: absolute;
@@ -120,10 +121,9 @@ a:hover, a:visited {
     text-align: center;
 }
 
-
 .boton-juego, .boton-juego-click {
     position: absolute;
-    bottom:200px;
+    bottom: 200px;
     right: 20px;
     cursor: pointer;
     z-index: 10;
@@ -135,11 +135,12 @@ a:hover, a:visited {
     height: 96px;
 
     -webkit-animation: playboton .8s steps(10) infinite;
-    -moz-animation: playboton .8s steps(10)infinite
-    -ms-animation: playboton .8s steps(10)infinite
-    -o-animation: playboton .8s steps(10)infinite
-    animation: playboton .8s steps(10)infinite
+    -moz-animation: playboton .8s steps(10) infinite;
+    -ms-animation: playboton .8s steps(10) infinite;
+    -o-animation: playboton .8s steps(10) infinite;
+    animation: playboton .8s steps(10) infinite;
 }
+
 @-webkit-keyframes playboton {
     from {
         background-position: 0;
@@ -185,17 +186,17 @@ a:hover, a:visited {
     }
 }
 
-
-.boton-juego-click{
+/*boton juego click sprite */
+.boton-juego-click {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton_push.png");
     width: 96px;
     height: 96px;
 
-    -webkit-animation: play  .8s steps(10) ;
-    -moz-animation: play .8s steps(10)
--ms-animation: play .8s steps(10)
--o-animation: play .8s steps(10)
-animation: play .8s steps(10)
+    -webkit-animation: play .8s steps(10);
+    -moz-animation: play .8s steps(10);
+    -ms-animation: play .8s steps(10);
+    -o-animation: play .8s steps(10);
+    animation: play .8s steps(10);
 }
 
 @-webkit-keyframes play {
@@ -242,6 +243,301 @@ animation: play .8s steps(10)
         background-position: -960px;
     }
 }
+
+/*fin boton juego click sprite */
+
+/*cereza animada sprite */
+.gelatina_cereza {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/gelatina_cereza.png");
+    width: 131px;
+    height: 96px;
+    -webkit-animation: playgelatinacereza 1s steps(17) infinite;
+    -moz-animation: playgelatinacereza 1s steps(17) infinite;
+    -ms-animation: playgelatinacereza 1s steps(17) infinite;
+    -o-animation: playgelatinacereza 1s steps(17) infinite;
+    animation: playgelatinacereza 1s steps(17) infinite;
+}
+
+@-webkit-keyframes playgelatinacereza {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-moz-keyframes playgelatinacereza {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-ms-keyframes playgelatinacereza {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-o-keyframes playgelatinacereza {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@keyframes playgelatinacereza {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+/*fin cereza  animada sprite */
+
+/*frambuesa animada sprite */
+.gelatina_frambuesa {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/gelatina_frambuesa.png");
+    width: 131px;
+    height: 96px;
+    -webkit-animation: playgelatinaframbuesa 1s steps(17) infinite;
+    -moz-animation: playgelatinaframbuesa 1s steps(17) infinite;
+    -ms-animation: playgelatinaframbuesa 1s steps(17) infinite;
+    -o-animation: playgelatinaframbuesa 1s steps(17) infinite;
+    animation: playgelatinaframbuesa 1s steps(17) infinite;
+}
+
+@-webkit-keyframes playgelatinaframbuesa {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-moz-keyframes playgelatinaframbuesa {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-ms-keyframes playgelatinaframbuesa {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-o-keyframes playgelatinaframbuesa {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@keyframes playgelatinaframbuesa {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+/*fin frambuesa animada sprite */
+
+/*limon animada sprite */
+.gelatina_limon {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/gelatina_limon.png");
+    width: 131px;
+    height: 96px;
+    -webkit-animation: playgelatinalimon 1s steps(17) infinite;
+    -moz-animation: playgelatinalimon 1s steps(17) infinite;
+    -ms-animation: playgelatinalimon 1s steps(17) infinite;
+    -o-animation: playgelatinalimon 1s steps(17) infinite;
+    animation: playgelatinalimon 1s steps(17) infinite;
+}
+
+@-webkit-keyframes playgelatinalimon {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-moz-keyframes playgelatinalimon {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-ms-keyframes playgelatinalimon {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-o-keyframes playgelatinalimon {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@keyframes playgelatinalimon {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+/*fin limon animada sprite */
+
+/*naranja animada sprite */
+.gelatina_naranja {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/gelatina_naranja.png");
+    width: 131px;
+    height: 96px;
+    -webkit-animation: playgelatinanaranja 1s steps(17) infinite;
+    -moz-animation: playgelatinanaranja 1s steps(17) infinite;
+    -ms-animation: playgelatinanaranja 1s steps(17) infinite;
+    -o-animation: playgelatinanaranja 1s steps(17) infinite;
+    animation: playgelatinanaranja 1s steps(17) infinite;
+}
+
+@-webkit-keyframes playgelatinanaranja {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-moz-keyframes playgelatinanaranja {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-ms-keyframes playgelatinanaranja {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-o-keyframes playgelatinanaranja {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@keyframes playgelatinanaranja {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+/*fin naranja animada sprite */
+
+
+/*uva animada sprite */
+.gelatina_uva {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/gelatina_uva.png");
+    width: 131px;
+    height: 96px;
+    -webkit-animation: playgelatinauva 1s steps(17) infinite;
+    -moz-animation: playgelatinauva 1s steps(17) infinite;
+    -ms-animation: playgelatinauva 1s steps(17) infinite;
+    -o-animation: playgelatinauva 1s steps(17) infinite;
+    animation: playgelatinauva 1s steps(17) infinite;
+}
+
+@-webkit-keyframes playgelatinauva {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-moz-keyframes playgelatinauva {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-ms-keyframes playgelatinauva {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@-o-keyframes playgelatinauva {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+@keyframes playgelatinauva {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -2227px;
+    }
+}
+
+/*fin uva animada sprite */
 
 .cien {
     width: 100%;
@@ -359,7 +655,6 @@ p.texto-home {
     font-size: 22px;
     padding-top: 60px;
 }
-
 
 .titulo-der {
     font-size: 24px;

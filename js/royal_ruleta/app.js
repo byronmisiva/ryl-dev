@@ -17,13 +17,14 @@ var tiempoPausa = 4000;
 var divSeleccion
 
 var sabores = [];
-var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
+var gelatinas = ["gelatina_cereza", "gelatina_frambuesa", "gelatina_limon", "gelatina_uva", "gelatina_  naranja"];
+//var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
 var gelatinasNombre = [" CEREZA", " FRAMBUESA", " LIMÓN", " UVA", " NARANJA"];
 
 
 window.onload = function () {
     var backgroundAudio = document.getElementById("bgAudio");
-    backgroundAudio.volume = 0.2;
+    backgroundAudio.volume = 0;
     backgroundAudio.src = "linus-and-lucy_part_2.mp3"
 }
 
@@ -76,9 +77,10 @@ function lanzaGelatinas() {
     if (!pausa) {
         if (animGelatinasActive == 1) {
             divSeleccion = getRandomInt(0, 4);
-            var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
-                'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
-                'class="img-responsive"/></span>';
+            var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '">' +
+                '<div class="gelatina_limon" ><\/div>' +
+                //'<img  src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' + 'class="img-responsive"/>' +
+                '</span>';
             $(".contenedorGelatina").append(nuevaGelatina);
             var anim = "crossscreen";
             animGelatina(anim, "#animationGelatina" + numeroGelatina);
@@ -96,9 +98,10 @@ function lanzaGelatinas() {
                     sabores.push(divSeleccion);
                 }
 
-                var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '"><img ' +
-                    'src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' +
-                    'class="img-responsive"/></span>';
+                var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '">' +
+                    '<div class="gelatina_limon" ><\/div>' +
+//                    '<img  src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' + 'class="img-responsive"/> +'
+                    '</span>';
                 $(".contenedorGelatina").append(nuevaGelatina);
                 var anim = "crossscreen" + gelatinaPremio;
                 gelatinaPremio++;
