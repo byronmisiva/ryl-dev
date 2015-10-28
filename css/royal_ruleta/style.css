@@ -550,7 +550,9 @@ a:hover, a:visited {
 }
 
 .espacio74 {
-    width: 89%;
+    /* width: 89%;*/
+    margin-left: 53%;
+    width: 28%;
 }
 
 .fondo-ingresocodigo {
@@ -712,7 +714,7 @@ input[type="text"], input[type="email"] {
     font-family: sans-serif;
     font-size: 13px;
     padding: 3px 0px 3px 3px;
-    margin: 14px 1px 3px 0px;
+    margin: 10px 1px 3px 0px;
     text-align: center;
     width: 100%;
 }
