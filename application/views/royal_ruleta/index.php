@@ -148,6 +148,9 @@
 <div id="home" class=" seccion fondo-home ">
 
     <div class="fondo-home2 home ">
+        <div class="pestaneo1"></div>
+        <div class="pestaneo2"></div>
+        <div class="pestaneo3"></div>
         <div class="container center-block">
             <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
         </div>

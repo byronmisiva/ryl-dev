@@ -62,6 +62,29 @@ $(document).ready(function () {
         }
     });
 
+    //animacion parpadeo
+
+
+    setInterval(function () {
+        $('.pestaneo1').show();
+        setTimeout(function () {
+            $('.pestaneo1').hide();
+        },250)
+    },3000)
+
+    setInterval(function () {
+        $('.pestaneo2').show();
+        setTimeout(function () {
+            $('.pestaneo2').hide();
+        },250)
+    },4000)
+    setInterval(function () {
+        $('.pestaneo3').show();
+        setTimeout(function () {
+            $('.pestaneo3').hide();
+        },250)
+    },4000)
+
 
 });
 

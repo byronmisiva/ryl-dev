@@ -60,11 +60,40 @@ a:hover, a:visited {
 .fondo-ingresocodigo,
 .fondo-galeria,
 .fondo-registro,
-.fondo-registro2 {
+.fondo-registro2,
+.pestaneo1,
+.pestaneo2,
+.pestaneo3 {
     width: 100%;
     height: 100%;
     background-size: cover;
     position: absolute;
+
+}
+
+.fondo-home2 {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/background2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.pestaneo1 {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/pestaneo1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: none;
+}
+.pestaneo2 {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/pestaneo2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: none;
+
+}
+.pestaneo3 {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/pestaneo2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: none;
 
 }
 
@@ -565,11 +594,7 @@ a:hover, a:visited {
     background-position: center center;
 }
 
-.fondo-home2 {
-    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/background2.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-}
+
 
 .fondo-instrucciones {
     /*background-image: url("../../imagenes/karaokegalaxya/intrucciones/fondo_intrucciones.png");
