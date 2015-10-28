@@ -50,16 +50,22 @@
 
 
 <div id="registro" class=" seccion fondo-registro">
-    <div class="fondo-registro2  ">
-        <div class="container center-block">
-            <div class="col-md-12 col-sm-12">
-                <div class="col-sm-offset-2 col-md-offset-2 col-xs-offset-2  col-md-8 col-sm-8">
-                    <div class="titulares-registro titulares text-center">
-                        <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
-                            un
-                            viaje a Fox Studios en Los Ángeles.</p>
 
-                        <p>También puedes jugar y ganar premios instáneos.</p>
+    <div class="fondo-registro2  ">
+        <div class="cabecerahome">
+            <div class="container center-block">
+                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+            </div>
+            <div class="container center-block">
+                <div class="col-md-12 col-sm-12">
+                    <div class="col-sm-offset-2 col-md-offset-2 col-xs-offset-2  col-md-8 col-sm-8">
+                        <div class="titulares-registro titulares text-center">
+                            <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
+                                un
+                                viaje a Fox Studios en Los Ángeles.</p>
+
+                            <p>También puedes jugar y ganar premios instáneos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,16 +154,16 @@
 
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
-<!--            <div class="mensajeSeleccion1 mensaje hidden">
-                <div class="titulo">LINUS TIENE UNA GELATINA DE</div>
-            </div>
-            <div class="mensajeSeleccion2 mensaje hidden">
-                <div class="titulo">CHARLIE TIENE UNA GELATINA DE</div>
-            </div>
-            <div class="mensajeSeleccion3 mensaje hidden">
-                <div class="titulo">LUCY TIENE UNA GELATINA DE</div>
-            </div>
--->
+            <!--            <div class="mensajeSeleccion1 mensaje hidden">
+                            <div class="titulo">LINUS TIENE UNA GELATINA DE</div>
+                        </div>
+                        <div class="mensajeSeleccion2 mensaje hidden">
+                            <div class="titulo">CHARLIE TIENE UNA GELATINA DE</div>
+                        </div>
+                        <div class="mensajeSeleccion3 mensaje hidden">
+                            <div class="titulo">LUCY TIENE UNA GELATINA DE</div>
+                        </div>
+            -->
         </div>
 
 

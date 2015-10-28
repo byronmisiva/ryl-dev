@@ -50,6 +50,7 @@ a:hover, a:visited {
 .titulares {
     font-family: 'snoopyregular';
     font-size: 23px;
+    line-height: 24px;
 
 }
 
@@ -68,7 +69,8 @@ a:hover, a:visited {
 }
 
 .fondo-registro2 {
-    padding-top: 130px;
+    padding-top: 0px;
+/*    padding-top: 130px;*/
 }
 
 .fondo-registro {
@@ -87,6 +89,10 @@ a:hover, a:visited {
     bottom: 0;
     left: 10px;
     z-index: 10;
+}
+
+.cabecerahome {
+    height: 40%;
 }
 
 .mensajeSeleccion1, .mensajeSeleccion2, .mensajeSeleccion3 {
