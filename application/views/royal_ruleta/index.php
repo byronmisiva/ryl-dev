@@ -49,7 +49,7 @@
 </div>-->
 
 
-<div id="registro" class=" seccion fondo-registro">
+<div id="registro" class="hidden seccion fondo-registro">
 
     <div class="fondo-registro2  ">
         <div class="cabecerahome">
@@ -138,20 +138,21 @@
                                 <input type="text" id="fbid" name="fbid" class="hidden">
                             </form>
                         </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 
-<div id="home" class="hidden seccion fondo-home ">
+<div id="home" class=" seccion fondo-home ">
 
     <div class="fondo-home2 home ">
-
+        <div class="container center-block">
+            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+        </div>
         <div class="container vertical-center">
+
 
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>

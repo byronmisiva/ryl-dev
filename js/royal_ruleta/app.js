@@ -7,7 +7,7 @@ var animGelatinasActive = 1;
 var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
-var pruebas = 0;
+var pruebas = 1;
 var ganapremio = 1;
 var premioganado = 1;
 
@@ -25,8 +25,8 @@ var gelatinasNombre = [" CEREZA", " FRAMBUESA", " LIMÓN", " UVA", " NARANJA"];
 
 window.onload = function () {
     var backgroundAudio = document.getElementById("bgAudio");
-    backgroundAudio.volume = 0.2;
-    //backgroundAudio.volume = 0;
+    //backgroundAudio.volume = 0.2;
+    backgroundAudio.volume = 0;
     backgroundAudio.src = "linus-and-lucy_part_2.mp3"
 }
 
