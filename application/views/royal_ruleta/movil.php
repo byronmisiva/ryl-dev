@@ -30,11 +30,16 @@
     <link href="<?php echo base_url() ?>css/royal_ruleta/animate.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+    <link rel="icon" type="image/png" sizes="96x96" href="imagenes/royal_ruleta/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/royal_ruleta/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="imagenes/royal_ruleta/favicon/favicon-16x16.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="imagenes/royal_ruleta/favicon/apple-touch-114x114.png"/>
+
 </head>
 
 <body>
 
-<audio id="bgAudio" autoplay="autoplay" loop="loop" ></audio>
+<audio id="bgAudio" autoplay="autoplay" loop="loop"></audio>
 
 <!--<div>
     <button onclick="document.getElementById('player').play()">Play</button>
@@ -44,7 +49,7 @@
 </div>-->
 
 
-<div id="registro" class="hidden seccion fondo-registro">
+<div id="registro" class=" seccion fondo-registro">
     <div class="fondo-registro2  ">
         <div class="container center-block">
             <div class="col-md-12 col-sm-12">
@@ -135,25 +140,50 @@
 </div>
 
 
-<div id="home" class="seccion fondo-home ">
-    <div class="fondo-home2">
+<div id="home" class="hidden seccion fondo-home ">
+
+    <div class="fondo-home2 home ">
 
         <div class="container vertical-center">
 
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
-            <div class="mensajeSeleccion1 mensaje hidden">
-                <div class="titulo">LINUS TIENE UNA GELATINA DE </div>
-            </div>
-            <div class="mensajeSeleccion2 mensaje hidden">
-                <div class="titulo">CHARLIE TIENE UNA GELATINA DE </div>
-            </div>
-            <div class="mensajeSeleccion3 mensaje hidden">
-                <div class="titulo">LUCY TIENE UNA GELATINA DE </div>
-            </div>
+            <!--            <div class="mensajeSeleccion1 mensaje hidden">
+                            <div class="titulo">LINUS TIENE UNA GELATINA DE</div>
+                        </div>
+                        <div class="mensajeSeleccion2 mensaje hidden">
+                            <div class="titulo">CHARLIE TIENE UNA GELATINA DE</div>
+                        </div>
+                        <div class="mensajeSeleccion3 mensaje hidden">
+                            <div class="titulo">LUCY TIENE UNA GELATINA DE</div>
+                        </div>
+            -->
+        </div>
+
+
+        <div class="contenedorGelatina col-md-12 col-sm-12 col-xs-12">
 
         </div>
-        <div class="   contenedorGelatina col-md-12 col-sm-12 col-xs-12">
+    </div>
+
+    <div class="container vertical-center pierde hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/pierde.png" class="img-responsive">
+        </div>
+    </div>
+    <div class="container vertical-center ganacamiseta  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_camiseta.png" class="img-responsive">
+        </div>
+    </div>
+    <div class="container vertical-center ganagorra  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_gorra.png" class="img-responsive">
+        </div>
+    </div>
+    <div class="container vertical-center ganaentrada  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive">
         </div>
     </div>
 </div>
