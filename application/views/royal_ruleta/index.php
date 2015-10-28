@@ -58,7 +58,7 @@
             </div>
             <div class="container center-block">
                 <div class="col-md-12 col-sm-12">
-                    <div class="col-sm-offset-2 col-md-offset-2 col-xs-offset-2  col-md-8 col-sm-8">
+                    <div class="  col-md-offset-2    col-xs-12 col-md-8 col-sm-12">
                         <div class="titulares-registro titulares text-center">
                             <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
                                 un
@@ -71,15 +71,16 @@
             </div>
         </div>
 
-        <div class="container center-block">
+<!--        <div class="container center-block">-->
+        <div class=" ">
             <div class="espacio74 ">
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="col-sm-offset-6 col-md-offset-6 col-xs-offset-6 col-md-5 col-sm-5 col-xs-5">
+
                         <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
                             <div class="titulares titulo text-center"><p>REGISTRO</p></div>
                         </div>
-                        <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-7 col-sm-7 col-xs-7">
+                        <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                             <form id="registroform"
                                   action=""
                                   method="post"
@@ -137,7 +138,7 @@
                                 <input type="text" id="fbid" name="fbid" class="hidden">
                             </form>
                         </div>
-                    </div>
+
                 </div>
             </div>
         </div>

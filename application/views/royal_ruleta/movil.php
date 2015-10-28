@@ -50,88 +50,95 @@
 
 
 <div id="registro" class=" seccion fondo-registro">
-    <div class="fondo-registro2  ">
-        <div class="container center-block">
-            <div class="col-md-12 col-sm-12">
-                <div class="col-sm-offset-2 col-md-offset-2 col-xs-offset-2  col-md-8 col-sm-8">
-                    <div class="titulares-registro titulares text-center">
-                        <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
-                            un
-                            viaje a Fox Studios en Los Ángeles.</p>
 
-                        <p>También puedes jugar y ganar premios instáneos.</p>
+    <div class="fondo-registro2  ">
+        <div class="cabecerahome">
+            <div class="container center-block">
+                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+            </div>
+            <div class="container center-block">
+                <div class="col-md-12 col-sm-12">
+                    <div class="  col-md-offset-2    col-xs-12 col-md-8 col-sm-12">
+                        <div class="titulares-registro titulares text-center">
+                            <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
+                                un
+                                viaje a Fox Studios en Los Ángeles.</p>
+
+                            <p>También puedes jugar y ganar premios instáneos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container center-block">
+        <!--        <div class="container center-block">-->
+        <div class=" ">
             <div class="espacio74 ">
                 <div class="col-md-12 col-sm-12">
 
-                    <div class="col-sm-offset-6 col-md-offset-6 col-xs-offset-6 col-md-5 col-sm-5 col-xs-5">
-                        <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
-                            <div class="titulares titulo text-center"><p>REGISTRO</p></div>
-                        </div>
-                        <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-7 col-sm-7 col-xs-7">
-                            <form id="registroform"
-                                  action=""
-                                  method="post"
-                                  enctype="multipart/form-data">
-                                <ul class="login_wid">
-                                    <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
-                                               required="required"
-                                               placeholder="Cédula:"></li>
-                                    <div id="complete_register" class="hidden">
-                                        <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
-                                                   required="required"
-                                                   placeholder="Nombre:">
-                                        </li>
-                                        <li><input class="box-text" type="text" id="apellido" name="apellido"
-                                                   maxlength="20"
-                                                   required="required"
-                                                   placeholder="Apellido:">
-                                        </li>
-                                        <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
-                                                   required="required"
-                                                   placeholder="Email:">
-                                        </li>
-                                        <li><input class="box-text" type="text" id="telefono" name="telefono"
-                                                   maxlength="10"
-                                                   required="required"
-                                                   placeholder="Teléfono:"></li>
-                                        <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
-                                                   required="required"
-                                                   placeholder="Ciudad:">
-                                        </li>
 
-                                        <li><input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
-                                                   maxlength="20"
-                                                   required="required"
-                                                   placeholder="Código de tu producto:">
-                                        </li>
-
-                                        <li class="text-center">
-                                            <div class="portabotones center-block ">
-                                                <input type="submit" value="Continuar" name="login"
-                                                       class="btn-ingreso botontexto"
-                                                       style="">
-                                            </div>
-                                        </li>
-                                        <li class="text-center">
-                                            <div id="mensaje-envio"></div>
-                                        </li>
-                                        <li class="text-center">
-                                            <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf"
-                                               target="_blank">Términos y
-                                                condiciones</a>
-                                        </li>
-                                    </div>
-                                </ul>
-                                <input type="text" id="fbid" name="fbid" class="hidden">
-                            </form>
-                        </div>
+                    <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
+                        <div class="titulares titulo text-center"><p>REGISTRO</p></div>
                     </div>
+                    <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
+                        <form id="registroform"
+                              action=""
+                              method="post"
+                              enctype="multipart/form-data">
+                            <ul class="login_wid">
+                                <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
+                                           required="required"
+                                           placeholder="Cédula:"></li>
+                                <div id="complete_register" class="hidden">
+                                    <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
+                                               required="required"
+                                               placeholder="Nombre:">
+                                    </li>
+                                    <li><input class="box-text" type="text" id="apellido" name="apellido"
+                                               maxlength="20"
+                                               required="required"
+                                               placeholder="Apellido:">
+                                    </li>
+                                    <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
+                                               required="required"
+                                               placeholder="Email:">
+                                    </li>
+                                    <li><input class="box-text" type="text" id="telefono" name="telefono"
+                                               maxlength="10"
+                                               required="required"
+                                               placeholder="Teléfono:"></li>
+                                    <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
+                                               required="required"
+                                               placeholder="Ciudad:">
+                                    </li>
+
+                                    <li><input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
+                                               maxlength="20"
+                                               required="required"
+                                               placeholder="Código de tu producto:">
+                                    </li>
+
+                                    <li class="text-center">
+                                        <div class="portabotones center-block ">
+                                            <input type="submit" value="Continuar" name="login"
+                                                   class="btn-ingreso botontexto"
+                                                   style="">
+                                        </div>
+                                    </li>
+                                    <li class="text-center">
+                                        <div id="mensaje-envio"></div>
+                                    </li>
+                                    <li class="text-center">
+                                        <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf"
+                                           target="_blank">Términos y
+                                            condiciones</a>
+                                    </li>
+                                </div>
+                            </ul>
+                            <input type="text" id="fbid" name="fbid" class="hidden">
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>
