@@ -25,16 +25,14 @@
     10% {
         opacity: 1;
     }
-    95% {
+    99% {
         opacity: 1;
     }
-    96% {
-        opacity: 0;
-    }
+
     to {
         -webkit-transform: translate3d(0, 0, 0) skewX(0deg);
-        transform: translate3d(0, 0, 0) skewX(0deg);
-        opacity: 0;
+        transform: translate3d(-131px, 0, 0) skewX(0deg);
+        opacity: 1;
     }
 }
 
@@ -47,17 +45,15 @@
     10% {
         opacity: 1;
     }
-    91% {
+    99% {
         opacity: 1;
     }
-    92% {
-         opacity: 0;
-     }
+
 
     to {
         -webkit-transform: translate3d(0, 0, 0) skewX(0deg);
-        transform: translate3d(0, 0, 0) skewX(0deg);
-        opacity: 0;
+        transform: translate3d(-131px, 0, 0) skewX(0deg);
+        opacity: 1;
     }
 }
 
