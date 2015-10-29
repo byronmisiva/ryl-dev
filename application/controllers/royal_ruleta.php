@@ -25,11 +25,13 @@ class Royal_ruleta extends CI_Controller
 
     function index()
     {
-        $this->load->library('user_agent');
-        $mobiles = array('Apple iPhone', 'Apple iPod Touch', 'Android', 'Apple iPad');
-        if ($this->agent->is_mobile($mobiles))
+
+
+
+        if ($this->verificarDispositivo() == "1")
+        {
             $this->movil();
-        else {
+        } else {
 
             $this->data['dispositivo'] = "normal";
             $this->load->view($this->folderView . '/index', array('data' => $this->data));
@@ -39,10 +41,32 @@ class Royal_ruleta extends CI_Controller
 
     function movil()
     {
-        if ($this->uri->segment(3) != false)
-            $data['vervideo'] = $this->uri->segment(3);
         $this->data['dispositivo'] = "movil";
         $this->load->view($this->folderView . '/movil', array('data' => $this->data));
+    }
+
+    function verificarDispositivo()
+    {
+        $this->load->library('user_agent');
+        $mobiles = array('Sony Ericsson', 'Apple iPhone', 'Ipad', 'Android', 'Windows CE', 'Symbian S60', 'Apple iPad', "LG", "Nokia", "BlackBerry");
+        $isMobile = "0";
+        if ($this->agent->is_mobile()) {
+            $m = $this->agent->mobile();
+            if ($m == "Android" and preg_match('/\bAndroid\b.*\bMobile/i', $this->agent->agent) == 0)
+                $m = "Android Tablet";
+            switch ($m) {
+                case 'Apple iPad':
+                    $isMobile = "2";
+                    break;
+                case 'Android Tablet':
+                    $isMobile = "2";
+                    break;
+                case in_array($m, $mobiles):
+                    $isMobile = "1";
+                    break;
+            }
+        }
+        return $isMobile;
     }
 
 

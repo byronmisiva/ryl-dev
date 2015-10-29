@@ -49,7 +49,7 @@
 </div>-->
 
 
-<div id="registro" class=" seccion fondo-registro">
+<div id="registro" class="seccion fondo-registro hidden-xs">
 
     <div class="fondo-registro2  ">
         <div class="cabecerahome">
@@ -138,20 +138,30 @@
                             <input type="text" id="fbid" name="fbid" class="hidden">
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 
-<div id="home" class="hidden seccion fondo-home ">
+<div id="home" class="hidden seccion fondo-home hidden-xs">
 
     <div class="fondo-home2 home ">
+        <div class="pestaneo1"></div>
+        <div class="pestaneo2"></div>
+        <div class="pestaneo3"></div>
+        <div class="botones">
+            <div class="btn-instrucciones js--triggerInstrucciones"></div>
+            <div class="btn-audioOn js--triggerAudio"></div>
+            <div class="btn-compartir js--triggerCompartir"></div>
+        </div>
 
+        <div class="container center-block">
+            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+        </div>
         <div class="container vertical-center">
+
 
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
@@ -194,6 +204,14 @@
         </div>
     </div>
 </div>
+
+
+<div id="movil" class="hidden-lg hidden-md hidden-sm">
+    <div class="fondo-movil">
+        <img src="imagenes/royal_ruleta/vista-mobile.jpg" width="100%">
+    </div>
+</div>
+
 
 <div id="instrucciones" class="hidden seccion fondo-instrucciones">
     <div class="container vertical-center">

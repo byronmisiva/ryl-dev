@@ -49,7 +49,7 @@
 </div>-->
 
 
-<div id="registro" class="seccion fondo-registro">
+<div id="registro" class="hidden seccion fondo-registro hidden-xs">
 
     <div class="fondo-registro2  ">
         <div class="cabecerahome">
@@ -145,7 +145,7 @@
 </div>
 
 
-<div id="home" class="hidden seccion fondo-home ">
+<div id="home" class="hidden seccion fondo-home hidden-xs">
 
     <div class="fondo-home2 home ">
         <div class="pestaneo1"></div>
@@ -204,6 +204,14 @@
         </div>
     </div>
 </div>
+
+
+<div id="movil" class="hidden-lg hidden-md hidden-sm">
+    <div class="fondo-movil">
+        <img src="imagenes/royal_ruleta/vista-mobile.jpg" width="100%">
+    </div>
+</div>
+
 
 <div id="instrucciones" class="hidden seccion fondo-instrucciones">
     <div class="container vertical-center">

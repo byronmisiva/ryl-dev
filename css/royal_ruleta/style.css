@@ -108,7 +108,8 @@ cursor: pointer;
 cursor: pointer;
 
 }
-.btn-compartir {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botoncompartir-on.png");
+.btn-compartir {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botoncompartir-on.png");
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
@@ -117,6 +118,9 @@ cursor: pointer;
     cursor: pointer;
 }
 
+.fondo-movil {
+
+}
 
 
 .fondo-home2 {
