@@ -79,10 +79,10 @@ $(document).ready(function () {
         },250)
     },4000)
     setInterval(function () {
-        $('.pestaneo3').show();
+        $('.pestaneo3').hide();
         setTimeout(function () {
-            $('.pestaneo3').hide();
-        },250)
+            $('.pestaneo3').show();
+        },4000)
     },4000)
 
 
