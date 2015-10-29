@@ -7,7 +7,7 @@ var animGelatinasActive = 1;
 var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
-var pruebas = 1;
+var pruebas = 0;
 var ganapremio = 1;
 var premioganado = 1;
 
@@ -21,13 +21,14 @@ var sabores = [];
 var gelatinas = ["gelatina_cereza", "gelatina_frambuesa", "gelatina_limon", "gelatina_uva", "gelatina_naranja"];
 //var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
 var gelatinasNombre = [" CEREZA", " FRAMBUESA", " LIMÓN", " UVA", " NARANJA"];
-
+var backgroundAudio;
+var audioOnOff = 1;
 
 window.onload = function () {
-    var backgroundAudio = document.getElementById("bgAudio");
-    //backgroundAudio.volume = 0.2;
-    backgroundAudio.volume = 0;
-    backgroundAudio.src = "linus-and-lucy_part_2.mp3"
+    backgroundAudio = document.getElementById("bgAudio");
+    backgroundAudio.volume = 0.2;
+//    backgroundAudio.volume = 0;
+    backgroundAudio.src = "linus-and-lucy_part_1.mp3"
 }
 
 //funciones scriptcam
@@ -42,6 +43,7 @@ $(document).ready(function () {
 function animGelatina(x, animationDiv) {
     $(animationDiv).removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
     });
+
 };
 
 $(document).ready(function () {
@@ -79,11 +81,35 @@ $(document).ready(function () {
         },250)
     },4000)
     setInterval(function () {
-        $('.pestaneo3').hide();
+        $('.pestaneo3').show();
         setTimeout(function () {
-            $('.pestaneo3').show();
-        },4000)
-    },4000)
+            $('.pestaneo3').hide();
+        },250)
+    },5000)
+
+    //botones eventos
+    $('.js--triggerInstrucciones').click(function(){
+
+    });
+
+    $('.js--triggerAudio').click(function(){
+        if (audioOnOff == 1 ){
+            audioOnOff = 0
+            backgroundAudio.volume = 0;
+            $('.js--triggerAudio').addClass('btn-audioOff').removeClass('btn-audioOn')
+        } else {
+            audioOnOff = 1
+            backgroundAudio.volume = 0.2;
+            $('.js--triggerAudio').addClass('btn-audioOn').removeClass('btn-audioOff')
+
+        }
+
+    });
+
+    $('.js--triggerCompartir').click(function(){
+
+    });
+
 
 
 });
@@ -100,6 +126,12 @@ function animGelatinas() {
 
 function lanzaGelatinas() {
     if (!pausa) {
+        //borramos las gelatinas no vistas
+        if (numeroGelatina > 12){
+
+            $( "span.borraGelatina"+ (numeroGelatina -12)  ).remove();
+        }
+
         if (animGelatinasActive == 1) {
             divSeleccion = getRandomInt(0, 4);
             var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '">' +
@@ -109,6 +141,7 @@ function lanzaGelatinas() {
             $(".contenedorGelatina").append(nuevaGelatina);
             var anim = "crossscreen";
             animGelatina(anim, "#animationGelatina" + numeroGelatina);
+            $("#animationGelatina" + numeroGelatina).addClass('borraGelatina' + numeroGelatina);
             numeroGelatina = numeroGelatina + 1;
         } else {
             if (ultimo) {

@@ -71,6 +71,54 @@ a:hover, a:visited {
 
 }
 
+.botones {
+    width: 115px;
+    height: 35px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.btn-instrucciones {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonayuda-on.png");
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+
+}
+.btn-audioOn {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonmusicaon.png");
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    margin-right: 5px;
+cursor: pointer;
+
+}
+.btn-audioOff {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonmusicaoff.png");
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    margin-right: 5px;
+cursor: pointer;
+
+}
+.btn-compartir {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botoncompartir-on.png");
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    cursor: pointer;
+}
+
+
+
 .fondo-home2 {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/background2.png");
     background-repeat: no-repeat;

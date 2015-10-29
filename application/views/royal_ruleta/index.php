@@ -49,7 +49,7 @@
 </div>-->
 
 
-<div id="registro" class="hidden seccion fondo-registro">
+<div id="registro" class="seccion fondo-registro">
 
     <div class="fondo-registro2  ">
         <div class="cabecerahome">
@@ -145,12 +145,18 @@
 </div>
 
 
-<div id="home" class=" seccion fondo-home ">
+<div id="home" class="hidden seccion fondo-home ">
 
     <div class="fondo-home2 home ">
         <div class="pestaneo1"></div>
         <div class="pestaneo2"></div>
         <div class="pestaneo3"></div>
+        <div class="botones">
+            <div class="btn-instrucciones js--triggerInstrucciones"></div>
+            <div class="btn-audioOn js--triggerAudio"></div>
+            <div class="btn-compartir js--triggerCompartir"></div>
+        </div>
+
         <div class="container center-block">
             <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
         </div>

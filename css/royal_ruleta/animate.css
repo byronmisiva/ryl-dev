@@ -30,8 +30,8 @@
     }
 
     to {
-        -webkit-transform: translate3d(0, 0, 0) skewX(0deg);
-        transform: translate3d(-131px, 0, 0) skewX(0deg);
+        -webkit-transform: translate3d(-140px, 0, 0) skewX(0deg);
+        transform: translate3d(-140px, 0, 0) skewX(0deg);
         opacity: 1;
     }
 }
@@ -51,8 +51,8 @@
 
 
     to {
-        -webkit-transform: translate3d(0, 0, 0) skewX(0deg);
-        transform: translate3d(-131px, 0, 0) skewX(0deg);
+        -webkit-transform: translate3d(-140px, 0, 0) skewX(0deg);
+        transform: translate3d(-140px, 0, 0) skewX(0deg);
         opacity: 1;
     }
 }
