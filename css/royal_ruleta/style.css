@@ -208,6 +208,7 @@ cursor: pointer;
     text-align: center;
 }
 
+
 .boton-juego, .boton-juego-click {
     position: absolute;
     bottom: 120px;
@@ -336,8 +337,16 @@ cursor: pointer;
 
 /*flecha animada sprite */
 .flecha_animada {
+    position: absolute;
+    bottom: 220px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.flecha_animada {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/flechaindica.png");
-    width: 85px;
+    width: 46px;
     height: 50px;
     -webkit-animation: playflecha_animada 0.5s steps(4) infinite;
     -moz-animation: playflecha_animada 0.5s steps(4) infinite;
@@ -390,6 +399,9 @@ cursor: pointer;
         background-position: -340px;
     }
 }
+
+
+
 
 /*fin flecha  animada sprite */
 

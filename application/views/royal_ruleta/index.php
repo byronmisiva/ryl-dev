@@ -162,7 +162,7 @@
         </div>
         <div class="container vertical-center">
 
-
+            <div class="flecha_animada js--triggerAnimation1"></div>
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
             <!--            <div class="mensajeSeleccion1 mensaje hidden">
