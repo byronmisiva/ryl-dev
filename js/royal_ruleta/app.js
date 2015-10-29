@@ -283,6 +283,7 @@ function iniciaFormulario() {
                 $('#complete_register').removeClass("hidden").show();
                 $('.portabotones').removeClass("hidden").show();
 
+
             }
 
 
@@ -373,6 +374,8 @@ function mostrarCodigoCorrecto(data) {
     } else {
         ganapremio = 1;
     }
+    //segunda parte de cancion
+    backgroundAudio.src = "linus-and-lucy_part_2.mp3"
     premioganado = obj.id_premio;
     ocultarTodosSeccion();
     $('#home').removeClass("hidden").show();

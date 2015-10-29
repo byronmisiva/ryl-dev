@@ -333,6 +333,66 @@ cursor: pointer;
 
 /*fin boton juego click sprite */
 
+
+/*flecha animada sprite */
+.flecha_animada {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/flechaindica.png");
+    width: 85px;
+    height: 50px;
+    -webkit-animation: playflecha_animada 0.5s steps(4) infinite;
+    -moz-animation: playflecha_animada 0.5s steps(4) infinite;
+    -ms-animation: playflecha_animada 0.5s steps(4) infinite;
+    -o-animation: playflecha_animada 0.5s steps(4) infinite;
+    animation: playflecha_animada 0.5s steps(4) infinite;
+}
+
+@-webkit-keyframes playflecha_animada {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -340px;
+    }
+}
+
+@-moz-keyframes playflecha_animada {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -340px;
+    }
+}
+
+@-ms-keyframes playflecha_animada {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -340px;
+    }
+}
+
+@-o-keyframes playflecha_animada {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -340px;
+    }
+}
+
+@keyframes playflecha_animada {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -340px;
+    }
+}
+
+/*fin flecha  animada sprite */
+
 /*cereza animada sprite */
 .gelatina_cereza {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/gelatina_cereza.png");
