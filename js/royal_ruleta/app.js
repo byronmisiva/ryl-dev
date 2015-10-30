@@ -64,9 +64,16 @@ $(document).ready(function () {
         }
     });
 
+    //evento instrucciones
+    $('.js--triggerInstrucciones').click(function (e) {
+            e.preventDefault();
+            animGelatinasActive = 0;
+            $('#instrucciones').removeClass('hidden').show();
+            $('#home').removeClass('hidden').hide();
+    });
+
+
     //animacion parpadeo
-
-
     setInterval(function () {
         $('.pestaneo1').show();
         setTimeout(function () {

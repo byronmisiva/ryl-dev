@@ -213,48 +213,13 @@
 </div>
 
 
-<div id="instrucciones" class="hidden seccion fondo-instrucciones">
+<div id="instrucciones" class="hidden seccion fondo-home hidden-xs">
     <div class="container vertical-center">
-        <div class="row">
-            <div class="col-md-12 vertical-centercol-sm-12">
-                <div class="col-md-12 col-sm-12">
-                    <div class="logo-karaoke-galeria">
-                        <!--<img src="<?php /*echo base_url() */?>imagenes/royal_ruleta/intrucciones/logo_karaoke.png"
-                             class="img-responsive"/>-->
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="roboto-bold titulo text-center"><p>INSTRUCCIONES</p></div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class=" conten-instrucciones">
-                        <div class="text-center texto20">
-                            <p><span class="roboto-bold">1.- </span><span
-                                    class="roboto-light">Regístrate con tus datos completos</span></p>
-                        </div>
-                        <div class="text-center texto20">
-                            <p><span class="roboto-bold">2.- </span><span class="roboto-light">Selecciona una de tus canciones
-                            favoritas de la mejor década, 1990, graba y sube tu video de máximo 15 segundos
-                            directo a tu galería. Tu canción formará parte de nuestra playlist.</span></p>
-                        </div>
-                        <div class="text-center texto20">
-
-                            <p><span class="roboto-bold">3.- </span><span class="roboto-light">Comparte tus videos con
-                            tus amigos usando el HT </span><span class="roboto-bold">#KaraokeGalaxyA.</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
-                </div>
-
-                <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
-                </div>
-            </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/instrucciones.png" class="img-responsive">
         </div>
     </div>
 </div>
-
 
 <script type="text/javascript" charset="utf-8">
     var idParticipante = 0;
@@ -291,7 +256,6 @@
 
     var dis = "<?php  echo $data['dispositivo'];?>";
 </script>
-
 <script>
     //Google Analitics
     (function (i, s, o, g, r, a, m) {

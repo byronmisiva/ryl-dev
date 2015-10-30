@@ -211,8 +211,8 @@ cursor: pointer;
 
 .boton-juego, .boton-juego-click {
     position: absolute;
-    bottom: 120px;
-    right: 30px;
+    bottom: 20%;
+    right: 50px;
     cursor: pointer;
     z-index: 10;
 }
@@ -338,8 +338,8 @@ cursor: pointer;
 /*flecha animada sprite */
 .flecha_animada {
     position: absolute;
-    bottom: 220px;
-    right: 50px;
+    bottom: 35%;
+    right: 70px;
     cursor: pointer;
     z-index: 10;
 }
