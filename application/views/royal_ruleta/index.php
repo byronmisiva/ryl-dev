@@ -164,12 +164,14 @@
         <div class="pestaneo2"></div>
         <div class="pestaneo3"></div>
         <div class="botones">
-            <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');">Compartir
-                en Facebook</a>
+
 
             <div class="btn-instrucciones js--triggerInstrucciones"></div>
             <div class="btn-audioOn js--triggerAudio"></div>
-            <div class="btn-compartir js--triggerCompartir"></div>
+
+            <a  href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');" target="_blank">
+                <div class="btn-compartir js--triggerCompartir"></div>
+            </a>
         </div>
 
         <div class="container center-block">
