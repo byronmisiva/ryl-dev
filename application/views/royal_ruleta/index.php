@@ -219,8 +219,8 @@
             <div class="col-md-12 vertical-centercol-sm-12">
                 <div class="col-md-12 col-sm-12">
                     <div class="logo-karaoke-galeria">
-                        <img src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/logo_karaoke.png"
-                             class="img-responsive"/>
+                        <!--<img src="<?php /*echo base_url() */?>imagenes/royal_ruleta/intrucciones/logo_karaoke.png"
+                             class="img-responsive"/>-->
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -247,109 +247,11 @@
 
                 <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
                 </div>
-                <div class="col-md-10 col-sm-10 col-xs-10  ">
-                    <div class="col-md-4 col-sm-4 col-xs-12  margen-0-md">
-                        <div class="row">
-                            <div class="col-xs-1 margen-0"></div>
-                            <div class="col-xs-10 margen-0-md">
-                                <div class="btn-home-home ">
-                                    <img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/boton_home.png"
-                                        class="img-responsive "/>
-                                </div>
-                            </div>
-                            <div class="col-xs-1 margen-0"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 margen-0-md">
-                        <div class="row">
-                            <div class="col-xs-1 margen-0"></div>
-                            <div class="col-xs-10 margen-0-md">
-                                <div class="btn-home-subir-video">
-                                    <img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/boton_subirvideo.png"
-                                        class="img-responsive"/>
-                                </div>
-                            </div>
-                            <div class="col-xs-1"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 margen-0-md">
-                        <div class="row">
-                            <div class="col-xs-1 margen-0"></div>
-                            <div class="col-xs-10 margen-0-md">
-                                <div class="btn-home-galeria">
-                                    <img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/boton_galeria.png"
-                                        class="img-responsive"/>
-                                </div>
-                            </div>
-                            <div class="col-xs-1 margen-0"></div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div id="galeria" class="hidden seccion fondo-galeria">
-    <div class="container vertical-center">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="col-md-12 col-sm-12">
-                    <div class="logo-karaoke-galeria">
-                        <img src="<?php echo base_url() ?>imagenes/royal_ruleta/galeria/logo_karaoke.png"
-                             class="img-responsive"/>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="roboto-bold titulo text-left"><p>GALERÍA</p></div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 ">
-                    <div class="fondo-video pull-right">
-                        <div class="col-md-10 col-sm-10 col-xs-10 margen-0 ">
-                            <div class="pull-left div-buscar-video"><input class="" type="text" id="box-buscar-video"
-                                                                           name="box-buscar-video"
-                                                                           placeholder="Buscar video"></div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-2 margen-0">
-                            <div class="pull-right boton-buscar-video"><p><img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/galeria/icono_buscar.png">
-                                </p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12 margen-0">
-
-                    <div id="galeria-imagenes" class="col-md-12 col-sm-12 col-xs-12"></div>
-
-                </div>
-
-
-            </div>
-
-            <!--Botones-->
-            <div class="col-md-12 col-sm-12 col-xs-12  ">
-                <div class="col-md-6 col-sm-6 col-xs-6   ">
-                    <div class="btn-home-home botontexto col-center-block   pull-right">
-                        <div class="icono-instrucciones">Inicio</div>
-                    </div>
-
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6   ">
-
-                    <div class="btn-home-subir-video botontexto col-center-block pull-left ">
-                        <div class="icono-subir-video">Subir video</div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
     </div>
 </div>
 
