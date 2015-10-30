@@ -80,6 +80,15 @@ $(document).ready(function () {
     });
 
 
+
+    $('.ganacamiseta, .ganagorra, .ganaentrada').click(function (e) {
+        e.preventDefault();
+
+        $(".fanpage").removeClass('hidden').fadeIn();
+        $(this).removeClass('hidden').hide();
+    });
+
+
     //animacion parpadeo
     setInterval(function () {
         $('.pestaneo1').show();

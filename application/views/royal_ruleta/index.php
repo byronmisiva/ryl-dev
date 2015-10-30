@@ -89,7 +89,7 @@
                 <div class="col-md-12 col-sm-12">
 
 
-                    <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
+                    <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                         <div class="titulares titulo text-center"><p>REGISTRO</p></div>
                     </div>
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
@@ -101,7 +101,7 @@
                                 <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
                                            required="required"
                                            placeholder="Cédula:"></li>
-                                <div id="complete_register" class="hidden">
+                                <div id="complete_register" class="">
                                     <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
                                                required="required"
                                                placeholder="Nombre:">
@@ -217,11 +217,20 @@
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_gorra.png" class="img-responsive">
         </div>
     </div>
+
     <div class="container vertical-center ganaentrada  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive">
         </div>
     </div>
+    <div class="container vertical-center fanpage  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="https://www.facebook.com/RoyalEcuador/" target="_blank">
+                <img src="imagenes/royal_ruleta/snoopy-juego/fanpage.png" class="img-responsive">
+            </a>
+        </div>
+    </div>
+
 </div>
 
 

@@ -118,9 +118,11 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.fondo-movil {
-
+.ganacamiseta, .ganagorra, .ganaentrada, .fanpage {
+    cursor: pointer;
 }
+
+
 
 
 .fondo-home2 {
