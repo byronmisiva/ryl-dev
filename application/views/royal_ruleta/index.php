@@ -28,9 +28,9 @@
     <meta property="og:type" content="article">
 <!--    <meta property="og:url" content="http://www.ganaconroyal.com">-->
     <meta property="og:url" content="http://royal.misiva.com.ec">
-    <meta property="og:image" content="http://norfipc.com/img/logos/compartir-pagina-redes-sociales.jpeg">
+    <meta property="og:image" content="http://royal.misiva.com.ec/imagenes/royal_ruleta/facebook.jpg">
     <meta property="og:site_name" content="GanaConRoyal">
-<meta property="fb:admins" content="100001543332907">
+<!--<meta property="fb:admins" content="100001543332907">-->
     <meta property="og:description" content="Gana con Royal premios.">
 
 
