@@ -149,6 +149,16 @@ cursor: pointer;
 
 }
 
+.legales {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    z-index: 40;
+
+
+}
+
 .fondo-registro2 {
     padding-top: 0px;
 /*    padding-top: 130px;*/
@@ -171,9 +181,29 @@ cursor: pointer;
     left: 10px;
     z-index: 10;
 }
+.snoopy-juego-feliz {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/snoppy-feliz.png");
+    width: 340px;
+    height: 460px;
+    position: absolute;
+    bottom: -130px;
+    left: 10px;
+    z-index: 10;
+}
 
 .cabecerahome {
     height: 40%;
+}
+
+.imagen-instrucciones {
+    position: absolute;
+    margin: 0 auto;
+
+}
+.textos-instrucciones {
+    position: absolute;
+    margin: 0 auto;
+
 }
 
 .mensajeSeleccion1, .mensajeSeleccion2, .mensajeSeleccion3 {
@@ -338,21 +368,21 @@ cursor: pointer;
 /*flecha animada sprite */
 .flecha_animada {
     position: absolute;
-    bottom: 35%;
-    right: 70px;
+    bottom: 27%;
+    right: 50px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 12;
 }
 
 .flecha_animada {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/flechaindica.png");
-    width: 46px;
-    height: 50px;
-    -webkit-animation: playflecha_animada 0.5s steps(4) infinite;
-    -moz-animation: playflecha_animada 0.5s steps(4) infinite;
-    -ms-animation: playflecha_animada 0.5s steps(4) infinite;
-    -o-animation: playflecha_animada 0.5s steps(4) infinite;
-    animation: playflecha_animada 0.5s steps(4) infinite;
+    width: 91px;
+    height: 230px;
+    -webkit-animation: playflecha_animada 2s steps(40) ;
+    -moz-animation: playflecha_animada 2s steps(40) ;
+    -ms-animation: playflecha_animada 2s steps(40) ;
+    -o-animation: playflecha_animada 2s steps(40) ;
+    animation: playflecha_animada 2s steps(40) ;
 }
 
 @-webkit-keyframes playflecha_animada {
@@ -360,7 +390,7 @@ cursor: pointer;
         background-position: 0;
     }
     to {
-        background-position: -340px;
+        background-position: -3640px;
     }
 }
 
@@ -369,7 +399,7 @@ cursor: pointer;
         background-position: 0px;
     }
     to {
-        background-position: -340px;
+        background-position: -3640px;
     }
 }
 
@@ -378,7 +408,7 @@ cursor: pointer;
         background-position: 0px;
     }
     to {
-        background-position: -340px;
+        background-position: -3640px;
     }
 }
 
@@ -387,7 +417,7 @@ cursor: pointer;
         background-position: 0px;
     }
     to {
-        background-position: -340px;
+        background-position: -3640px;
     }
 }
 
@@ -396,7 +426,7 @@ cursor: pointer;
         background-position: 0px;
     }
     to {
-        background-position: -340px;
+        background-position: -3640px;
     }
 }
 

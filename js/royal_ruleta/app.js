@@ -26,8 +26,8 @@ var audioOnOff = 1;
 
 window.onload = function () {
     backgroundAudio = document.getElementById("bgAudio");
-    backgroundAudio.volume = 0.2;
-//    backgroundAudio.volume = 0;
+//    backgroundAudio.volume = 0.2;
+    backgroundAudio.volume = 0;
     backgroundAudio.src = "linus-and-lucy_part_1.mp3"
 }
 
@@ -66,10 +66,17 @@ $(document).ready(function () {
 
     //evento instrucciones
     $('.js--triggerInstrucciones').click(function (e) {
-            e.preventDefault();
-            animGelatinasActive = 0;
-            $('#instrucciones').removeClass('hidden').show();
-            $('#home').removeClass('hidden').hide();
+        e.preventDefault();
+
+        $('#instrucciones').removeClass('hidden').show();
+        $('#home').removeClass('hidden').hide();
+    });
+
+    $('#instrucciones').click(function (e) {
+        e.preventDefault();
+
+        $('#home').removeClass('hidden').show();
+        $('#instrucciones').removeClass('hidden').hide();
     });
 
 
@@ -78,29 +85,25 @@ $(document).ready(function () {
         $('.pestaneo1').show();
         setTimeout(function () {
             $('.pestaneo1').hide();
-        },250)
-    },3000)
+        }, 250)
+    }, 3000)
 
     setInterval(function () {
         $('.pestaneo2').show();
         setTimeout(function () {
             $('.pestaneo2').hide();
-        },250)
-    },4000)
+        }, 250)
+    }, 4000)
     setInterval(function () {
         $('.pestaneo3').show();
         setTimeout(function () {
             $('.pestaneo3').hide();
-        },250)
-    },5000)
+        }, 250)
+    }, 5000)
 
-    //botones eventos
-    $('.js--triggerInstrucciones').click(function(){
 
-    });
-
-    $('.js--triggerAudio').click(function(){
-        if (audioOnOff == 1 ){
+    $('.js--triggerAudio').click(function () {
+        if (audioOnOff == 1) {
             audioOnOff = 0
             backgroundAudio.volume = 0;
             $('.js--triggerAudio').addClass('btn-audioOff').removeClass('btn-audioOn')
@@ -113,10 +116,9 @@ $(document).ready(function () {
 
     });
 
-    $('.js--triggerCompartir').click(function(){
+    $('.js--triggerCompartir').click(function () {
 
     });
-
 
 
 });
@@ -126,7 +128,6 @@ function muestraBotonOriginal() {
 }
 function animGelatinas() {
     var anim = "crossscreen";
-
     lanzaGelatina = setInterval(lanzaGelatinas, 250);
 }
 
@@ -134,16 +135,16 @@ function animGelatinas() {
 function lanzaGelatinas() {
     if (!pausa) {
         //borramos las gelatinas no vistas
-        if (numeroGelatina > 12){
+        if (numeroGelatina > 12) {
 
-            $( "span.borraGelatina"+ (numeroGelatina -12)  ).remove();
+            $("span.borraGelatina" + (numeroGelatina - 12)).remove();
         }
 
         if (animGelatinasActive == 1) {
             divSeleccion = getRandomInt(0, 4);
             var nuevaGelatina = '<span id="animationGelatina' + numeroGelatina + '">' +
                 '<div class="' + gelatinas[divSeleccion] + '" ><\/div>' +
-                //'<img  src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' + 'class="img-responsive"/>' +
+                    //'<img  src="imagenes\/royal_ruleta\/' + gelatinas[divSeleccion] + '"' + 'class="img-responsive"/>' +
                 '</span>';
             $(".contenedorGelatina").append(nuevaGelatina);
             var anim = "crossscreen";
@@ -178,6 +179,8 @@ function lanzaGelatinas() {
                     ultimo = false;
                     animGelatinasActive = 0;
 
+                    $(".snoopy-juego-feliz").removeClass("hidden").fadeIn();
+                    $(".snoopy-juego").fadeOut();
                     setTimeout(function () {
                         cierre()
                     }, 5000)
@@ -206,27 +209,27 @@ function continuaJuego() {
 
 function mostraMensajeSeleecion() {
 
-    muestra = gelatinaPremio - 1 ;
+    muestra = gelatinaPremio - 1;
     textoOriginal = $('.mensajeSeleccion' + muestra + " .titulo").html() + gelatinasNombre[divSeleccion];
     //$('.mensajeSeleccion' + muestra + " .titulo").html(textoOriginal );
-   // $('.mensajeSeleccion' + muestra).removeClass("hidden").fadeIn();
+    // $('.mensajeSeleccion' + muestra).removeClass("hidden").fadeIn();
     // esperamos para continuar
     setTimeout(function () {
-        ocultaNube ('.mensajeSeleccion' + muestra)
+        ocultaNube('.mensajeSeleccion' + muestra)
     }, 2000)
 
 }
 
-function ocultaNube (selector){
+function ocultaNube(selector) {
     $(selector).fadeOut();
 }
+
 function cierre() {
     pausa = true;
     if (ganapremio == 0) {
         $('.home').fadeOut();
-        $('.ganacamiseta').fadeOut();
+        $('.ganacamiseta, .ganagorra, .ganaentrada').fadeOut();
         $('.pierde').removeClass("hidden").fadeIn();
-
     } else {
         $('.home').fadeOut();
         $('.pierde').hide();
@@ -243,7 +246,17 @@ function cierre() {
             $('.ganaentrada').removeClass("hidden").fadeIn();
         }
     }
+    //graba participacion
+    $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val()})
+        .done(function (data) {
+            if (data == 'F') {
+                mostrarCodigoErrado()
+            } else {
+                mostrarCodigoCorrecto(data)
+            }
+        });
 }
+
 /**
  * Returns a random integer between min (inclusive) and max (inclusive)
  * Using Math.round() will give you a non-uniform distribution!
@@ -279,21 +292,14 @@ function iniciaFormulario() {
                                         mostrarCodigoCorrecto(data)
                                     }
                                 });
-
-
                         }
                     }
-                )
-                ;
+                );
             }
             else {
                 $('#complete_register').removeClass("hidden").show();
                 $('.portabotones').removeClass("hidden").show();
-
-
             }
-
-
             event.preventDefault();
             return false;
         }
@@ -316,10 +322,6 @@ function iniciaFormulario() {
             cache: false,
             processData: false,
             success: function (data) {
-                // error =   data.split(':');
-                //if (error[0] = 'false'){
-                //  alert ("Error : " +  error[1])
-                //} else {
                 nombreArchivoSubido = data;
                 var nuevovideo = '<video id="videoSubido" width="100%" controls="" autoplay="">' +
                     '<source src="' + accion + 'videos/' + nombreArchivoSubido + '" type="video/mp4">' +
@@ -329,7 +331,6 @@ function iniciaFormulario() {
                 setTimeout(callbackFunction, 3000);
                 $('.formuploadenvio').removeClass("hidden").show();
                 $('.formuploadfile').hide();
-                //}
             }
         });
         event.preventDefault();
@@ -428,11 +429,9 @@ function crearBotonesInterface() {
     })
 
 }
-
 function ocultarTodosSeccion() {
     $('.seccion').hide();
 }
-
 function isInArray(value, array) {
     return array.indexOf(value) > -1;
 }

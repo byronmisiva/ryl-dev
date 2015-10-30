@@ -21,17 +21,17 @@
     <script src="<?php echo base_url() ?>js/royal_ruleta/ligthbox/ekko-lightbox.min.js"></script>
 
 
-
     <script language="JavaScript" src="<?php echo base_url() ?>js/royal_ruleta/app.js"></script>
 
     <meta property="og:title" content="Gana con Royal">
     <meta property="og:type" content="article">
-<!--    <meta property="og:url" content="http://www.ganaconroyal.com">-->
+    <!--    <meta property="og:url" content="http://www.ganaconroyal.com">-->
     <meta property="og:url" content="http://royal.misiva.com.ec/index">
     <meta property="og:image" content="http://royal.misiva.com.ec/imagenes/royal_ruleta/facebook.jpg">
     <meta property="og:site_name" content="GanaConRoyal">
-<!--<meta property="fb:admins" content="100001543332907">-->
-    <meta property="og:description" content="Gana con Royal premios.">
+    <!--<meta property="fb:admins" content="100001543332907">-->
+    <meta property="og:description"
+          content="Yo ya estoy participando para ganar un viaje a Fox Studios en Los Ángeles  con Royal y por muchos premios más. Y tú… ¿qué esperas? Compra tu Gelatina Royal, ingresa el código de tu empaque y gana..">
 
 
     <link href="<?php echo base_url() ?>fonts/Roboto-Bold/styles.css" rel="stylesheet" type="text/css"/>
@@ -169,7 +169,8 @@
             <div class="btn-instrucciones js--triggerInstrucciones"></div>
             <div class="btn-audioOn js--triggerAudio"></div>
 
-            <a  href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');" target="_blank">
+            <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"
+               target="_blank">
                 <div class="btn-compartir js--triggerCompartir"></div>
             </a>
         </div>
@@ -182,6 +183,7 @@
             <div class="flecha_animada js--triggerAnimation1"></div>
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
+            <div class="snoopy-juego-feliz hidden"></div>
             <!--            <div class="mensajeSeleccion1 mensaje hidden">
                             <div class="titulo">LINUS TIENE UNA GELATINA DE</div>
                         </div>
@@ -229,7 +231,11 @@
     </div>
 </div>
 
-
+<div class="legales hidden-xs">
+    <div class="center-img">
+        <img src="imagenes/royal_ruleta/snoopy-juego/legales.png" class="img-responsive center-img">
+    </div>
+</div>
 <div id="instrucciones" class="hidden seccion fondo-home hidden-xs">
     <div class="container vertical-center">
         <div class="col-md-12 col-sm-12 col-xs-12">

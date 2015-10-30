@@ -91,6 +91,16 @@ class Royal_ruleta extends CI_Controller
             echo json_encode($codData);
         }
     }
+    function grabaEvento()
+    {
+        $codigo = $_POST["codigo"];
+        $codData = $this->modelo->getCodigo($codigo);
+        if ($codData == "0") {
+            echo "F";
+        } else {
+            echo json_encode($codData);
+        }
+    }
 
     function register()
     {
