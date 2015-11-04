@@ -36,6 +36,7 @@
         position: inherit;
     }
 
+
     .inicio {
         width: 100%;
         height: 100%;
