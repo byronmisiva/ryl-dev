@@ -145,7 +145,7 @@ class Royal_ruleta extends CI_Controller
     {
         //caso camiseta
         if ($premio == "2") {
-            $this->envioEmailPremio("bherrera@misiva.com.ec");
+            $this->envioEmailPremio("bherrera@misiva.com.ec", "Felicitaciones", "Felicitaciones ganador", "Contenido del Email");
             // actualizaPremio ($codigo);
         }
         if ($premio == "3") {
@@ -156,17 +156,17 @@ class Royal_ruleta extends CI_Controller
         }
     }
 
-    function envioEmailPremio()
+    function envioEmailPremio($toMail, $nombre, $subject, $mensaje)
     {
         $this->load->library('email');
 
-        $this->email->from('info@ganaconroyal.com', 'Your Name');
-        $this->email->to('bherrera@misiva.com.ec');
+        $this->email->from('info@ganaconroyal.com', $nombre);
+        $this->email->to($toMail);
         //$this->email->cc('another@another-example.com');
         //$this->email->bcc('them@their-example.com');
 
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');
+        $this->email->subject($subject);
+        $this->email->message($mensaje);
 
         $this->email->send();
 
