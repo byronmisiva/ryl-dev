@@ -26,8 +26,8 @@ var audioOnOff = 1;
 
 window.onload = function () {
     backgroundAudio = document.getElementById("bgAudio");
-//    backgroundAudio.volume = 0.2;
-    backgroundAudio.volume = 0;
+    backgroundAudio.volume = 0.2;
+//    backgroundAudio.volume = 0;
     backgroundAudio.src = "linus-and-lucy_part_1.mp3"
 }
 
@@ -83,7 +83,6 @@ $(document).ready(function () {
 
     $('.ganacamiseta, .ganagorra, .ganaentrada, .pierde').click(function (e) {
         e.preventDefault();
-
         $(".fanpage").removeClass('hidden').fadeIn();
         $(this).removeClass('hidden').hide();
     });
