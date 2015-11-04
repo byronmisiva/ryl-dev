@@ -129,7 +129,6 @@
                                                required="required"
                                                placeholder="Num de lote de tu producto:">
                                     </li>
-
                                     <li class="text-center">
                                         <div class="portabotones center-block ">
                                             <input type="submit" value="Continuar" name="login"
