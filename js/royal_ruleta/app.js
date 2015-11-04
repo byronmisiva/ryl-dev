@@ -81,7 +81,7 @@ $(document).ready(function () {
 
 
 
-    $('.ganacamiseta, .ganagorra, .ganaentrada').click(function (e) {
+    $('.ganacamiseta, .ganagorra, .ganaentrada, .pierde').click(function (e) {
         e.preventDefault();
 
         $(".fanpage").removeClass('hidden').fadeIn();
