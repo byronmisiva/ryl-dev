@@ -735,6 +735,7 @@ cursor: pointer;
     /* width: 89%;*/
     margin-left: 53%;
     width: 28%;
+    max-width: 380px;
 }
 
 .fondo-ingresocodigo {
