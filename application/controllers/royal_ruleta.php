@@ -166,6 +166,7 @@ class Royal_ruleta extends CI_Controller
         $this->email->to($toMail);
         //$this->email->cc('another@another-example.com');
         //$this->email->bcc('them@their-example.com');
+        $this->email->set_mailtype("html");
 
         $this->email->subject($subject);
         $this->email->message($mensaje);
