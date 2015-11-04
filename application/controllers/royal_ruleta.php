@@ -118,14 +118,70 @@ class Royal_ruleta extends CI_Controller
 
     function grabaEvento()
     {
-        $codigo = $_POST["codigo"];
-        $cedula = $_POST["cedula"];
+        if (isset ($_POST["codigo"])) {
+            $codigo = $_POST["codigo"];
+        } else {
+            echo "F";
+            return;
+        }
+        if (isset ($_POST["cedula"])) {
+            $cedula = $_POST["cedula"];
+        } else {
+            echo "F";
+            return;
+        }
+
         $codData = $this->modelo->getCodigo($codigo);
         if ($codData == "0") {
             echo "F";
         } else {
+
             echo json_encode($codData);
+            $this->registraPremio($codigo, $cedula, $codData->id_premio);
         }
+    }
+
+    function registraPremio($codigo, $cedula, $premio)
+    {
+        //caso camiseta
+        if ($premio == "2") {
+            envioEmailPremio("bherrera@misiva.com.ec");
+            // actualizaPremio ($codigo);
+        }
+        if ($premio == "3") {
+
+        }
+        if ($premio == "4") {
+
+        }
+    }
+
+    function envioEmailPremio()
+    {
+        $this->load->library('email');
+        $config['protocol'] = 'smtp';
+        $config['smtp_host'] = '69,64,85,167';
+        $config['smtp_port'] = '25';
+        $config['smtp_timeout'] = '4';
+        $config['smtp_user'] = 'info@ganaconroyal.com';
+        $config['smtp_pass'] = 'Fhtf48_4';
+        $config['charset'] = 'utf-8';
+        $config['newline'] = "\r\n";
+        $config['mailtype'] = 'html';
+        $config['validation'] = TRUE;
+        $config['wordwrap'] = FALSE;
+
+        $this->email->initialize($config);
+        $this->email->from('info@ganaconroyal.com', 'Royal te informa:');
+        $this->email->to('bherrera@misiva.com.ec');
+        $data = array();
+        $body = $this->load->view($this->folderView . '/email', $data, TRUE);
+        $this->email->subject("ROYAL");
+        $this->email->message($body);
+
+        $this->email->send();
+
+        echo "1";
     }
 
     function register()
