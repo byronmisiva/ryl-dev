@@ -127,7 +127,7 @@
                                     <li><input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
                                                maxlength="20"
                                                required="required"
-                                               placeholder="Código de tu producto:">
+                                               placeholder="Num de lote de tu producto:">
                                     </li>
 
                                     <li class="text-center">
