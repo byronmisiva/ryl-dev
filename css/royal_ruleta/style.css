@@ -732,10 +732,26 @@ cursor: pointer;
 }
 
 .espacio74 {
-    /* width: 89%;*/
+    width: 35%;
     margin-left: 53%;
-    width: 28%;
-    max-width: 380px;
+    max-width: 360px;
+
+
+}
+
+
+@media (max-width: 960px){
+    .espacio74 {
+        margin-left: 58%;
+        width: 40%;
+        max-width: 380px;
+
+    }
+}
+
+.espacio74 {
+    /* width: 89%;*/
+
 }
 
 .fondo-ingresocodigo {
