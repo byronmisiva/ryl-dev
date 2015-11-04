@@ -361,6 +361,7 @@ function mostrarCodigoCorrecto(data) {
     } else {
         ganapremio = 1;
     }
+
     //segunda parte de cancion
     backgroundAudio.src = "linus-and-lucy_part_2.mp3"
     premioganado = obj.id_premio;
