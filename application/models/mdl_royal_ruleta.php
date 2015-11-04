@@ -17,6 +17,7 @@ class Mdl_royal_ruleta extends CI_Model{
 	//recupera info del premio
 	function getCodigo($codigo){
 
+		$this->db->select('id_premio');
 		$this->db->where('codigo',$codigo);
 		$codData=$this->db->get('ruleta_serial');
 		if ($codData->num_rows()>0)

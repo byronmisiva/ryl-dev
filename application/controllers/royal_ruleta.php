@@ -27,9 +27,7 @@ class Royal_ruleta extends CI_Controller
     {
 
 
-
-        if ($this->verificarDispositivo() == "1")
-        {
+        if ($this->verificarDispositivo() == "1") {
             $this->movil();
         } else {
 
@@ -70,7 +68,6 @@ class Royal_ruleta extends CI_Controller
     }
 
 
-
     function verificarParticipante()
     {
         $cedula = $_POST["cedula"];
@@ -81,19 +78,48 @@ class Royal_ruleta extends CI_Controller
             echo json_encode($participante);
         }
     }
+
     function validarCodigo()
     {
-        $codigo = $_POST["codigo"];
+        if (isset ($_POST["codigo"])) {
+            $codigo = $_POST["codigo"];
+        } else {
+            echo "F";
+            return;
+        }
+        if (isset ($_POST["cedula"])) {
+            $cedula = $_POST["cedula"];
+        } else {
+            echo "F";
+            return;
+        }
+
+
         $codData = $this->modelo->getCodigo($codigo);
         if ($codData == "0") {
             echo "F";
         } else {
             echo json_encode($codData);
+            $this->insertarSeguimientoValidacion($codigo, $cedula, json_encode($codData));
         }
     }
+
+    function insertarSeguimientoValidacion($codigo, $cedula, $resultado = "")
+    {
+        $ip = $_SERVER['REMOTE_ADDR'];
+
+        $insertarMensaje = array("codigopremio" => $codigo,
+            "cedula" => $cedula,
+            "resultado" => $resultado,
+            "ip" => $ip);
+        $this->db->insert("royal_usuario_serial", $insertarMensaje);
+        return;
+    }
+
     function grabaEvento()
     {
         $codigo = $_POST["codigo"];
+        $cedula = $_POST["cedula"];
         $codData = $this->modelo->getCodigo($codigo);
         if ($codData == "0") {
             echo "F";
@@ -158,15 +184,13 @@ class Royal_ruleta extends CI_Controller
         }
     }
 
-     /**************************************************************/
+    /**************************************************************/
 
     function ingresoActividad($sw = "0")
     {
         $this->data["dispositivo"] = $sw;
         $this->load->view($this->folderView . '/actividad');
     }
-
-
 
 
     function cargaEfectos()

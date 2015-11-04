@@ -255,7 +255,7 @@ function cierre() {
         }
     }
     //graba participacion
-    $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val()})
+    $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val()})
         .done(function (data) {
             if (data == 'F') {
                 mostrarCodigoErrado()
@@ -292,7 +292,7 @@ function iniciaFormulario() {
                         processData: false,
                         DataType: "jsonp",
                         success: function (data) {
-                            $.post(accion + controladorApp + "/validarCodigo", {codigo: $('#box-codigo1').val()})
+                            $.post(accion + controladorApp + "/validarCodigo", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val()})
                                 .done(function (data) {
                                     if (data == 'F') {
                                         mostrarCodigoErrado()
@@ -314,36 +314,7 @@ function iniciaFormulario() {
     )
     ;
 
-    $("#formuploadvideo").submit(function (event) {
 
-        //ocultamos el boton y mostramos el loader
-        $('.loader-lineal').removeClass("hidden").show();
-        $('.btn-subir-video').hide();
-
-        var url = accion + controladorApp + "/uploadvideo";
-
-        $.ajax({
-            url: url,
-            type: "POST",
-            data: new FormData(this),
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function (data) {
-                nombreArchivoSubido = data;
-                var nuevovideo = '<video id="videoSubido" width="100%" controls="" autoplay="">' +
-                    '<source src="' + accion + 'videos/' + nombreArchivoSubido + '" type="video/mp4">' +
-                    'Su navegador no soporta video HTML5.' +
-                    '</video>';
-                $('.videoSubido').html(nuevovideo);
-                setTimeout(callbackFunction, 3000);
-                $('.formuploadenvio').removeClass("hidden").show();
-                $('.formuploadfile').hide();
-            }
-        });
-        event.preventDefault();
-        return false;
-    });
 
 }
 
