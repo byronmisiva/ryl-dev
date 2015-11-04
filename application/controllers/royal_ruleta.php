@@ -145,7 +145,9 @@ class Royal_ruleta extends CI_Controller
     {
         //caso camiseta
         if ($premio == "2") {
-            $this->envioEmailPremio("bherrera@misiva.com.ec", "Felicitaciones", "Felicitaciones ganador", "Contenido del Email");
+            $data['imagen']= "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-ganaste.jpg";
+            $body = $this->load->view($this->folderView . '/email', $data, TRUE);
+            $this->envioEmailPremio("bherrera@misiva.com.ec", "Felicitaciones", "Felicitaciones ganador", $body);
             // actualizaPremio ($codigo);
         }
         if ($premio == "3") {

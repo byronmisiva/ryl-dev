@@ -3,13 +3,13 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	</head>	
-	<body style="background-color:#ffffff;width:600px;">
-		<div style="position:absolute;left:0px;top:0px;width:726px;height:410px;" >
+	<body style="background-color:#ffffff;width:700px;">
+		<div style="position:absolute;left:0px;top:0px;width:700px;height:500px;" >
 			<div>
 			 	
 			</div>
 			<div style="margin-top:20px;color:#000000;">
-				 la imagen
+				 <img src="<?php echo $imagen; ?>" alt=""/>
 			</div>
 						
 		</div>
