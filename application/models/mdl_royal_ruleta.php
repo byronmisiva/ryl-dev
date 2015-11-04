@@ -25,6 +25,14 @@ class Mdl_royal_ruleta extends CI_Model{
 		else
 			return "0";
 	}
+	function getUsuario($cedula){
+		$this->db->where('cedula',$cedula);
+		$codData=$this->db->get('ruleta_usuarios');
+		if ($codData->num_rows()>0)
+			return current($codData->result());
+		else
+			return "0";
+	}
 
  ////////
 
