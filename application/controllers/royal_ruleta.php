@@ -101,6 +101,12 @@ class Royal_ruleta extends CI_Controller
         } else {
             echo json_encode($codData);
             $this->insertarSeguimientoValidacion($codigo, $cedula, json_encode($codData));
+
+            $registro = $this->modelo->getUsuario($cedula);
+            $data['imagen']= "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-confirmacion.jpg";
+            $body = $this->load->view($this->folderView . '/email', $data, TRUE);
+            $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ya estas participando", $body);
+
         }
     }
 
