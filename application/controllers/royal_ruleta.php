@@ -114,13 +114,13 @@ class Royal_ruleta extends CI_Controller
                     'ciudad' => $_POST['ciudad'], 'cedula' => $_POST['cedula'],
                     'telefono' => $_POST['telefono']
                 );
-                $this->db->update('usuarios', $updateUser, array('fbid' => $_POST['fbid']));
+                $this->db->update('usuarios', $updateUser, array('cedula' => $_POST['cedula']));
                 $resp = "1";
             } else {
                 $insertUser = array(
                     'nombre' => $_POST['nombre'], 'apellido' => $_POST['apellido'],
                     'completo' => $_POST['nombre'] . " " . $_POST['apellido'],
-                    'mail' => $_POST['mail'], 'ultima_app' => "karaoke-galaxy-a",
+                    'mail' => $_POST['mail'], 'ultima_app' => "Ruleta 2015",
                     'ciudad' => $_POST['ciudad'], 'cedula' => $_POST['cedula'],
                     'telefono' => $_POST['telefono'], 'fbid' => $_POST['fbid']
                 );
