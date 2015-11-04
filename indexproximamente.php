@@ -28,6 +28,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="imagenes/royal_ruleta/favicon/favicon-16x16.png"/>
     <link rel="apple-touch-icon" sizes="57x57" href="imagenes/royal_ruleta/favicon/apple-touch-114x114.png"/>
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
     .inicio  {
         position: inherit;
     }
@@ -41,14 +45,25 @@
     }
 
     .inicio {
-        background-image: url("imagenes/royal_ruleta/proximamente.jpg");
+        background-image: url("imagenes/royal_ruleta/proximamente-fondo.jpg");
         background-repeat: no-repeat;
         background-position: center center;
+    }
+    .snoopy {
+        height: 100%;
+        position: absolute;
+    }
+    .snoopy img {
+        height: 100%;
     }
 </style>
 </head>
 <body>
 <div class="inicio" >
+
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12  snoopy ">
+    <img src="imagenes/royal_ruleta/proximamente-snoppy.png" class="img-responsive   center-block center-img text-center center">
 </div>
 <script>
     //Google Analitics
