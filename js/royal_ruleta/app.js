@@ -2,6 +2,8 @@
 var lanzaGelatina;
 var ultimo = true;
 
+var primeravez = 1;
+
 var numeroGelatina = 1;
 var animGelatinasActive = 1;
 var gelatinaPremio = 1;
@@ -52,6 +54,8 @@ $(document).ready(function () {
         animGelatinas(anim, "#animationGelatina1");
     }
     $('.js--triggerAnimation1').click(function (e) {
+
+
         if (!pausa) {
             $('#animationSandbox').removeClass();
             e.preventDefault();
@@ -62,6 +66,7 @@ $(document).ready(function () {
                 $('.js--triggerAnimation1').removeClass('boton-juego-click').addClass('boton-juego')
             }, 800)
         }
+
     });
 
     //evento instrucciones
@@ -78,7 +83,6 @@ $(document).ready(function () {
         $('#home').removeClass('hidden').show();
         $('#instrucciones').removeClass('hidden').hide();
     });
-
 
 
     $('.ganacamiseta, .ganagorra, .ganaentrada, .pierde').click(function (e) {
@@ -124,16 +128,43 @@ $(document).ready(function () {
 
     });
 
-    $('.js--triggerCompartir').click(function () {
+    $('.js--ingresaotrocodigo').click(function () {
+        ultimo = true;
+        primeravez = 0;
+        numeroGelatina = 1;
+        animGelatinasActive = 1;
+        gelatinaPremio = 1;
+        gelPremio = getRandomInt(0, 4);
+
+        ganapremio = 1;
+        premioganado = 1;
+
+        //pausa en el juego
+        pausa = false;
+        tiempoPausa = 4000;
+        backgroundAudio.src = "linus-and-lucy_part_1.mp3"
+
+
+        $('.home').fadeIn();
+        $('.pierde').hide();
+        $('.ganacamiseta').hide();
+        $('.ganagorra').hide();
+        $('.ganaentrada').hide();
+        $('.fanpage').hide();
+        $('.snoopy-juego-feliz').hide();
+        $('.snoopy-juego').show();
+        $("span.crossscreen1, span.crossscreen2, span.crossscreen3, .gelatinas").remove();
+
+        $('#home').fadeOut();
+        $('#registro').fadeIn();
+        $('#box-codigo1').val("")
 
     });
 
 
 });
 
-function muestraBotonOriginal() {
 
-}
 function animGelatinas() {
     var anim = "crossscreen";
     lanzaGelatina = setInterval(lanzaGelatinas, 250);
@@ -158,6 +189,7 @@ function lanzaGelatinas() {
             var anim = "crossscreen";
             animGelatina(anim, "#animationGelatina" + numeroGelatina);
             $("#animationGelatina" + numeroGelatina).addClass('borraGelatina' + numeroGelatina);
+            $("#animationGelatina" + numeroGelatina).addClass('gelatinas');
             numeroGelatina = numeroGelatina + 1;
         } else {
             if (ultimo) {
@@ -188,7 +220,7 @@ function lanzaGelatinas() {
                     animGelatinasActive = 0;
                     //mostramos snoopy ganador
 
-                    if (ganapremio > 0){
+                    if (ganapremio > 0) {
                         setTimeout(function () {
                             $(".snoopy-juego-feliz").removeClass("hidden").fadeIn();
                             $(".snoopy-juego").fadeOut();
@@ -266,6 +298,7 @@ function cierre() {
             if (data == 'F') {
                 mostrarCodigoErrado()
             } else {
+                primeravez = 0;
                 mostrarCodigoCorrecto(data)
             }
         });
@@ -298,7 +331,10 @@ function iniciaFormulario() {
                         processData: false,
                         DataType: "jsonp",
                         success: function (data) {
-                            $.post(accion + controladorApp + "/validarCodigo", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val()})
+                            $.post(accion + controladorApp + "/validarCodigo", {
+                                codigo: $('#box-codigo1').val(),
+                                cedula: $('#cedula').val()
+                            })
                                 .done(function (data) {
                                     if (data == 'F') {
                                         mostrarCodigoErrado()
@@ -319,7 +355,6 @@ function iniciaFormulario() {
         }
     )
     ;
-
 
 
 }
@@ -374,7 +409,10 @@ function mostrarCodigoCorrecto(data) {
     ocultarTodosSeccion();
     $('#home').removeClass("hidden").show();
     var anim = "crossscreen";
-    animGelatinas(anim, "#animationGelatina1");
+    if (primeravez == 1) {
+        console.log ("generate  " +primeravez)
+        animGelatinas(anim, "#animationGelatina1");
+    }
 
     setTimeout(function () {
         $('.flecha_animada').fadeOut()

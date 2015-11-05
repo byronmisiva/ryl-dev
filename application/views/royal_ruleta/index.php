@@ -235,6 +235,11 @@
             <a href="https://www.facebook.com/RoyalEcuador/" target="_blank">
                 <img src="imagenes/royal_ruleta/snoopy-juego/fanpage.png" class="img-responsive center-img">
             </a>
+            <div class="ingresanuevocodigo">
+            <div class="js--ingresaotrocodigo">
+                <img src="imagenes/royal_ruleta/snoopy-juego/ingresa.png" class="img-responsive center-img">
+            </div>
+            </div>
         </div>
     </div>
 

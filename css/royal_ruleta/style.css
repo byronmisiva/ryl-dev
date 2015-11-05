@@ -450,6 +450,13 @@ cursor: pointer;
     animation-iteration-count: 30;
 }
 
+.ingresanuevocodigo {
+    margin: 45% auto 0;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
 
 /*@-webkit-keyframes playflecha_animada {
     from {
