@@ -732,14 +732,10 @@ cursor: pointer;
 }
 
 .espacio74 {
-    width: 35%;
-    margin-left: 54%;
+    width: 34%;
+    margin-left: 52%;
     max-width: 360px;
-
-
 }
-
-
 
 @media (max-height: 620px){
     img.logoregistro {
@@ -757,7 +753,6 @@ cursor: pointer;
         max-width: 360px;
     }
 }
-
 
 @media (max-width: 960px){
     .espacio74 {
@@ -777,6 +772,16 @@ cursor: pointer;
     }
 
 }
+
+@media (max-width: 960px) and (max-height: 700px) {
+    .espacio74 {
+        margin-left: 51%;
+        width: 31%;
+        max-width: 380px;
+    }
+}
+
+
 
 
 .fondo-ingresocodigo {

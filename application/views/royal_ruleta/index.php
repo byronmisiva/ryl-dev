@@ -64,6 +64,16 @@
 <div id="registro" class="  seccion fondo-registro hidden-xs">
 
     <div class="fondo-registro2  ">
+        <div class="botones">
+
+            <div class="btn-audioOn js--triggerAudio"></div>
+
+            <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"
+               target="_blank">
+                <div class="btn-compartir js--triggerCompartir"></div>
+            </a>
+        </div>
+
         <div class="cabecerahome">
             <div class="container center-block">
                 <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img logoregistro">
@@ -163,8 +173,6 @@
         <div class="pestaneo2"></div>
         <div class="pestaneo3"></div>
         <div class="botones">
-
-
             <div class="btn-instrucciones js--triggerInstrucciones"></div>
             <div class="btn-audioOn js--triggerAudio"></div>
 
