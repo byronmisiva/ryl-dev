@@ -186,9 +186,13 @@ function lanzaGelatinas() {
                 if (gelatinaPremio > 3) {
                     ultimo = false;
                     animGelatinasActive = 0;
+                    if (ganapremio > 0){
+                        setTimeout(function () {
+                            $(".snoopy-juego-feliz").removeClass("hidden").fadeIn();
+                            $(".snoopy-juego").fadeOut();
+                        }, 1500)
+                    }
 
-                    $(".snoopy-juego-feliz").removeClass("hidden").fadeIn();
-                    $(".snoopy-juego").fadeOut();
                     setTimeout(function () {
                         cierre()
                     }, 5000)
