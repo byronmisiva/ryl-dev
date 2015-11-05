@@ -187,7 +187,7 @@
         </div>
         <div class="container vertical-center">
 
-            <div class="flecha_animada js--triggerAnimation1"></div>
+            <div class="flecha_animada js--triggerAnimation1 salto"></div>
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
             <div class="snoopy-juego-feliz hidden"></div>

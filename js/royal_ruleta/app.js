@@ -375,6 +375,12 @@ function mostrarCodigoCorrecto(data) {
     $('#home').removeClass("hidden").show();
     var anim = "crossscreen";
     animGelatinas(anim, "#animationGelatina1");
+
+    setTimeout(function () {
+        $('.flecha_animada').fadeOut()
+    }, 6000)
+
+
 }
 
 function crearBotonesInterface() {
