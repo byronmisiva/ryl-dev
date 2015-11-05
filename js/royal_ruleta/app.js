@@ -410,15 +410,12 @@ function mostrarCodigoCorrecto(data) {
     $('#home').removeClass("hidden").show();
     var anim = "crossscreen";
     if (primeravez == 1) {
-        console.log ("generate  " +primeravez)
+        //console.log ("generate  " +primeravez)
         animGelatinas(anim, "#animationGelatina1");
     }
-
     setTimeout(function () {
         $('.flecha_animada').fadeOut()
     }, 6000)
-
-
 }
 
 function crearBotonesInterface() {
@@ -448,8 +445,6 @@ function crearBotonesInterface() {
         $('#ingresolote-container').removeClass("hidden").show();
         $('#mensaje-error').hide();
     })
-
-
     ///////////////////////////
 
 
