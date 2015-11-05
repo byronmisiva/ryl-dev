@@ -49,8 +49,8 @@ a:hover, a:visited {
 
 .titulares {
     font-family: 'snoopyregular';
-    font-size: 23px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 25px;
 
 }
 
@@ -740,6 +740,23 @@ cursor: pointer;
 }
 
 
+
+@media (max-height: 620px){
+    img.logoregistro {
+        height: 100px;
+    }
+    .legales1 {
+        display: none;
+    }
+    input[type="text"], input[type="email"] {
+        margin: 7px 1px 3px 0px !important;
+    }
+    .espacio74 {
+        width: 28%;
+        margin-left: 52%;
+        max-width: 360px;
+    }
+}
 
 
 @media (max-width: 960px){

@@ -66,7 +66,7 @@
     <div class="fondo-registro2  ">
         <div class="cabecerahome">
             <div class="container center-block">
-                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img logoregistro">
             </div>
             <div class="container center-block">
                 <div class="col-md-12 col-sm-12">
@@ -175,7 +175,7 @@
         </div>
 
         <div class="container center-block">
-            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img logoregistro">
         </div>
         <div class="container vertical-center">
 
