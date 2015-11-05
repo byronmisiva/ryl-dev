@@ -930,7 +930,8 @@ p.texto-interno, .texto-interno {
 }
 
 input[type="text"], input[type="email"] {
-    background-color: transparent;
+    background-color: #c4222b;
+   /* background-color: transparent;*/
     border: 1px solid #ffffff;
     border-radius: 10px;
     box-shadow: none;

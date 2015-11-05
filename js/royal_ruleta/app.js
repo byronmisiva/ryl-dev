@@ -186,6 +186,8 @@ function lanzaGelatinas() {
                 if (gelatinaPremio > 3) {
                     ultimo = false;
                     animGelatinasActive = 0;
+                    //mostramos snoopy ganador
+
                     if (ganapremio > 0){
                         setTimeout(function () {
                             $(".snoopy-juego-feliz").removeClass("hidden").fadeIn();
