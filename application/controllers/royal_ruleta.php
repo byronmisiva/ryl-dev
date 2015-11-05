@@ -103,7 +103,7 @@ class Royal_ruleta extends CI_Controller
             $this->insertarSeguimientoValidacion($codigo, $cedula, json_encode($codData));
 
             $registro = $this->modelo->getUsuario($cedula);
-            $data['imagen']= "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-confirmacion.jpg";
+            $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-confirmacion.jpg";
             $body = $this->load->view($this->folderView . '/email', $data, TRUE);
             $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ya estas participando", $body);
 
@@ -149,23 +149,18 @@ class Royal_ruleta extends CI_Controller
 
     function registraPremio($codigo, $cedula, $premio)
     {
-        //caso camiseta
-        if ($premio == "2") {
-
-            // actualizaPremio ($codigo);
-        }
-        if ($premio == "3") {
-
-        }
-        if ($premio == "4") {
-
-        }
+        $this->actualizaPremio($codigo, $cedula, $premio);
 
         $registro = $this->modelo->getUsuario($cedula);
-        $data['imagen']= "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-ganaste.jpg";
+        $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-ganaste.jpg";
         $body = $this->load->view($this->folderView . '/email', $data, TRUE);
         $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ganador", $body);
 
+    }
+
+    function actualizaPremio($codigo, $cedula, $premio)
+    {
+        return;
     }
 
     function envioEmailPremio($toMail, $nombre, $subject, $mensaje)
@@ -183,7 +178,7 @@ class Royal_ruleta extends CI_Controller
 
         $this->email->send();
 
-       // echo $this->email->print_debugger();
+        // echo $this->email->print_debugger();
         /*
 
 
