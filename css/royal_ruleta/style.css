@@ -822,7 +822,7 @@ a:hover, a:visited {
     max-width: 360px;
 }
 
-@media (max-height: 620px) {
+@media (max-height: 640px) {
     img.logoregistro {
         height: 100px;
     }
