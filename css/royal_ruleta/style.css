@@ -78,7 +78,9 @@ a:hover, a:visited {
     right: 10px;
     top: 10px;
 }
-.btn-instrucciones {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonayuda-on.png");
+
+.btn-instrucciones {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonayuda-on.png");
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
@@ -88,26 +90,31 @@ a:hover, a:visited {
     cursor: pointer;
 
 }
-.btn-audioOn {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonmusicaon.png");
+
+.btn-audioOn {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonmusicaon.png");
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
     background-position: center center;
     float: left;
     margin-right: 5px;
-cursor: pointer;
+    cursor: pointer;
 
 }
-.btn-audioOff {background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonmusicaoff.png");
+
+.btn-audioOff {
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botonmusicaoff.png");
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
     background-position: center center;
     float: left;
     margin-right: 5px;
-cursor: pointer;
+    cursor: pointer;
 
 }
+
 .btn-compartir {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/botoncompartir-on.png");
     width: 35px;
@@ -127,12 +134,14 @@ cursor: pointer;
     background-repeat: no-repeat;
     background-position: center center;
 }
+
 .pestaneo1 {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/pestaneo1.png");
     background-repeat: no-repeat;
     background-position: center center;
     display: none;
 }
+
 .pestaneo2 {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/pestaneo2.png");
     background-repeat: no-repeat;
@@ -140,6 +149,7 @@ cursor: pointer;
     display: none;
 
 }
+
 .pestaneo3 {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/pestaneo3.png");
     background-repeat: no-repeat;
@@ -155,12 +165,11 @@ cursor: pointer;
 
     z-index: 40;
 
-
 }
 
 .fondo-registro2 {
     padding-top: 0px;
-/*    padding-top: 130px;*/
+    /*    padding-top: 130px;*/
 }
 
 .fondo-registro {
@@ -180,6 +189,7 @@ cursor: pointer;
     left: 10px;
     z-index: 10;
 }
+
 .snoopy-juego-feliz {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/snoppy-feliz.png");
     width: 340px;
@@ -199,6 +209,7 @@ cursor: pointer;
     margin: 0 auto;
 
 }
+
 .textos-instrucciones {
     position: absolute;
     margin: 0 auto;
@@ -236,7 +247,6 @@ cursor: pointer;
     line-height: 27px;
     text-align: center;
 }
-
 
 .boton-juego, .boton-juego-click {
     position: absolute;
@@ -363,7 +373,6 @@ cursor: pointer;
 
 /*fin boton juego click sprite */
 
-
 /*flecha animada sprite */
 .flecha_animada {
     position: absolute;
@@ -377,19 +386,19 @@ cursor: pointer;
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/huella.png");
     width: 72px;
     height: 43px;
-/*    -webkit-animation: playflecha_animada 2s steps(40) ;
-    -moz-animation: playflecha_animada 2s steps(40) ;
-    -ms-animation: playflecha_animada 2s steps(40) ;
-    -o-animation: playflecha_animada 2s steps(40) ;
-    animation: playflecha_animada 2s steps(40) ;*/
+    /*    -webkit-animation: playflecha_animada 2s steps(40) ;
+        -moz-animation: playflecha_animada 2s steps(40) ;
+        -ms-animation: playflecha_animada 2s steps(40) ;
+        -o-animation: playflecha_animada 2s steps(40) ;
+        animation: playflecha_animada 2s steps(40) ;*/
 }
 
 @-webkit-keyframes salto {
     from, 20%, 53%, 80%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     40%, 43% {
@@ -407,8 +416,8 @@ cursor: pointer;
     }
 
     90% {
-        -webkit-transform: translate3d(0,-4px,0);
-        transform: translate3d(0,-4px,0);
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
     }
 }
 
@@ -416,8 +425,8 @@ cursor: pointer;
     from, 20%, 53%, 80%, to {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     40%, 43% {
@@ -435,11 +444,10 @@ cursor: pointer;
     }
 
     90% {
-        -webkit-transform: translate3d(0,-4px,0);
-        transform: translate3d(0,-4px,0);
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
     }
 }
-
 
 .salto {
     -webkit-animation-name: salto;
@@ -451,12 +459,11 @@ cursor: pointer;
 }
 
 .ingresanuevocodigo {
-    margin: 45% auto 0;
+    margin: 42% auto 0;
     position: absolute;
     top: 10px;
     width: 100%;
 }
-
 
 /*@-webkit-keyframes playflecha_animada {
     from {
@@ -619,6 +626,7 @@ cursor: pointer;
         background-position: -2227px;
     }
 }
+
 /*fin frambuesa animada sprite */
 
 /*limon animada sprite */
@@ -677,6 +685,7 @@ cursor: pointer;
         background-position: -2227px;
     }
 }
+
 /*fin limon animada sprite */
 
 /*naranja animada sprite */
@@ -735,8 +744,8 @@ cursor: pointer;
         background-position: -2227px;
     }
 }
-/*fin naranja animada sprite */
 
+/*fin naranja animada sprite */
 
 /*uva animada sprite */
 .gelatina_uva {
@@ -807,16 +816,19 @@ cursor: pointer;
     max-width: 360px;
 }
 
-@media (max-height: 620px){
+@media (max-height: 620px) {
     img.logoregistro {
         height: 100px;
     }
+
     .legales1 {
         display: none;
     }
+
     input[type="text"], input[type="email"] {
         margin: 7px 1px 3px 0px !important;
     }
+
     .espacio74 {
         width: 28%;
         margin-left: 52%;
@@ -824,7 +836,7 @@ cursor: pointer;
     }
 }
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
     .espacio74 {
         margin-left: 58%;
         width: 40%;
@@ -832,12 +844,30 @@ cursor: pointer;
 
     }
 }
-@media screen and (orientation:portrait) {
+
+@media (min-width: 961px) {
+    .espacio74 {
+        margin-left: 52%;
+        width: 40%;
+        max-width: 380px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .espacio74 {
+        width: 27%;
+        max-width: 450px;
+        margin-left: 52%;
+    }
+}
+
+
+
+@media screen and (orientation: portrait) {
     .espacio74 {
         width: 35%;
         margin-left: 54%;
         max-width: 360px;
-
 
     }
 
@@ -851,9 +881,6 @@ cursor: pointer;
     }
 }
 
-
-
-
 .fondo-ingresocodigo {
     padding-top: 2%;
 }
@@ -863,8 +890,6 @@ cursor: pointer;
     background-repeat: no-repeat;
     background-position: center center;
 }
-
-
 
 .fondo-instrucciones {
     /*background-image: url("../../imagenes/karaokegalaxya/intrucciones/fondo_intrucciones.png");
@@ -1001,7 +1026,7 @@ p.texto-interno, .texto-interno {
 
 input[type="text"], input[type="email"] {
     background-color: #c4222b;
-   /* background-color: transparent;*/
+    /* background-color: transparent;*/
     border: 1px solid #ffffff;
     border-radius: 10px;
     box-shadow: none;

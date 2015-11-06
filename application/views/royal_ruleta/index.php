@@ -257,10 +257,10 @@
         <img src="imagenes/royal_ruleta/snoopy-juego/legales.png" class="img-responsive center-img">
     </div>
 </div>
-<div id="instrucciones" class="hidden seccion fondo-home hidden-xs">
+<div id="instrucciones" class="hidden seccion hidden-xs">
     <div class="container vertical-center">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="imagenes/royal_ruleta/snoopy-juego/instrucciones.png" class="img-responsive">
+            <img src="imagenes/royal_ruleta/snoopy-juego/instrucciones.png" class="img-responsive center-img">
         </div>
     </div>
 </div>

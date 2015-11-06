@@ -15,7 +15,7 @@ var premioganado = 1;
 
 //pausa en el juego
 var pausa = false;
-var tiempoPausa = 4000;
+var tiempoPausa = 3000;
 
 var divSeleccion
 
@@ -54,34 +54,36 @@ $(document).ready(function () {
         animGelatinas(anim, "#animationGelatina1");
     }
     $('.js--triggerAnimation1').click(function (e) {
-
-
         if (!pausa) {
             $('#animationSandbox').removeClass();
             e.preventDefault();
             animGelatinasActive = 0;
-
             $('.js--triggerAnimation1').removeClass('boton-juego').addClass('boton-juego-click');
             setTimeout(function () {
-                $('.js--triggerAnimation1').removeClass('boton-juego-click').addClass('boton-juego')
+                $('.js--triggerAnimation1').removeClass('boton-juego-click').addClass('boton-juego');
+                if (ultimo) {
+                    $('.flecha_animada').fadeIn()
+                    setTimeout(function () {
+                        $('.flecha_animada').fadeOut()
+                    }, 3000)
+
+                }
             }, 800)
         }
-
     });
 
     //evento instrucciones
     $('.js--triggerInstrucciones').click(function (e) {
         e.preventDefault();
-
         $('#instrucciones').removeClass('hidden').show();
-        $('#home').removeClass('hidden').hide();
+        //$('#home').removeClass('hidden').hide();
     });
 
     $('#instrucciones').click(function (e) {
         e.preventDefault();
 
-        $('#home').removeClass('hidden').show();
-        $('#instrucciones').removeClass('hidden').hide();
+        //$('#home').removeClass('hidden').show();
+        $('#instrucciones').removeClass('hidden').fadeOut();
     });
 
 
@@ -129,7 +131,8 @@ $(document).ready(function () {
     });
 
     $('.js--ingresaotrocodigo').click(function () {
-        ultimo = true;
+        location.reload(true);
+/*        ultimo = true;
         primeravez = 0;
         numeroGelatina = 1;
         animGelatinasActive = 1;
@@ -156,8 +159,9 @@ $(document).ready(function () {
         $("span.crossscreen1, span.crossscreen2, span.crossscreen3, .gelatinas").remove();
 
         $('#home').fadeOut();
+        $('#instrucciones').fadeOut();
         $('#registro').fadeIn();
-        $('#box-codigo1').val("")
+        $('#box-codigo1').val("")*/
 
     });
 
@@ -229,7 +233,7 @@ function lanzaGelatinas() {
 
                     setTimeout(function () {
                         cierre()
-                    }, 5000)
+                    }, 3000)
 
                 }
                 // activamos la pausa
@@ -274,7 +278,7 @@ function cierre() {
     pausa = true;
     if (ganapremio == 0) {
         $('.home').fadeOut();
-        $('.ganacamiseta, .ganagorra, .ganaentrada').fadeOut();
+        $('.ganacamiseta, .ganagorra, .ganaentrada, #instrucciones').hide();
         $('.pierde').removeClass("hidden").fadeIn();
     } else {
         $('.home').fadeOut();
@@ -319,6 +323,7 @@ function iniciaFormulario() {
     });
 
     $("#registroform").submit(function (event) {
+            event.preventDefault();
             //si campos registro no estan visibles y estan llenos por recarga pagina los mostramos
             if ($('#complete_register').is(':visible')) {
                 var url = accion + controladorApp + "/register";
@@ -350,7 +355,7 @@ function iniciaFormulario() {
                 $('#complete_register').removeClass("hidden").show();
                 $('.portabotones').removeClass("hidden").show();
             }
-            event.preventDefault();
+
             return false;
         }
     )
@@ -408,14 +413,17 @@ function mostrarCodigoCorrecto(data) {
     premioganado = obj.id_premio;
     ocultarTodosSeccion();
     $('#home').removeClass("hidden").show();
+
     var anim = "crossscreen";
     if (primeravez == 1) {
         //console.log ("generate  " +primeravez)
         animGelatinas(anim, "#animationGelatina1");
+        console.log ("11");
+        $('#instrucciones').removeClass("hidden").show();
     }
     setTimeout(function () {
         $('.flecha_animada').fadeOut()
-    }, 6000)
+    }, 5000)
 }
 
 function crearBotonesInterface() {
