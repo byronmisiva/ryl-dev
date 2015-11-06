@@ -853,7 +853,7 @@ a:hover, a:visited {
 
 @media (min-width: 961px) {
     .espacio74 {
-        margin-left: 52%;
+        margin-left: 53%;
         width: 40%;
         max-width: 380px;
     }
@@ -863,14 +863,14 @@ a:hover, a:visited {
     .espacio74 {
         width: 30%;
         max-width: 450px;
-        margin-left: 54%;
+        margin-left: 53%;
     }
 }
 
 @media screen and (orientation: portrait) {
     .espacio74 {
-        width: 35%;
-        margin-left: 54%;
+        width: 44%;
+        margin-left: 61%;
         max-width: 360px;
 
     }
