@@ -449,6 +449,12 @@ a:hover, a:visited {
     }
 }
 
+#instrucciones {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
 .salto {
     -webkit-animation-name: salto;
     animation-name: salto;
@@ -860,8 +866,6 @@ a:hover, a:visited {
         margin-left: 52%;
     }
 }
-
-
 
 @media screen and (orientation: portrait) {
     .espacio74 {
