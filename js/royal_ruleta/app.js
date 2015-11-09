@@ -9,7 +9,7 @@ var animGelatinasActive = 1;
 var gelatinaPremio = 1;
 var gelPremio = getRandomInt(0, 4);
 
-var pruebas = 0;
+var pruebas = 1;
 var ganapremio = 1;
 var premioganado = 1;
 
@@ -56,6 +56,8 @@ $(document).ready(function () {
     if (pruebas == 1) {
         var anim = "crossscreen";
         animGelatinas(anim, "#animationGelatina1");
+        ganapremio = 1;
+        premioganado= 2;
     }
     $('.js--triggerAnimation1').click(function (e) {
         if (!pausa) {
