@@ -86,9 +86,16 @@
                               method="post"
                               enctype="multipart/form-data">
                             <ul class="login_wid">
-                                <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
-                                           required="required"
-                                           placeholder="Cédula:"></li>
+                                <li>
+                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                        Cédula:
+                                    </div>
+                                    <div class="col-md-9 col-sm-9 col-xs-9"><input class="box-text" type="text"
+                                                                                   id="cedula" name="cedula"
+                                                                                   maxlength="10"
+                                                                                   required="required">
+                                    </div>
+                                </li>
                                 <div id="complete_register" class="hidden">
                                     <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
                                                required="required"

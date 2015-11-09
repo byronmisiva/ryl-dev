@@ -76,7 +76,8 @@
 
         <div class="cabecerahome">
             <div class="container center-block">
-                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img logoregistro">
+                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png"
+                     class="img-responsive center-img logoregistro">
             </div>
             <div class="container center-block">
                 <div class="col-md-12 col-sm-12">
@@ -100,7 +101,7 @@
 
 
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
-                        <div class="titulares titulo text-center"><p>REGISTRO</p></div>
+                        <div class="titulares titulo text-center"><p>REGÍSTRATE</p></div>
                     </div>
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                         <form id="registroform"
@@ -108,48 +109,92 @@
                               method="post"
                               enctype="multipart/form-data">
                             <ul class="login_wid">
-                                <li><input class="box-text" type="text" id="cedula" name="cedula" maxlength="10"
-                                           required="required"
-                                           placeholder="Cédula:"></li>
+                                <li class="li-form">
+                                    <div class="col-md-3 col-sm-3 col-xs-3 margen-0 right tit-form">
+                                        Cédula:
+                                    </div>
+                                    <div class="col-md-9 col-sm-9 col-xs-9 margen-0"><input class="box-text" type="text"
+                                                                                            id="cedula" name="cedula"
+                                                                                            maxlength="10"
+                                                                                            required="required">
+                                    </div>
+                                </li>
                                 <div id="complete_register" class="">
-                                    <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
-                                               required="required"
-                                               placeholder="Nombre:">
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Nombre:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
+                                                   required="required">
+                                        </div>
                                     </li>
-                                    <li><input class="box-text" type="text" id="apellido" name="apellido"
-                                               maxlength="20"
-                                               required="required"
-                                               placeholder="Apellido:">
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Apellido:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="apellido" name="apellido"
+                                                   maxlength="20"
+                                                   required="required">
+                                        </div>
                                     </li>
-                                    <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
-                                               required="required"
-                                               placeholder="Email:">
-                                    </li>
-                                    <li><input class="box-text" type="text" id="telefono" name="telefono"
-                                               maxlength="10"
-                                               required="required"
-                                               placeholder="Teléfono:"></li>
-                                    <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
-                                               required="required"
-                                               placeholder="Ciudad:">
-                                    </li>
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Email:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="email" id="mail" name="mail" maxlength="100"
+                                                   required="required">
+                                        </div>
 
-                                    <li><input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
-                                               maxlength="20"
-                                               required="required"
-                                               placeholder="Num de lote de tu producto:">
+
+
                                     </li>
-                                    <li class="text-center">
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Teléfono:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="telefono" name="telefono"
+                                                   maxlength="10"
+                                                   required="required">
+                                        </div>
+                                    </li>
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Ciudad:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
+                                                   required="required">
+                                        </div>
+                                    </li>
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Lote:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
+                                                   maxlength="10"
+                                                   required="required">
+                                        </div>
+
+
+                                    </li>
+                                    <li class="text-center li-form" >
                                         <div class="portabotones center-block ">
                                             <input type="submit" value="Continuar" name="login"
                                                    class="btn-ingreso botontexto"
                                                    style="">
                                         </div>
+
+
                                     </li>
-                                    <li class="text-center">
+                                    <li class="text-center li-form">
                                         <div id="mensaje-envio"></div>
                                     </li>
-                                    <li class="text-center">
+                                    <li class="text-center li-form terminos-condiciones">
                                         <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf"
                                            target="_blank">Términos y
                                             condiciones</a>
@@ -183,7 +228,8 @@
         </div>
 
         <div class="container center-block">
-            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img logoregistro">
+            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png"
+                 class="img-responsive center-img logoregistro">
         </div>
         <div class="container vertical-center">
 
@@ -235,10 +281,11 @@
             <a href="https://www.facebook.com/RoyalEcuador/" target="_blank">
                 <img src="imagenes/royal_ruleta/snoopy-juego/fanpage.png" class="img-responsive center-img">
             </a>
+
             <div class="ingresanuevocodigo">
-            <div class="js--ingresaotrocodigo">
-                <img src="imagenes/royal_ruleta/snoopy-juego/ingresa.png" class="img-responsive center-img">
-            </div>
+                <div class="js--ingresaotrocodigo">
+                    <img src="imagenes/royal_ruleta/snoopy-juego/ingresa.png" class="img-responsive center-img">
+                </div>
             </div>
         </div>
     </div>
