@@ -64,7 +64,7 @@
 </div>-->
 
 
-<div id="registro" class="  seccion fondo-registro hidden-xs">
+<div id="registro" class="hidden  seccion fondo-registro hidden-xs">
 
     <div class="fondo-registro2  ">
         <div class="botones">
