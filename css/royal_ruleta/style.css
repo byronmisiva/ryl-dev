@@ -1049,8 +1049,12 @@ input[type="text"], input[type="email"] {
 }
 
 input[type=text]:focus, textarea:focus {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
-    border: 1px solid rgba(255, 255, 255, 1);
+    /*box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);*/
+}
+
+input:focus{
+    outline:0px;
 }
 
 ::-webkit-input-placeholder {

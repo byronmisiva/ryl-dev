@@ -420,9 +420,7 @@ function mostrarCodigoCorrecto(data) {
 
     var anim = "crossscreen";
     if (primeravez == 1) {
-        //console.log ("generate  " +primeravez)
         animGelatinas(anim, "#animationGelatina1");
-        console.log ("11");
         $('#instrucciones').removeClass("hidden").show();
     }
     setTimeout(function () {
