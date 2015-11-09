@@ -214,7 +214,7 @@
 </div>
 
 
-<div id="home" class="hidden seccion fondo-home hidden-xs">
+<div id="home" class=" seccion fondo-home hidden-xs">
 
     <div class="fondo-home2 home ">
         <div class="pestaneo1"></div>
