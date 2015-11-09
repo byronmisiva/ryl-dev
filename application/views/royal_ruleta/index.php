@@ -10,10 +10,13 @@
     <meta name="author" content="Misiva Corp"/>
 
     <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
 
     <link href="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.css" rel="stylesheet" type="text/css"/>
     <script src="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.js" type="text/javascript"></script>
+
+    <script src="<?php echo base_url() ?>js/royal_ruleta/jquery.maskedinput.min.js" type="text/javascript"></script>
+
 
 
     <script type="text/javascript" src="<?php echo base_url('js/general/validate.js') ?>"></script>

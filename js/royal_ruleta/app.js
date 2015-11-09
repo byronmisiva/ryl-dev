@@ -38,6 +38,10 @@ $(document).ready(function () {
     iniciaFormulario()
     //llamada para mostrar webcam en div, incluye botones
     crearBotonesInterface();
+
+    //$("#cedula").mask("9999999999");
+    $("#box-codigo1").mask("99 999 99:99");
+    $("#telefono").mask("9999999999");
 });
 
 
