@@ -10,17 +10,32 @@
     <meta name="author" content="Misiva Corp"/>
 
     <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+
 
     <link href="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.css" rel="stylesheet" type="text/css"/>
     <script src="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.js" type="text/javascript"></script>
+
+    <script src="<?php echo base_url() ?>js/royal_ruleta/jquery.maskedinput.min.js" type="text/javascript"></script>
+
 
 
     <script type="text/javascript" src="<?php echo base_url('js/general/validate.js') ?>"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/bootstrap.min.js"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/ligthbox/ekko-lightbox.min.js"></script>
 
+
     <script language="JavaScript" src="<?php echo base_url() ?>js/royal_ruleta/app.js"></script>
+
+    <meta property="og:title" content="Gana con Royal">
+    <meta property="og:type" content="article">
+    <!--    <meta property="og:url" content="http://www.ganaconroyal.com">-->
+    <meta property="og:url" content="http://royal.misiva.com.ec/index">
+    <meta property="og:image" content="http://royal.misiva.com.ec/imagenes/royal_ruleta/facebook.jpg">
+    <meta property="og:site_name" content="GanaConRoyal">
+    <!--<meta property="fb:admins" content="100001543332907">-->
+    <meta property="og:description"
+          content="Yo ya estoy participando para ganar un viaje a Fox Studios en Los Ángeles  con Royal y por muchos premios más. Y tú… ¿qué esperas? Compra tu Gelatina Royal, ingresa el código de tu empaque y gana..">
+
 
     <link href="<?php echo base_url() ?>fonts/Roboto-Bold/styles.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo base_url() ?>fonts/Roboto-Light/styles.css" rel="stylesheet" type="text/css"/>
@@ -49,12 +64,23 @@
 </div>-->
 
 
-<div id="registro" class="seccion fondo-registro hidden-xs">
+<div id="registro" class="  seccion fondo-registro hidden-xs">
 
     <div class="fondo-registro2  ">
+        <div class="botones">
+
+            <div class="btn-audioOn js--triggerAudio"></div>
+
+            <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"
+               target="_blank">
+                <div class="btn-compartir js--triggerCompartir"></div>
+            </a>
+        </div>
+
         <div class="cabecerahome">
             <div class="container center-block">
-                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+                <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png"
+                     class="img-responsive center-img logoregistro">
             </div>
             <div class="container center-block">
                 <div class="col-md-12 col-sm-12">
@@ -77,8 +103,8 @@
                 <div class="col-md-12 col-sm-12">
 
 
-                    <div class="col-sm-offset-4 col-md-offset-4 col-xs-offset-4  col-md-8 col-sm-8 col-xs-8">
-                        <div class="titulares titulo text-center"><p>REGISTRO</p></div>
+                    <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
+                        <div class="titulares titulo text-center"><p>REGÍSTRATE</p></div>
                     </div>
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                         <form id="registroform"
@@ -86,56 +112,92 @@
                               method="post"
                               enctype="multipart/form-data">
                             <ul class="login_wid">
-                                <li>
-                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                <li class="li-form">
+                                    <div class="col-md-3 col-sm-3 col-xs-3 margen-0 right tit-form">
                                         Cédula:
                                     </div>
-                                    <div class="col-md-9 col-sm-9 col-xs-9"><input class="box-text" type="text"
-                                                                                   id="cedula" name="cedula"
-                                                                                   maxlength="10"
-                                                                                   required="required">
+                                    <div class="col-md-9 col-sm-9 col-xs-9 margen-0"><input class="box-text" type="text"
+                                                                                            id="cedula" name="cedula"
+                                                                                            maxlength="10"
+                                                                                            required="required">
                                     </div>
                                 </li>
-                                <div id="complete_register" class="hidden">
-                                    <li><input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
-                                               required="required"
-                                               placeholder="Nombre:">
+                                <div id="complete_register" class="">
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Nombre:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="nombre" name="nombre" maxlength="20"
+                                                   required="required">
+                                        </div>
                                     </li>
-                                    <li><input class="box-text" type="text" id="apellido" name="apellido"
-                                               maxlength="20"
-                                               required="required"
-                                               placeholder="Apellido:">
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Apellido:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="apellido" name="apellido"
+                                                   maxlength="20"
+                                                   required="required">
+                                        </div>
                                     </li>
-                                    <li><input class="box-text" type="email" id="mail" name="mail" maxlength="100"
-                                               required="required"
-                                               placeholder="Email:">
-                                    </li>
-                                    <li><input class="box-text" type="text" id="telefono" name="telefono"
-                                               maxlength="10"
-                                               required="required"
-                                               placeholder="Teléfono:"></li>
-                                    <li><input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
-                                               required="required"
-                                               placeholder="Ciudad:">
-                                    </li>
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Email:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="email" id="mail" name="mail" maxlength="100"
+                                                   required="required">
+                                        </div>
 
-                                    <li><input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
-                                               maxlength="20"
-                                               required="required"
-                                               placeholder="Código de tu producto:">
-                                    </li>
 
-                                    <li class="text-center">
+
+                                    </li>
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Teléfono:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="telefono" name="telefono"
+                                                   maxlength="10"
+                                                   required="required">
+                                        </div>
+                                    </li>
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Ciudad:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="ciudad" name="ciudad" maxlength="20"
+                                                   required="required">
+                                        </div>
+                                    </li>
+                                    <li class="li-form">
+                                        <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
+                                            Lote:
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                            <input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
+                                                   maxlength="10"
+                                                   required="required">
+                                        </div>
+
+
+                                    </li>
+                                    <li class="text-center li-form" >
                                         <div class="portabotones center-block ">
                                             <input type="submit" value="Continuar" name="login"
                                                    class="btn-ingreso botontexto"
                                                    style="">
                                         </div>
+
+
                                     </li>
-                                    <li class="text-center">
+                                    <li class="text-center li-form">
                                         <div id="mensaje-envio"></div>
                                     </li>
-                                    <li class="text-center">
+                                    <li class="text-center li-form terminos-condiciones">
                                         <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf"
                                            target="_blank">Términos y
                                             condiciones</a>
@@ -161,17 +223,23 @@
         <div class="botones">
             <div class="btn-instrucciones js--triggerInstrucciones"></div>
             <div class="btn-audioOn js--triggerAudio"></div>
-            <div class="btn-compartir js--triggerCompartir"></div>
+
+            <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"
+               target="_blank">
+                <div class="btn-compartir js--triggerCompartir"></div>
+            </a>
         </div>
 
         <div class="container center-block">
-            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png" class="img-responsive center-img">
+            <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png"
+                 class="img-responsive center-img logoregistro">
         </div>
         <div class="container vertical-center">
 
-
+            <div class="flecha_animada js--triggerAnimation1 salto"></div>
             <div class="boton-juego js--triggerAnimation1"></div>
             <div class="snoopy-juego"></div>
+            <div class="snoopy-juego-feliz hidden"></div>
             <!--            <div class="mensajeSeleccion1 mensaje hidden">
                             <div class="titulo">LINUS TIENE UNA GELATINA DE</div>
                         </div>
@@ -192,24 +260,39 @@
 
     <div class="container vertical-center pierde hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="imagenes/royal_ruleta/snoopy-juego/pierde.png" class="img-responsive">
+            <img src="imagenes/royal_ruleta/snoopy-juego/pierde.png" class="img-responsive center-img">
         </div>
     </div>
     <div class="container vertical-center ganacamiseta  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="imagenes/royal_ruleta/snoopy-juego/gana_camiseta.png" class="img-responsive">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_camiseta.png" class="img-responsive center-img">
         </div>
     </div>
     <div class="container vertical-center ganagorra  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="imagenes/royal_ruleta/snoopy-juego/gana_gorra.png" class="img-responsive">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_gorra.png" class="img-responsive center-img">
         </div>
     </div>
+
     <div class="container vertical-center ganaentrada  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive">
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive center-img">
         </div>
     </div>
+    <div class="container vertical-center fanpage  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <a href="https://www.facebook.com/RoyalEcuador/" target="_blank">
+                <img src="imagenes/royal_ruleta/snoopy-juego/fanpage.png" class="img-responsive center-img">
+            </a>
+
+            <div class="ingresanuevocodigo">
+                <div class="js--ingresaotrocodigo">
+                    <img src="imagenes/royal_ruleta/snoopy-juego/ingresa.png" class="img-responsive center-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 
@@ -219,147 +302,24 @@
     </div>
 </div>
 
-
-<div id="instrucciones" class="hidden seccion fondo-instrucciones">
+<div class="legales hidden-xs">
+    <div class="center-img">
+        <img src="imagenes/royal_ruleta/snoopy-juego/legales.png" class="img-responsive center-img">
+    </div>
+</div>
+<div id="instrucciones" class="hidden seccion hidden-xs">
     <div class="container vertical-center">
-        <div class="row">
-            <div class="col-md-12 vertical-centercol-sm-12">
-                <div class="col-md-12 col-sm-12">
-                    <div class="logo-karaoke-galeria">
-                        <img src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/logo_karaoke.png"
-                             class="img-responsive"/>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="roboto-bold titulo text-center"><p>INSTRUCCIONES</p></div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class=" conten-instrucciones">
-                        <div class="text-center texto20">
-                            <p><span class="roboto-bold">1.- </span><span
-                                    class="roboto-light">Regístrate con tus datos completos</span></p>
-                        </div>
-                        <div class="text-center texto20">
-                            <p><span class="roboto-bold">2.- </span><span class="roboto-light">Selecciona una de tus canciones
-                            favoritas de la mejor década, 1990, graba y sube tu video de máximo 15 segundos
-                            directo a tu galería. Tu canción formará parte de nuestra playlist.</span></p>
-                        </div>
-                        <div class="text-center texto20">
-
-                            <p><span class="roboto-bold">3.- </span><span class="roboto-light">Comparte tus videos con
-                            tus amigos usando el HT </span><span class="roboto-bold">#KaraokeGalaxyA.</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
-                </div>
-                <div class="col-md-10 col-sm-10 col-xs-10  ">
-                    <div class="col-md-4 col-sm-4 col-xs-12  margen-0-md">
-                        <div class="row">
-                            <div class="col-xs-1 margen-0"></div>
-                            <div class="col-xs-10 margen-0-md">
-                                <div class="btn-home-home ">
-                                    <img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/boton_home.png"
-                                        class="img-responsive "/>
-                                </div>
-                            </div>
-                            <div class="col-xs-1 margen-0"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 margen-0-md">
-                        <div class="row">
-                            <div class="col-xs-1 margen-0"></div>
-                            <div class="col-xs-10 margen-0-md">
-                                <div class="btn-home-subir-video">
-                                    <img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/boton_subirvideo.png"
-                                        class="img-responsive"/>
-                                </div>
-                            </div>
-                            <div class="col-xs-1"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 margen-0-md">
-                        <div class="row">
-                            <div class="col-xs-1 margen-0"></div>
-                            <div class="col-xs-10 margen-0-md">
-                                <div class="btn-home-galeria">
-                                    <img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/intrucciones/boton_galeria.png"
-                                        class="img-responsive"/>
-                                </div>
-                            </div>
-                            <div class="col-xs-1 margen-0"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-1 col-sm-1 col-xs-1 margen-0">
-                </div>
-            </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <img src="imagenes/royal_ruleta/snoopy-juego/instrucciones.png" class="img-responsive center-img">
         </div>
     </div>
 </div>
-
-<div id="galeria" class="hidden seccion fondo-galeria">
-    <div class="container vertical-center">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="col-md-12 col-sm-12">
-                    <div class="logo-karaoke-galeria">
-                        <img src="<?php echo base_url() ?>imagenes/royal_ruleta/galeria/logo_karaoke.png"
-                             class="img-responsive"/>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="roboto-bold titulo text-left"><p>GALERÍA</p></div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 ">
-                    <div class="fondo-video pull-right">
-                        <div class="col-md-10 col-sm-10 col-xs-10 margen-0 ">
-                            <div class="pull-left div-buscar-video"><input class="" type="text" id="box-buscar-video"
-                                                                           name="box-buscar-video"
-                                                                           placeholder="Buscar video"></div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-2 margen-0">
-                            <div class="pull-right boton-buscar-video"><p><img
-                                        src="<?php echo base_url() ?>imagenes/royal_ruleta/galeria/icono_buscar.png">
-                                </p></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12 col-sm-12 col-xs-12 margen-0">
-
-                    <div id="galeria-imagenes" class="col-md-12 col-sm-12 col-xs-12"></div>
-
-                </div>
-
-
-            </div>
-
-            <!--Botones-->
-            <div class="col-md-12 col-sm-12 col-xs-12  ">
-                <div class="col-md-6 col-sm-6 col-xs-6   ">
-                    <div class="btn-home-home botontexto col-center-block   pull-right">
-                        <div class="icono-instrucciones">Inicio</div>
-                    </div>
-
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6   ">
-
-                    <div class="btn-home-subir-video botontexto col-center-block pull-left ">
-                        <div class="icono-subir-video">Subir video</div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
-</div>
-
+<script type="text/javascript">
+    var dir = window.document.URL;
+    var dir2 = encodeURIComponent(dir);
+    var tit = window.document.title;
+    var tit2 = encodeURIComponent(tit);
+</script>
 
 <script type="text/javascript" charset="utf-8">
     var idParticipante = 0;
@@ -396,7 +356,6 @@
 
     var dis = "<?php  echo $data['dispositivo'];?>";
 </script>
-
 <script>
     //Google Analitics
     (function (i, s, o, g, r, a, m) {
