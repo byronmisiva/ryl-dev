@@ -18,7 +18,6 @@
     <script src="<?php echo base_url() ?>js/royal_ruleta/jquery.maskedinput.min.js" type="text/javascript"></script>
 
 
-
     <script type="text/javascript" src="<?php echo base_url('js/general/validate.js') ?>"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/bootstrap.min.js"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/ligthbox/ekko-lightbox.min.js"></script>
@@ -66,11 +65,11 @@
 
 <div id="registro" class="  seccion fondo-registro hidden-xs">
 
-    <div class="fondo-registro2  ">
+    <div class="texto-info js--triggerInstruccionesInicio">
+    </div>
+    <div class="fondo-registro2">
         <div class="botones">
-
             <div class="btn-audioOn js--triggerAudio"></div>
-
             <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"
                target="_blank">
                 <div class="btn-compartir js--triggerCompartir"></div>
@@ -99,7 +98,9 @@
 
         <!--        <div class="container center-block">-->
         <div class=" ">
-            <div class="espacio74 ">
+            <div class="espacio74 hidden">
+
+
                 <div class="col-md-12 col-sm-12">
 
 
@@ -152,7 +153,6 @@
                                         </div>
 
 
-
                                     </li>
                                     <li class="li-form">
                                         <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
@@ -185,7 +185,7 @@
 
 
                                     </li>
-                                    <li class="text-center li-form" >
+                                    <li class="text-center li-form">
                                         <div class="portabotones center-block ">
                                             <input type="submit" value="Continuar" name="login"
                                                    class="btn-ingreso botontexto"

@@ -57,7 +57,7 @@ $(document).ready(function () {
         var anim = "crossscreen";
         animGelatinas(anim, "#animationGelatina1");
         ganapremio = 1;
-        premioganado= 2;
+        premioganado = 2;
     }
     $('.js--triggerAnimation1').click(function (e) {
         if (!pausa) {
@@ -85,6 +85,17 @@ $(document).ready(function () {
         //$('#home').removeClass('hidden').hide();
     });
 
+    //evento instrucciones inicio
+    $('.js--triggerInstruccionesInicio').click(function (e) {
+        e.preventDefault();
+        $('.texto-info').hide();
+        //$('.espacio74 ').removeClass('hidden').fadeIn();
+        $('.espacio74 ').removeClass('hidden').fadeIn();
+    });
+
+
+
+
     $('#instrucciones').click(function (e) {
         e.preventDefault();
 
@@ -93,15 +104,15 @@ $(document).ready(function () {
     });
 
 
-    $('.ganacamiseta .btn-pierde2, .ganagorra .btn-pierde2, .ganaentrada .btn-pierde2, .pierde .btn-pierde2' ).click(function (e) {
+    $('.ganacamiseta .btn-pierde2, .ganagorra .btn-pierde2, .ganaentrada .btn-pierde2, .pierde .btn-pierde2').click(function (e) {
         e.preventDefault();
         /*-------------*/
         //$(".fanpage").removeClass('hidden').fadeIn();
         //$(this).removeClass('hidden').hide();
-        window.open('https://www.facebook.com/RoyalEcuador/','_blank');
+        window.open('https://www.facebook.com/RoyalEcuador/', '_blank');
     });
 
-    $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3, .pierde .btn-pierde3' ).click(function (e) {
+    $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3, .pierde .btn-pierde3').click(function (e) {
         e.preventDefault();
         /*-------------*/
         //$(".fanpage").removeClass('hidden').fadeIn();
@@ -148,36 +159,36 @@ $(document).ready(function () {
 
     $('.js--ingresaotrocodigo').click(function () {
         location.reload(true);
-/*        ultimo = true;
-        primeravez = 0;
-        numeroGelatina = 1;
-        animGelatinasActive = 1;
-        gelatinaPremio = 1;
-        gelPremio = getRandomInt(0, 4);
+        /*        ultimo = true;
+         primeravez = 0;
+         numeroGelatina = 1;
+         animGelatinasActive = 1;
+         gelatinaPremio = 1;
+         gelPremio = getRandomInt(0, 4);
 
-        ganapremio = 1;
-        premioganado = 1;
+         ganapremio = 1;
+         premioganado = 1;
 
-        //pausa en el juego
-        pausa = false;
-        tiempoPausa = 4000;
-        backgroundAudio.src = "linus-and-lucy_part_1.mp3"
+         //pausa en el juego
+         pausa = false;
+         tiempoPausa = 4000;
+         backgroundAudio.src = "linus-and-lucy_part_1.mp3"
 
 
-        $('.home').fadeIn();
-        $('.pierde').hide();
-        $('.ganacamiseta').hide();
-        $('.ganagorra').hide();
-        $('.ganaentrada').hide();
-        $('.fanpage').hide();
-        $('.snoopy-juego-feliz').hide();
-        $('.snoopy-juego').show();
-        $("span.crossscreen1, span.crossscreen2, span.crossscreen3, .gelatinas").remove();
+         $('.home').fadeIn();
+         $('.pierde').hide();
+         $('.ganacamiseta').hide();
+         $('.ganagorra').hide();
+         $('.ganaentrada').hide();
+         $('.fanpage').hide();
+         $('.snoopy-juego-feliz').hide();
+         $('.snoopy-juego').show();
+         $("span.crossscreen1, span.crossscreen2, span.crossscreen3, .gelatinas").remove();
 
-        $('#home').fadeOut();
-        $('#instrucciones').fadeOut();
-        $('#registro').fadeIn();
-        $('#box-codigo1').val("")*/
+         $('#home').fadeOut();
+         $('#instrucciones').fadeOut();
+         $('#registro').fadeIn();
+         $('#box-codigo1').val("")*/
 
     });
 
