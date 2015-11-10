@@ -260,39 +260,45 @@
 
     <div class="container vertical-center pierde hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/pierde.png" class="img-responsive center-img">
         </div>
     </div>
     <div class="container vertical-center ganacamiseta  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_camiseta.png" class="img-responsive center-img">
         </div>
     </div>
     <div class="container vertical-center ganagorra  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_gorra.png" class="img-responsive center-img">
         </div>
     </div>
 
     <div class="container vertical-center ganaentrada  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive center-img">
         </div>
     </div>
-    <div class="container vertical-center fanpage  hidden">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <a href="https://www.facebook.com/RoyalEcuador/" target="_blank">
-                <img src="imagenes/royal_ruleta/snoopy-juego/fanpage.png" class="img-responsive center-img">
-            </a>
-
-            <div class="ingresanuevocodigo">
-                <div class="js--ingresaotrocodigo">
-                    <img src="imagenes/royal_ruleta/snoopy-juego/ingresa.png" class="img-responsive center-img">
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 

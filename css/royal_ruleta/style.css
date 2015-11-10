@@ -126,7 +126,7 @@ a:hover, a:visited {
 }
 
 .ganacamiseta, .ganagorra, .ganaentrada, .fanpage, .pierde {
-    cursor: pointer;
+ /*   cursor: pointer; */
 }
 
 .fondo-home2 {
@@ -833,7 +833,7 @@ a:hover, a:visited {
     }
 
     input[type="text"], input[type="email"] {
-/*        margin: 7px 1px 3px 0px !important;*/
+        /*        margin: 7px 1px 3px 0px !important;*/
     }
 
     .espacio74 {
@@ -940,8 +940,7 @@ a:hover, a:visited {
     font-size: 12px;
 }
 
-
-.terminos-condiciones a, .terminos-condiciones a:hover,.terminos-condiciones  a:visited {
+.terminos-condiciones a, .terminos-condiciones a:hover, .terminos-condiciones a:visited {
     font-weight: normal;
     color: #ffffff;
 
@@ -1053,8 +1052,8 @@ input[type=text]:focus, textarea:focus {
     border: 1px solid rgba(255, 255, 255, 1);*/
 }
 
-input:focus{
-    outline:0px;
+input:focus {
+    outline: 0px;
 }
 
 ::-webkit-input-placeholder {
@@ -1084,8 +1083,6 @@ ul.login_wid {
     margin: 0;
     padding: 0;
 }
-
-
 
 /*input.btn-ingreso {
     background: url("../../imagenes/karaokegalaxya/registro/boton_continuar.png") no-repeat scroll 0 0 transparent;
@@ -1426,7 +1423,6 @@ ul.login_wid {
     }
 }
 
-
 .tit-form {
     padding-top: 6px;
     font-size: 13px;
@@ -1441,5 +1437,32 @@ li.li-form {
     float: left;
     width: 100%;
 
-    font-family: arial,sans-serif;
+    font-family: arial, sans-serif;
+}
+
+.btn-pierde1 {
+    height: 70%;
+    width: 100%;
+}
+
+.btn-pierde2 {
+    height: 10%;
+    width: 50%;
+    margin: 0 28% 0 23%;
+    cursor: pointer;
+
+}
+
+.btn-pierde3 {
+    height: 10%;
+    width: 50%;
+    margin: 0 28% 0 23%;
+    cursor: pointer;
+}
+
+.botones-juego {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
 }

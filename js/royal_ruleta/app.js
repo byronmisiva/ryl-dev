@@ -93,10 +93,20 @@ $(document).ready(function () {
     });
 
 
-    $('.ganacamiseta, .ganagorra, .ganaentrada, .pierde').click(function (e) {
+    $('.ganacamiseta .btn-pierde2, .ganagorra .btn-pierde2, .ganaentrada .btn-pierde2, .pierde .btn-pierde2' ).click(function (e) {
         e.preventDefault();
-        $(".fanpage").removeClass('hidden').fadeIn();
-        $(this).removeClass('hidden').hide();
+        /*-------------*/
+        //$(".fanpage").removeClass('hidden').fadeIn();
+        //$(this).removeClass('hidden').hide();
+        window.open('https://www.facebook.com/RoyalEcuador/','_blank');
+    });
+
+    $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3, .pierde .btn-pierde3' ).click(function (e) {
+        e.preventDefault();
+        /*-------------*/
+        //$(".fanpage").removeClass('hidden').fadeIn();
+        //$(this).removeClass('hidden').hide();
+        location.reload(true);
     });
 
 
