@@ -404,11 +404,13 @@ function mostrarFormCompleto(data) {
     $('#complete_register').removeClass("hidden").show();
     $('.portabotones').removeClass("hidden").show();
     var data = JSON.parse(data);
-    $('#nombre').val(data['nombre']);
-    $('#apellido').val(data['apellido']);
-    $('#mail').val(data['mail']);
-    $('#telefono').val(data['telefono']);
-    $('#ciudad').val(data['ciudad']);
+    if ($('#nombre').val() == ''){
+        $('#nombre').val(data['nombre']);
+        $('#apellido').val(data['apellido']);
+        $('#mail').val(data['mail']);
+        $('#telefono').val(data['telefono']);
+        $('#ciudad').val(data['ciudad']);
+    }
 }
 
 
