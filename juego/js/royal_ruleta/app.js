@@ -415,7 +415,7 @@ function mostrarCodigoCorrecto(data) {
     }
 
     //segunda parte de cancion
-    backgroundAudio.src = "linus-and-lucy_part_2.mp3"
+    backgroundAudio.src = "linus-and-lucy_part_1.mp3"
     premioganado = obj.id_premio;
     ocultarTodosSeccion();
     $('#home').removeClass("hidden").show();
