@@ -41,7 +41,7 @@ $(document).ready(function () {
 
     //$("#cedula").mask("9999999999");
     $("#box-codigo1").mask("99 999 99:99");
-    $("#telefono").mask("9999999999");
+    //$("#telefono").mask("9999999999");
 });
 
 
@@ -93,33 +93,21 @@ $(document).ready(function () {
         $('.espacio74 ').removeClass('hidden').fadeIn();
     });
 
-
-
-
     $('#instrucciones').click(function (e) {
         e.preventDefault();
-
-        //$('#home').removeClass('hidden').show();
         $('#instrucciones').removeClass('hidden').fadeOut();
     });
 
 
     $('.ganacamiseta .btn-pierde2, .ganagorra .btn-pierde2, .ganaentrada .btn-pierde2, .pierde .btn-pierde2').click(function (e) {
         e.preventDefault();
-        /*-------------*/
-        //$(".fanpage").removeClass('hidden').fadeIn();
-        //$(this).removeClass('hidden').hide();
         window.open('https://www.facebook.com/RoyalEcuador/', '_blank');
     });
 
     $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3, .pierde .btn-pierde3').click(function (e) {
         e.preventDefault();
-        /*-------------*/
-        //$(".fanpage").removeClass('hidden').fadeIn();
-        //$(this).removeClass('hidden').hide();
         location.reload(true);
     });
-
 
     //animacion parpadeo
     setInterval(function () {

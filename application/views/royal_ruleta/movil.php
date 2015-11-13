@@ -18,7 +18,6 @@
     <script src="<?php echo base_url() ?>js/royal_ruleta/jquery.maskedinput.min.js" type="text/javascript"></script>
 
 
-
     <script type="text/javascript" src="<?php echo base_url('js/general/validate.js') ?>"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/bootstrap.min.js"></script>
     <script src="<?php echo base_url() ?>js/royal_ruleta/ligthbox/ekko-lightbox.min.js"></script>
@@ -66,11 +65,11 @@
 
 <div id="registro" class="  seccion fondo-registro hidden-xs">
 
-    <div class="fondo-registro2  ">
+    <div class="texto-info js--triggerInstruccionesInicio">
+    </div>
+    <div class="fondo-registro2">
         <div class="botones">
-
             <div class="btn-audioOn js--triggerAudio"></div>
-
             <a href="javascript:var dir=window.document.URL;var tit=window.document.title;var tit2=encodeURIComponent(tit);var dir2= encodeURIComponent(dir);window.location.href=('http://www.facebook.com/share.php?u='+dir2+'&amp;t='+tit2+'');"
                target="_blank">
                 <div class="btn-compartir js--triggerCompartir"></div>
@@ -87,22 +86,17 @@
                     <div class="  col-md-offset-2    col-xs-12 col-md-8 col-sm-12">
                         <div class="titulares-registro titulares text-center">
                             <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
-                                un
-                                viaje a Fox Studios en Los Ángeles.</p>
-
-                            <p>También puedes jugar y ganar premios instáneos.</p>
+                                un viaje a Fox Studios en Los Ángeles.</p>
+                            <p>También puedes jugar y ganar premios instantáneos.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!--        <div class="container center-block">-->
         <div class=" ">
-            <div class="espacio74 ">
+            <div class="espacio74 hidden">
                 <div class="col-md-12 col-sm-12">
-
-
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                         <div class="titulares titulo text-center"><p>REGÍSTRATE</p></div>
                     </div>
@@ -152,7 +146,6 @@
                                         </div>
 
 
-
                                     </li>
                                     <li class="li-form">
                                         <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
@@ -185,7 +178,7 @@
 
 
                                     </li>
-                                    <li class="text-center li-form" >
+                                    <li class="text-center li-form">
                                         <div class="portabotones center-block ">
                                             <input type="submit" value="Continuar" name="login"
                                                    class="btn-ingreso botontexto"
@@ -260,39 +253,45 @@
 
     <div class="container vertical-center pierde hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/pierde.png" class="img-responsive center-img">
         </div>
     </div>
     <div class="container vertical-center ganacamiseta  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_camiseta.png" class="img-responsive center-img">
         </div>
     </div>
     <div class="container vertical-center ganagorra  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_gorra.png" class="img-responsive center-img">
         </div>
     </div>
 
     <div class="container vertical-center ganaentrada  hidden">
         <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive center-img">
         </div>
     </div>
-    <div class="container vertical-center fanpage  hidden">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <a href="https://www.facebook.com/RoyalEcuador/" target="_blank">
-                <img src="imagenes/royal_ruleta/snoopy-juego/fanpage.png" class="img-responsive center-img">
-            </a>
-
-            <div class="ingresanuevocodigo">
-                <div class="js--ingresaotrocodigo">
-                    <img src="imagenes/royal_ruleta/snoopy-juego/ingresa.png" class="img-responsive center-img">
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 

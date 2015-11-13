@@ -86,24 +86,17 @@
                     <div class="  col-md-offset-2    col-xs-12 col-md-8 col-sm-12">
                         <div class="titulares-registro titulares text-center">
                             <p>Llena tus datos, ingresa el código del empaque de tu gelatina Royal y participa por
-                                un
-                                viaje a Fox Studios en Los Ángeles.</p>
-
-                            <p>También puedes jugar y ganar premios instáneos.</p>
+                                un viaje a Fox Studios en Los Ángeles.</p>
+                            <p>También puedes jugar y ganar premios instantáneos.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!--        <div class="container center-block">-->
         <div class=" ">
             <div class="espacio74 hidden">
-
-
                 <div class="col-md-12 col-sm-12">
-
-
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                         <div class="titulares titulo text-center"><p>REGÍSTRATE</p></div>
                     </div>
@@ -339,7 +332,7 @@
         {name: 'apellido', display: 'apellido', rules: 'required'},
         {name: 'ciudad', display: 'ciudad', rules: 'required'},
         {name: 'cedula', display: 'cedula', rules: 'required|numeric||max_length[10]'},
-        {name: 'telefono', display: 'telefono', rules: 'required|numeric|max_length[10]'},
+        {name: 'telefono', display: 'telefono', rules: 'required|numeric|min_length[7]|max_length[10]'},
         {name: 'mail', display: 'mail', rules: 'required|valid_email'}
     ];
 
