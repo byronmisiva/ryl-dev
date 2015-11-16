@@ -1067,7 +1067,7 @@ input[type="text"], input[type="email"] {
     display: block;
     font-family: sans-serif;
     font-size: 14px;
-    font-family: "snoopyregular";
+
     padding: 3px 0px 3px 3px;
     margin: 0px 1px 0px 0px;
     text-align: center;
@@ -1460,8 +1460,6 @@ ul.login_wid {
     clear: both;
     text-align: right;
     color: rgba(255, 255, 255, 0.8);
-    font-family: 'snoopyregular';
-
 }
 
 li.li-form {
