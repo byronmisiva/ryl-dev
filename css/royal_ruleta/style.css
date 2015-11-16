@@ -1048,6 +1048,14 @@ p.texto-interno, .texto-interno {
     cursor: pointer;
 }
 
+.logo-home {
+    height: 62%;
+    margin-top: 2% !important;
+}
+
+.logoregistro {
+    height: 100% !important;
+}
 input[type="text"], input[type="email"] {
     background-color: transparent;
     border: none;
@@ -1447,10 +1455,12 @@ ul.login_wid {
 
 .tit-form {
     padding-top: 6px;
-    font-size: 13px;
+    font-size: 14px;
     clear: both;
     text-align: right;
-    color: rgba(255, 255, 255, 0.8);;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'snoopyregular';
+
 }
 
 li.li-form {

@@ -75,11 +75,11 @@
         </div>
 
         <div class="cabecerahome">
-            <div class="container center-block">
+            <div class="container center-block logo-home">
                 <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png"
                      class="img-responsive center-img logoregistro">
             </div>
-            <div class="container center-block">
+            <!--<div class="container center-block">
                 <div class="col-md-12 col-sm-12">
                     <div class="  col-md-offset-2    col-xs-12 col-md-8 col-sm-12">
                         <div class="titulares-registro titulares text-center">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <!--        <div class="container center-block">-->
         <div class=" ">
