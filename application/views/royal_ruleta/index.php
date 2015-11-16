@@ -150,7 +150,7 @@
                                         </div>
                                         <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
                                             <input class="box-text" type="text" id="telefono" name="telefono"
-                                                   maxlength="10"
+                                                   maxlength="12"
                                                    required="required">
                                         </div>
                                     </li>
