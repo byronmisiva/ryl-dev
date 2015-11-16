@@ -1039,6 +1039,15 @@ p.texto-interno, .texto-interno {
     font-size: 22px;
 }
 
+
+#mensaje-envio {
+    font-size: 11px;
+}
+
+.texto-info, #instrucciones {
+    cursor: pointer;
+}
+
 input[type="text"], input[type="email"] {
     background-color: transparent;
     border: none;

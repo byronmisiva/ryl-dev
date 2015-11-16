@@ -12,8 +12,6 @@
     <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
-    <link href="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.css" rel="stylesheet" type="text/css"/>
-    <script src="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.js" type="text/javascript"></script>
 
     <script src="<?php echo base_url() ?>js/royal_ruleta/jquery.maskedinput.min.js" type="text/javascript"></script>
 
@@ -336,17 +334,22 @@
         {name: 'mail', display: 'mail', rules: 'required|valid_email'}
     ];
 
-    var validator = new FormValidator('register', rules, function (errors, event) {
+    var validator = new FormValidator('registroform', rules, function (errors, event) {
+        seguirFormulario = 1 ;
         if (errors.length > 0) {
             var errorString = '';
             for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
-                $('#' + errors[i].id).val("");
-                $('#' + errors[i].id).css({"color": "#42332a"});
-                errorString += errors[i].id + "<br>";
+                //$('#' + errors[i].id).val("");
+                //$('#' + errors[i].id).css({"color": "#42332a"});
+                errorString += errors[i].message + "<br>";
+                //console.log (errors)
             }
             ;
-            alert("REGISTROS NO COMPLETADOS");
+            $('#mensaje-envio').html(errorString)
+
+            seguirFormulario = 0;
         } else {
+
             $(".btn-continuar-registro").hide();
             $("#submit").hide();
             enviarForma('register');

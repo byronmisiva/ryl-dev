@@ -19,6 +19,8 @@ var tiempoPausa = 3000;
 
 var divSeleccion
 
+var seguirFormulario = 1;
+
 var sabores = [];
 var gelatinas = ["gelatina_cereza", "gelatina_frambuesa", "gelatina_limon", "gelatina_uva", "gelatina_naranja"];
 //var gelatinas = ["snoopy-juego\/cereza.png", "snoopy-juego\/frambuesa.png", "snoopy-juego\/limon.png", "snoopy-juego\/uva.png", "snoopy-juego\/naranja.png"];
@@ -340,7 +342,7 @@ function iniciaFormulario() {
     $("#registroform").submit(function (event) {
             event.preventDefault();
             //si campos registro no estan visibles y estan llenos por recarga pagina los mostramos
-            if ($('#complete_register').is(':visible')) {
+            if (seguirFormulario == 1 ) {
                 var url = accion + controladorApp + "/register";
                 $.ajax({
                         url: url,
