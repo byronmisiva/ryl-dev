@@ -73,7 +73,6 @@
                 <div class="btn-compartir js--triggerCompartir"></div>
             </a>
         </div>
-
         <div class="cabecerahome">
             <div class="container center-block logo-home">
                 <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png"
