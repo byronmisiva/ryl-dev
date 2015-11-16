@@ -393,18 +393,21 @@ function verificarParticipante(cedula) {
 function mostrarFormRegistro() {
     $('#complete_register').removeClass("hidden").show();
     $('.portabotones').removeClass("hidden").show();
-    $('#nombre').val("");
-    $('#apellido').val("");
-    $('#mail').val("");
-    $('#telefono').val("");
-    $('#ciudad').val("");
+    if (($('#nombre').val() == '') || ($('#apellido').val() == '') || ($('#ciudad').val() == '') || ($('#mail').val() == '') || ($('#telefono').val() == '') ) {
+        $('#nombre').val("");
+        $('#apellido').val("");
+        $('#mail').val("");
+        $('#telefono').val("");
+        $('#ciudad').val("");
+    }
 }
 
 function mostrarFormCompleto(data) {
     $('#complete_register').removeClass("hidden").show();
     $('.portabotones').removeClass("hidden").show();
     var data = JSON.parse(data);
-    if ($('#nombre').val() == ''){
+    console.log ($('#nombre').val());
+    if (($('#nombre').val() == '') || ($('#apellido').val() == '') || ($('#ciudad').val() == '') || ($('#mail').val() == '') || ($('#telefono').val() == '') ) {
         $('#nombre').val(data['nombre']);
         $('#apellido').val(data['apellido']);
         $('#mail').val(data['mail']);
