@@ -20,7 +20,7 @@ class Royal_ruleta extends CI_Controller
         $this->folderView = "royal_ruleta";
         $this->data['controlador'] = "royal_ruleta";
 
-        $this->data['condiciones'] = "<a href='" . base_url() . "archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf' target='_blank' >T�rminos y condiciones</a>";
+        $this->data['condiciones'] = "<a href='" . base_url() . "archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-ROYAL.pdf' target='_blank' >T�rminos y condiciones</a>";
     }
 
     function index()

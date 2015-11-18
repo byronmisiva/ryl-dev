@@ -188,7 +188,7 @@
                                         <div id="mensaje-envio"></div>
                                     </li>
                                     <li class="text-center li-form terminos-condiciones">
-                                        <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-Karaoke.pdf"
+                                        <a href="archivos/REGLAMENTO-DE-TERMINOS-Y-CONDICIONES-PARA-EL-CONCURSO-ROYAL.pdf"
                                            target="_blank">Términos y
                                             condiciones</a>
                                     </li>
