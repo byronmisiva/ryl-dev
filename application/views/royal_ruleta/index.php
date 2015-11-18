@@ -61,7 +61,7 @@
 </div>-->
 
 
-<div id="registro" class="  seccion fondo-registro hidden-xs">
+<div id="registro" class="seccion fondo-registro hidden-xs">
 
     <div class="texto-info js--triggerInstruccionesInicio">
     </div>
@@ -298,6 +298,12 @@
     </div>
 </div>
 
+<div id="internet-explorer" class="hidden" style="background-color: #cccccc">
+    <div class="fondo-internet-explorer center-block  ">
+        <img src="imagenes/royal_ruleta/vista-internet-explorer.png" class="img-responsive">
+    </div>
+</div>
+
 <div class="legales hidden-xs">
     <div class="center-img">
         <img src="imagenes/royal_ruleta/snoopy-juego/legales.png" class="img-responsive center-img">
@@ -358,6 +364,8 @@
     var dis = "<?php  echo $data['dispositivo'];?>";
 </script>
 <script>
+
+
     //Google Analitics
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;

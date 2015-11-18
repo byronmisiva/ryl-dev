@@ -29,6 +29,7 @@ var backgroundAudio;
 var audioOnOff = 1;
 
 window.onload = function () {
+
     backgroundAudio = document.getElementById("bgAudio");
     backgroundAudio.volume = 0.2;
 //    backgroundAudio.volume = 0;
@@ -37,6 +38,11 @@ window.onload = function () {
 
 //funciones scriptcam
 $(document).ready(function () {
+    // si se usa el internet explorer 8 0 7 no funciona
+    if((navigator.appVersion.indexOf("MSIE 7.")!=-1) || (navigator.appVersion.indexOf("MSIE 8.")!=-1)) {
+        $('#registro').hide();
+        $('#internet-explorer').removeClass("hidden").show();
+    }
     iniciaFormulario()
     //llamada para mostrar webcam en div, incluye botones
     crearBotonesInterface();
