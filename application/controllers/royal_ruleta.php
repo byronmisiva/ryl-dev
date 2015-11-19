@@ -138,6 +138,8 @@ class Royal_ruleta extends CI_Controller
             echo "F";
             return;
         }
+        $codigo = str_replace(' ', '', $codigo);
+        $codigo = str_replace(':', '', $codigo);
 
         $codData = $this->modelo->getCodigo($codigo);
         if ($codData == "0") {
