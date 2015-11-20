@@ -50,10 +50,6 @@
 </head>
 
 <body>
-<div class="hidden">
-    <img src="imagenes/royal_ruleta/snoopy-juego/boton.png">
-</div>
-
 <audio id="bgAudio" autoplay="autoplay" loop="loop"></audio>
 
 <!--<div>
@@ -320,6 +316,11 @@
         </div>
     </div>
 </div>
+
+<div class="hidden">
+    <img src="imagenes/royal_ruleta/snoopy-juego/boton.png">
+</div>
+
 <script type="text/javascript">
     var dir = window.document.URL;
     var dir2 = encodeURIComponent(dir);
