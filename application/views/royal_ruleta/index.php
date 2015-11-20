@@ -49,7 +49,7 @@
 
 </head>
 
-<body>
+<body style="background-color: #00bce6">
 <audio id="bgAudio" autoplay="autoplay" loop="loop"></audio>
 
 <!--<div>
