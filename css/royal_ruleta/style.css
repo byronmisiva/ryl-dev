@@ -1491,3 +1491,7 @@ li.li-form {
         margin-top: 1px;
     }
 }
+
+.popover-content {
+    color: #313131;
+}

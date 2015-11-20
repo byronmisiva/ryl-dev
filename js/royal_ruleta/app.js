@@ -137,6 +137,8 @@ $(document).ready(function () {
         //no hacemos nada ;
     }
 
+    $('#example').popover('hide');
+
 
     //animacion parpadeo
     setInterval(function () {
@@ -447,7 +449,11 @@ function mostrarFormCompleto(data) {
 
 
 function mostrarCodigoErrado() {
-    $('#mensaje-envio').html("Código Incorrecto");
+//    $('#mensaje-envio').html("Código Incorrecto");
+    $('#example').popover('show');
+    setTimeout(function () {
+        $('#example').popover('hide');
+    }, 4000);
 }
 function mostrarCodigoCorrecto(data) {
     obj = JSON.parse(data);
