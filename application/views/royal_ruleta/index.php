@@ -320,6 +320,7 @@
 <div class="hidden">
     <img src="imagenes/royal_ruleta/snoopy-juego/boton.png">
     <img src="imagenes/royal_ruleta/snoopy-juego/snopy-frente.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/snoppy-feliz.png">
     <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_cereza.png">
     <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_frambuesa.png">
     <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_limon.png">
