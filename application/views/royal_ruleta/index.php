@@ -328,6 +328,8 @@
     <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_uva.png">
     <img src="imagenes/royal_ruleta/snoopy-juego/background-only.jpg">
     <img src="imagenes/royal_ruleta/snoopy-juego/background2.png">
+    <img src="imagenes/royal_ruleta/snoopy-registro/background2.png">
+    <img src="imagenes/royal_ruleta/snoopy-registro/background.jpg">
 </div>
 
 <script type="text/javascript">
