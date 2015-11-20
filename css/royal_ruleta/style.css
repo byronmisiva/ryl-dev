@@ -201,7 +201,7 @@ a:hover, a:visited {
 }
 
 .cabecerahome {
-    height: 42%;
+    height: 40%;
 }
 
 .imagen-instrucciones {
@@ -821,26 +821,6 @@ a:hover, a:visited {
     width: 34%;
     margin-left: 52%;
     max-width: 360px;
-}
-
-@media (max-height: 640px) {
-    img.logoregistro {
-        height: 100px;
-    }
-
-    .legales1 {
-        display: none;
-    }
-
-    input[type="text"], input[type="email"] {
-        /*        margin: 7px 1px 3px 0px !important;*/
-    }
-
-    .espacio74 {
-        width: 28% !important;
-        margin-left: 52%;
-        max-width: 360px;
-    }
 }
 
 @media (max-width: 960px) {
@@ -1497,3 +1477,33 @@ li.li-form {
     width: 100%;
 
 }
+
+@media (max-height: 640px) {
+    img.logoregistro {
+        height: 100px;
+    }
+
+    .legales1 {
+        display: none;
+    }
+
+    input[type="text"], input[type="email"] {
+        /*        margin: 7px 1px 3px 0px !important;*/
+    }
+
+    .espacio74 {
+        width: 28% !important;
+        margin-left: 52%;
+        max-width: 360px;
+    }
+
+    .cabecerahome {
+        height: 38%;
+    }
+
+    li.li-form {
+        margin-top: 1px;
+    }
+}
+
+
