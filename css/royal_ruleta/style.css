@@ -1441,69 +1441,53 @@ ul.login_wid {
     text-align: right;
     color: rgba(255, 255, 255, 0.8);
 }
-
 li.li-form {
     clear: both;
     margin-top: 6px;
     float: left;
     width: 100%;
-
     font-family: arial, sans-serif;
 }
-
 .btn-pierde1 {
     height: 70%;
     width: 100%;
 }
-
 .btn-pierde2 {
     height: 10%;
     width: 50%;
     margin: 0 28% 0 23%;
     cursor: pointer;
-
 }
-
 .btn-pierde3 {
     height: 10%;
     width: 50%;
     margin: 0 28% 0 23%;
     cursor: pointer;
 }
-
 .botones-juego {
     position: absolute;
     height: 100%;
     width: 100%;
-
 }
-
 @media (max-height: 640px) {
     img.logoregistro {
         height: 100px;
     }
-
     .legales1 {
         display: none;
     }
-
     input[type="text"], input[type="email"] {
         /*        margin: 7px 1px 3px 0px !important;*/
     }
-
     .espacio74 {
         width: 28% !important;
         margin-left: 52%;
         max-width: 360px;
     }
-
     .cabecerahome {
         height: 38%;
     }
-
     li.li-form {
         margin-top: 1px;
     }
 }
-
-
