@@ -114,8 +114,29 @@ $(document).ready(function () {
 
     $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3, .pierde .btn-pierde3').click(function (e) {
         e.preventDefault();
-        location.reload(true);
+         // evito que se repita la cedula
+        var str = window.location.href;
+        var n = str.search($('#cedula').val());
+
+        if (n > 0 ) {
+            window.location.replace(window.location.href)
+        } else {
+            window.location.replace(window.location.href  + $('#cedula').val())
+        }
+//        location.reload(true);
     });
+
+    var str = window.location.href;
+    var res = str.split("/");
+    var resol = res[res.length -1]
+    if ( resol.length  > 0 ) {
+        $('.js--triggerInstruccionesInicio').click() ;
+        $('#cedula').val(resol);
+        verificarParticipante(resol);
+    } else {
+        //no hacemos nada ;
+    }
+
 
     //animacion parpadeo
     setInterval(function () {
