@@ -107,12 +107,12 @@ $(document).ready(function () {
     });
 
 
-    $('.ganacamiseta .btn-pierde2, .ganagorra .btn-pierde2, .ganaentrada .btn-pierde2, .pierde .btn-pierde2').click(function (e) {
+    $('.ganacamiseta .btn-pierde2, .ganagorra .btn-pierde2, .ganaentrada .btn-pierde2, .ganacuaderno .btn-pierde2, .pierde .btn-pierde2').click(function (e) {
         e.preventDefault();
         window.open('https://www.facebook.com/RoyalEcuador/', '_blank');
     });
 
-    $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3, .pierde .btn-pierde3').click(function (e) {
+    $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3,.ganacuaderno .btn-pierde3, .pierde .btn-pierde3').click(function (e) {
         e.preventDefault();
          // evito que se repita la cedula
         var str = window.location.href;
@@ -324,7 +324,7 @@ function cierre() {
     pausa = true;
     if (ganapremio == 0) {
         $('.home').fadeOut();
-        $('.ganacamiseta, .ganagorra, .ganaentrada, #instrucciones').hide();
+        $('.ganacamiseta, .ganagorra, .ganaentrada,.ganacuaderno, #instrucciones').hide();
         $('.pierde').removeClass("hidden").fadeIn();
     } else {
         $('.home').fadeOut();
@@ -332,6 +332,7 @@ function cierre() {
         $('.ganacamiseta').hide();
         $('.ganagorra').hide();
         $('.ganaentrada').hide();
+        $('.ganacuaderno').hide();
         if (premioganado == 2) {
             $('.ganacamiseta').removeClass("hidden").fadeIn();
         }
@@ -340,6 +341,9 @@ function cierre() {
         }
         if (premioganado == 4) {
             $('.ganaentrada').removeClass("hidden").fadeIn();
+        }
+        if (premioganado == 5) {
+            $('.ganacuaderno').removeClass("hidden").fadeIn();
         }
     }
     //graba participacion

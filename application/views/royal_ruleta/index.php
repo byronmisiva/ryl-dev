@@ -288,6 +288,16 @@
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive center-img">
         </div>
     </div>
+    <div class="container vertical-center ganacuaderno  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_cuaderno.png" class="img-responsive center-img">
+        </div>
+    </div>
 </div>
 
 
