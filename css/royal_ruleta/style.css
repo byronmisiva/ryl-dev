@@ -260,7 +260,6 @@ a:hover, a:visited {
     background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton.png");
     width: 96px;
     height: 96px;
-
     -webkit-animation: playboton .8s steps(10) infinite;
     -moz-animation: playboton .8s steps(10) infinite;
     -ms-animation: playboton .8s steps(10) infinite;
@@ -315,7 +314,7 @@ a:hover, a:visited {
 
 /*boton juego click sprite */
 .boton-juego-click {
-    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton_push.png");
+    background-image: url("../../imagenes/royal_ruleta/snoopy-juego/boton.png");
     width: 96px;
     height: 96px;
 
@@ -328,46 +327,46 @@ a:hover, a:visited {
 
 @-webkit-keyframes play {
     from {
-        background-position: 0;
+        background-position: -961px;
     }
     to {
-        background-position: -960px;
+        background-position: -1920px;
     }
 }
 
 @-moz-keyframes play {
     from {
-        background-position: 0px;
+        background-position: -961px;
     }
     to {
-        background-position: -960px;
+        background-position: -1920px;
     }
 }
 
 @-ms-keyframes play {
     from {
-        background-position: 0px;
+        background-position: -961px;
     }
     to {
-        background-position: -960px;
+        background-position: -1920px;
     }
 }
 
 @-o-keyframes play {
     from {
-        background-position: 0px;
+        background-position: -961px;
     }
     to {
-        background-position: -960px;
+        background-position: -1920px;
     }
 }
 
 @keyframes play {
     from {
-        background-position: 0px;
+        background-position: -961px;
     }
     to {
-        background-position: -960px;
+        background-position: -1920px;
     }
 }
 

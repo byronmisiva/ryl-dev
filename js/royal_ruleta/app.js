@@ -69,7 +69,6 @@ $(document).ready(function () {
     }
     $('.js--triggerAnimation1').click(function (e) {
         if (!pausa) {
-            $('#animationSandbox').removeClass();
             e.preventDefault();
             animGelatinasActive = 0;
             $('.js--triggerAnimation1').removeClass('boton-juego').addClass('boton-juego-click');
