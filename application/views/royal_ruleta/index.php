@@ -99,8 +99,7 @@
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                         <form id="registroform"
                               action=""
-                              method="post"
-                              enctype="multipart/form-data">
+                              method="post" >
                             <ul class="login_wid">
                                 <li class="li-form">
                                     <div class="col-md-3 col-sm-3 col-xs-3 margen-0 right tit-form">
