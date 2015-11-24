@@ -28,10 +28,12 @@ class Mdl_royal_ruleta extends CI_Model{
 
 	}
 	//recupera info del premio
-	function getCodigoGanador($codigo){
+	function getCodigoGanador($codigo, $idcedula){
 		//todos existen pero pierden
 		$this->db->select('id_premio, id, fecha_ganador, asignado');
 		$this->db->where('asignado','0');
+		$this->db->where('codigo <>',$codigo);
+		$this->db->where('id_usuario <>', $idcedula);
 		$this->db->where('fecha_ganador <','NOW()', FALSE);
 		$this->db->order_by("fecha_ganador", "asc");
 		$this->db->limit(1);

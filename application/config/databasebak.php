@@ -6,7 +6,7 @@ $active_record = TRUE;
 
 $db['aplicaciones']['hostname'] = "127.0.0.1";
 $db['aplicaciones']['username'] = "root";
-$db['aplicaciones']['password'] = "";
+$db['aplicaciones']['password'] = "111111";
 $db['aplicaciones']['database'] = "royal";
 $db['aplicaciones']['dbdriver'] = "mysql";
 $db['aplicaciones']['dbprefix'] = "";
@@ -19,7 +19,7 @@ $db['aplicaciones']['dbcollat'] = "utf8_general_ci";
 
 $db['royal']['hostname'] = "127.0.0.1";
 $db['royal']['username'] = "root";
-$db['royal']['password'] = "";
+$db['royal']['password'] = "111111";
 $db['royal']['database'] = "royal";
 $db['royal']['dbdriver'] = "mysql";
 $db['royal']['dbprefix'] = "royal_";

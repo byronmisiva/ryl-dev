@@ -95,8 +95,8 @@ class Royal_ruleta extends CI_Controller
         }
         $codigo = str_replace(" ", "", $codigo);
         $codigo = str_replace(":", "", $codigo);
-
-        $codData = $this->modelo->getCodigoGanador($codigo);
+        $registro = $this->modelo->getUsuario($cedula);
+        $codData = $this->modelo->getCodigoGanador($codigo,$registro->id);
         if ($codData == "0") {
             // caso codigo invalido
             //todo validar que este en rango de horas los 4 ultimos digitos
