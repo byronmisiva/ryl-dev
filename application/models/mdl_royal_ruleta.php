@@ -15,11 +15,26 @@ class Mdl_royal_ruleta extends CI_Model{
     }
 
 	//recupera info del premio
-	function getCodigo($codigo){
+	function getCodigoOld($codigo){
 		//todos existen pero pierden
-		$this->db->select('id_premio');
+		$this->db->select('id_premio, id');
 		$this->db->where('codigo',$codigo);
 		$codData=$this->db->get('ruleta_serial');
+		if ($codData->num_rows()>0)
+			return current($codData->result());
+		else
+			return "0";
+	}
+	//recupera info del premio
+	function getCodigo($codigo){
+		//todos existen pero pierden
+		$this->db->select('id_premio, id, fecha_ganador, asignado');
+		$this->db->where('asignado','0');
+		$this->db->where('fecha_ganador <','NOW()', FALSE);
+		$this->db->order_by("fecha_ganador", "asc");
+		$this->db->limit(1);
+
+		$codData=$this->db->get('ruleta_asigna_premios');
 		if ($codData->num_rows()>0)
 			return current($codData->result());
 		else

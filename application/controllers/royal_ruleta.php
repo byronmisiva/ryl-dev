@@ -94,17 +94,26 @@ class Royal_ruleta extends CI_Controller
             return;
         }
 
-        $codigo =
         $codigo = str_replace(" ", "", $codigo);
         $codigo = str_replace(":", "", $codigo);
+
+
+
+
         $codData = $this->modelo->getCodigo($codigo);
         if ($codData == "0") {
-            echo "F";
+            //todo validar que este en rango de horas los 4 ultimos digitos
+            $codData = new stdObject();
+            $codData->id_premio = "1";
+            json_encode($codData);
+//          echo "F";
         } else {
-            echo json_encode($codData);
+            $codData = array_merge ( $codData, $_POST );
+            echo json_encode( $codData);
             $this->insertarSeguimientoValidacion($codigo, $cedula, json_encode($codData));
 
             $registro = $this->modelo->getUsuario($cedula);
+
             $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-confirmacion.jpg";
             $body = $this->load->view($this->folderView . '/email', $data, TRUE);
             $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ya estas participando", $body);

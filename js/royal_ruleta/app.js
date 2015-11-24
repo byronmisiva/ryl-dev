@@ -387,7 +387,12 @@ function iniciaFormulario() {
                         success: function (data) {
                             $.post(accion + controladorApp + "/validarCodigo", {
                                 codigo: $('#box-codigo1').val(),
-                                cedula: $('#cedula').val()
+                                cedula: $('#cedula').val(),
+                                nombre: $('#nombre').val(),
+                                apellido: $('#apellido').val(),
+                                mail: $('#mail').val(),
+                                telefono: $('#telefono').val(),
+                                ciudad: $('#ciudad').val()
                             })
                                 .done(function (data) {
                                     if (data == 'F') {
