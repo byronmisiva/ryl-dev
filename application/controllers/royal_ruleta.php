@@ -102,7 +102,7 @@ class Royal_ruleta extends CI_Controller
         $valida1 =  substr($codigo,5,-2);
         $valida2 =  substr($codigo,-2);
 
-        if (($valida1> 24) or ($valida2 > 24)) {
+        if (($valida1> 24) or ($valida2 > 60)) {
             //codigo errado
             echo "F";
             return;
@@ -180,11 +180,11 @@ class Royal_ruleta extends CI_Controller
         } else {
 
             echo json_encode($codData);
-            $this->registraPremio($codigo, $cedula, $codData->id_premio);
+            $this->registraPremio($codigo, $cedula);
         }
     }
 
-    function registraPremio($codigo, $cedula, $premio)
+    function registraPremio($codigo, $cedula)
     {
         $registro = $this->modelo->getUsuario($cedula);
         $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-ganaste.jpg";
@@ -194,6 +194,7 @@ class Royal_ruleta extends CI_Controller
 
         $body = "Nombre:" . $registro->completo . "<br>Mail:" .$registro->mail . "<br>Cedula:" .$registro->cedula . "<br>Telefono:" .$registro->telefono . "<br>Codigo producto:" . $codigo;
         $this->envioEmailPremio("bherrera@misiva.com.ec", "Ganador Royal", "Nuevo ganador Royal", $body);
+        $this->envioEmailPremio("info@ganaconroyal.com", "Ganador Royal", "Nuevo ganador Royal", $body);
     }
 
 
@@ -276,8 +277,6 @@ class Royal_ruleta extends CI_Controller
 
             echo $resp;
         }
-
-
     }
 
 
