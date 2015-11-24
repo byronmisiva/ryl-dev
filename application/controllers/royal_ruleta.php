@@ -96,10 +96,23 @@ class Royal_ruleta extends CI_Controller
         $codigo = str_replace(" ", "", $codigo);
         $codigo = str_replace(":", "", $codigo);
         $registro = $this->modelo->getUsuario($cedula);
+
+        // caso codigo invalido
+        //todo validar que este en rango de horas los 4 ultimos digitos
+        $valida1 =  substr($codigo,5,-2);
+        $valida2 =  substr($codigo,-2);
+
+        if (($valida1> 24) or ($valida2 > 24)) {
+            //codigo errado
+            echo "F";
+            return;
+        }
+
         $codData = $this->modelo->getCodigoGanador($codigo,$registro->id);
         if ($codData == "0") {
-            // caso codigo invalido
-            //todo validar que este en rango de horas los 4 ultimos digitos
+
+
+
             $codData = new stdClass;
             $codData->id_premio = "1";
             $codData->participacion = "Solo registro";

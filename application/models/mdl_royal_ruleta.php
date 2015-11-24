@@ -32,13 +32,17 @@ class Mdl_royal_ruleta extends CI_Model{
 		//todos existen pero pierden
 		$this->db->select('id_premio, id, fecha_ganador, asignado');
 		$this->db->where('asignado','0');
-		$this->db->where('codigo <>',$codigo);
-		$this->db->where('id_usuario <>', $idcedula);
+		$this->db->where('codigo != ',$codigo );
+ 		$this->db->where('id_usuario != ', $idcedula );
 		$this->db->where('fecha_ganador <','NOW()', FALSE);
 		$this->db->order_by("fecha_ganador", "asc");
 		$this->db->limit(1);
 		$codData=$this->db->get('ruleta_asigna_premios');
+
+		$test = $this->db->last_query();
+
 		if ($codData->num_rows()>0){
+
 			$recuperado = current($codData->result());
 			$data = array(
 				'asignado' => 1
@@ -50,6 +54,8 @@ class Mdl_royal_ruleta extends CI_Model{
 		}
 		else
 			return "0";
+
+
 
 	}
 	function getUsuario($cedula){
