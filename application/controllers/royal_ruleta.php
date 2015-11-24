@@ -93,27 +93,35 @@ class Royal_ruleta extends CI_Controller
             echo "F";
             return;
         }
-
         $codigo = str_replace(" ", "", $codigo);
         $codigo = str_replace(":", "", $codigo);
 
-
-
-
-        $codData = $this->modelo->getCodigo($codigo);
+        $codData = $this->modelo->getCodigoGanador($codigo);
         if ($codData == "0") {
+            // caso codigo invalido
             //todo validar que este en rango de horas los 4 ultimos digitos
-            $codData = new stdObject();
+            $codData = new stdClass;
             $codData->id_premio = "1";
-            json_encode($codData);
+            $codData->participacion = "Solo registro";
+            $codData->codigo = $codigo;
+            $codData->cedula = $cedula;
+            echo json_encode($codData);
+            $this->insertarSeguimientoValidacion($codigo, $cedula, json_encode($codData));
+            $registro = $this->modelo->getUsuario($cedula);
+            $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-confirmacion.jpg";
+            $body = $this->load->view($this->folderView . '/email', $data, TRUE);
+            $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ya estas participando", $body);
 //          echo "F";
         } else {
-            $codData = array_merge ( $codData, $_POST );
-            echo json_encode( $codData);
+            // caso codigo ganador
+            //agrego los valores de post para almacenarlos en base
+            foreach ($_POST as $key => $value) {
+                $codData->$key = $value;
+            }
+
+            echo json_encode($codData);
             $this->insertarSeguimientoValidacion($codigo, $cedula, json_encode($codData));
-
             $registro = $this->modelo->getUsuario($cedula);
-
             $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-confirmacion.jpg";
             $body = $this->load->view($this->folderView . '/email', $data, TRUE);
             $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ya estas participando", $body);
@@ -147,10 +155,16 @@ class Royal_ruleta extends CI_Controller
             echo "F";
             return;
         }
+        if (isset ($_POST["idvalidador"])) {
+            $idvalidador = $_POST["idvalidador"];
+        } else {
+            echo "F";
+            return;
+        }
         $codigo = str_replace(' ', '', $codigo);
         $codigo = str_replace(':', '', $codigo);
 
-        $codData = $this->modelo->getCodigo($codigo);
+        $codData = $this->modelo->getCodigo($codigo, $cedula,$idvalidador );
         if ($codData == "0") {
             echo "F";
         } else {
@@ -162,19 +176,13 @@ class Royal_ruleta extends CI_Controller
 
     function registraPremio($codigo, $cedula, $premio)
     {
-        $this->actualizaPremio($codigo, $cedula, $premio);
-
         $registro = $this->modelo->getUsuario($cedula);
         $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-ganaste.jpg";
         $body = $this->load->view($this->folderView . '/email', $data, TRUE);
         $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ganador", $body);
-
     }
 
-    function actualizaPremio($codigo, $cedula, $premio)
-    {
-        return;
-    }
+
 
     function envioEmailPremio($toMail, $nombre, $subject, $mensaje)
     {

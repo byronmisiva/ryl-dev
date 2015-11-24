@@ -15,28 +15,37 @@ class Mdl_royal_ruleta extends CI_Model{
     }
 
 	//recupera info del premio
-	function getCodigoOld($codigo){
-		//todos existen pero pierden
-		$this->db->select('id_premio, id');
-		$this->db->where('codigo',$codigo);
-		$codData=$this->db->get('ruleta_serial');
-		if ($codData->num_rows()>0)
-			return current($codData->result());
-		else
-			return "0";
+	function getCodigo($codigo, $cedula,$idvalidador ){
+		$registro = $this->getUsuario($cedula);
+		$data = array(
+			'codigo' => $codigo,
+			'id_usuario' => $registro->id,
+			'info_registro' => json_encode($registro)
+		);
+		$this->db->where('id',$idvalidador);
+		$this->db->update('ruleta_asigna_premios', $data);
+			return 1;
+
 	}
 	//recupera info del premio
-	function getCodigo($codigo){
+	function getCodigoGanador($codigo){
 		//todos existen pero pierden
 		$this->db->select('id_premio, id, fecha_ganador, asignado');
 		$this->db->where('asignado','0');
 		$this->db->where('fecha_ganador <','NOW()', FALSE);
 		$this->db->order_by("fecha_ganador", "asc");
 		$this->db->limit(1);
-
 		$codData=$this->db->get('ruleta_asigna_premios');
-		if ($codData->num_rows()>0)
-			return current($codData->result());
+		if ($codData->num_rows()>0){
+			$recuperado = current($codData->result());
+			$data = array(
+				'asignado' => 1
+			);
+			$this->db->where('id',$recuperado->id);
+			$this->db->update('ruleta_asigna_premios', $data);
+
+			return $recuperado;
+		}
 		else
 			return "0";
 

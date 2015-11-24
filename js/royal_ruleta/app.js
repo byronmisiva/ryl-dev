@@ -1,7 +1,7 @@
 // variable de intervalo de lanzar gelatinas
 var lanzaGelatina;
 var ultimo = true;
-
+var idvalidador = '';
 var primeravez = 1;
 
 var numeroGelatina = 1;
@@ -344,17 +344,18 @@ function cierre() {
         if (premioganado == 5) {
             $('.ganacuaderno').removeClass("hidden").fadeIn();
         }
+        //graba participacion
+        $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val(), idvalidador: idvalidador})
+            .done(function (data) {
+                if (data == 'F') {
+                    // mostrarCodigoErrado()
+                } else {
+                    //primeravez = 0;
+                    // mostrarCodigoCorrecto(data)
+                }
+            });
     }
-    //graba participacion
-    $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val()})
-        .done(function (data) {
-            if (data == 'F') {
-                mostrarCodigoErrado()
-            } else {
-                primeravez = 0;
-                mostrarCodigoCorrecto(data)
-            }
-        });
+
 }
 
 /**
@@ -445,7 +446,6 @@ function mostrarFormCompleto(data) {
     $('#complete_register').removeClass("hidden").show();
     $('.portabotones').removeClass("hidden").show();
     var data = JSON.parse(data);
-    console.log ($('#nombre').val());
     if (($('#nombre').val() == '') || ($('#apellido').val() == '') || ($('#ciudad').val() == '') || ($('#mail').val() == '') || ($('#telefono').val() == '') ) {
         $('#nombre').val(data['nombre']);
         $('#apellido').val(data['apellido']);
@@ -470,6 +470,8 @@ function mostrarCodigoCorrecto(data) {
     } else {
         ganapremio = 1;
     }
+
+    idvalidador = obj.id;
 
     //segunda parte de cancion
     backgroundAudio.src = "linus-and-lucy_part_1.mp3"
