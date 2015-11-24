@@ -190,6 +190,10 @@ class Royal_ruleta extends CI_Controller
         $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-ganaste.jpg";
         $body = $this->load->view($this->folderView . '/email', $data, TRUE);
         $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ganador", $body);
+        //seguimiento
+
+        $body = "Nombre:" . $registro->completo . "<br>Mail:" .$registro->mail . "<br>Cedula:" .$registro->cedula . "<br>Telefono:" .$registro->telefono . "<br>Codigo producto:" . $codigo;
+        $this->envioEmailPremio("bherrera@misiva.com.ec", "Ganador Royal", "Nuevo ganador Royal", $body);
     }
 
 
