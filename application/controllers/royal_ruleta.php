@@ -110,9 +110,6 @@ class Royal_ruleta extends CI_Controller
 
         $codData = $this->modelo->getCodigoGanador($codigo,$registro->id);
         if ($codData == "0") {
-
-
-
             $codData = new stdClass;
             $codData->id_premio = "1";
             $codData->participacion = "Solo registro";
