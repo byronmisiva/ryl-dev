@@ -345,7 +345,7 @@ function cierre() {
             $('.ganacuaderno').removeClass("hidden").fadeIn();
         }
         //graba participacion
-        $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val(), idvalidador: idvalidador})
+        $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val(), idvalidador: idvalidador, premioganado: premioganado})
             .done(function (data) {
                 if (data == 'F') {
                     // mostrarCodigoErrado()

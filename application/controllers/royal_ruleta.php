@@ -171,6 +171,20 @@ class Royal_ruleta extends CI_Controller
             echo "F";
             return;
         }
+        $premioganado = $_POST["premioganado"];
+        if ($premioganado == '2') {
+            $premioganado = "Camiseta";
+        }
+        if ($premioganado == '3') {
+            $premioganado = "Gorra";
+        }
+        if ($premioganado == '4') {
+            $premioganado = "Entrada";
+        }
+        if ($premioganado == '5') {
+            $premioganado = "Cuaderno";
+        }
+
         $codigo = str_replace(' ', '', $codigo);
         $codigo = str_replace(':', '', $codigo);
 
@@ -180,24 +194,21 @@ class Royal_ruleta extends CI_Controller
         } else {
 
             echo json_encode($codData);
-            $this->registraPremio($codigo, $cedula);
+            $this->registraPremio($codigo, $cedula, $premioganado);
         }
     }
 
-    function registraPremio($codigo, $cedula)
+    function registraPremio($codigo, $cedula, $premioganado)
     {
         $registro = $this->modelo->getUsuario($cedula);
         $data['imagen'] = "http://www.ganaconroyal.com/imagenes/royal_ruleta/mailing-ganaste.jpg";
         $body = $this->load->view($this->folderView . '/email', $data, TRUE);
         $this->envioEmailPremio($registro->mail, "Felicitaciones", "Felicitaciones ganador", $body);
         //seguimiento
-
-        $body = "Nombre:" . $registro->completo . "<br>Mail:" .$registro->mail . "<br>Cedula:" .$registro->cedula . "<br>Telefono:" .$registro->telefono . "<br>Codigo producto:" . $codigo;
+        $body = "Nombre:" . $registro->completo . "<br>Mail:" .$registro->mail . "<br>Cedula:" .$registro->cedula . "<br>Telefono:" .$registro->telefono . "<br>Ciudad:" .$registro->ciudad . "<br>Numero Lote:" . $codigo . "<br>Premio:" . $premioganado;
         $this->envioEmailPremio("bherrera@misiva.com.ec", "Ganador Royal", "Nuevo ganador Royal", $body);
-        $this->envioEmailPremio("info@ganaconroyal.com", "Ganador Royal", "Nuevo ganador Royal", $body);
+       // $this->envioEmailPremio("info@ganaconroyal.com", "Ganador Royal", "Nuevo ganador Royal", $body);
     }
-
-
 
     function envioEmailPremio($toMail, $nombre, $subject, $mensaje)
     {
