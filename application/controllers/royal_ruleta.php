@@ -179,7 +179,7 @@ class Royal_ruleta extends CI_Controller
             $premioganado = "Gorra";
         }
         if ($premioganado == '4') {
-            $premioganado = "Entrada";
+            $premioganado = "Entrada Cine";
         }
         if ($premioganado == '5') {
             $premioganado = "Cuaderno";
@@ -207,7 +207,7 @@ class Royal_ruleta extends CI_Controller
         //seguimiento
         $body = "Nombre:" . $registro->completo . "<br>Mail:" .$registro->mail . "<br>Cedula:" .$registro->cedula . "<br>Telefono:" .$registro->telefono . "<br>Ciudad:" .$registro->ciudad . "<br>Numero Lote:" . $codigo . "<br>Premio:" . $premioganado;
         $this->envioEmailPremio("bherrera@misiva.com.ec", "Ganador Royal", "Nuevo ganador Royal", $body);
-       // $this->envioEmailPremio("info@ganaconroyal.com", "Ganador Royal", "Nuevo ganador Royal", $body);
+        $this->envioEmailPremio("info@ganaconroyal.com", "Ganador Royal", "Nuevo ganador Royal", $body);
     }
 
     function envioEmailPremio($toMail, $nombre, $subject, $mensaje)
