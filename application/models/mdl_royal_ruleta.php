@@ -20,12 +20,15 @@ class Mdl_royal_ruleta extends CI_Model
     //recupera info del premio
     function getCodigo($codigo, $cedula, $idvalidador)
     {
+        $ip = $_SERVER['REMOTE_ADDR'];
         $registro = $this->getUsuario($cedula);
         $data = array(
             'codigo' => $codigo,
             'id_usuario' => $registro->id,
-            'info_registro' => json_encode($registro)
+            'info_registro' => json_encode($registro),
+            'ip' => $ip
         );
+
         $this->db->where('id', $idvalidador);
         $this->db->update('ruleta_asigna_premios', $data);
         return 1;
@@ -35,7 +38,18 @@ class Mdl_royal_ruleta extends CI_Model
     //recupera info del premio
     function getCodigoGanador($codigo, $idcedula)
     {
-
+        // Si el codigo y el usario no ganaron a la primera, no gana premio
+        $dataUser = $this->buscarUser($idcedula);
+        if ($dataUser != false) {
+            $this->db->select('cedula');
+            $this->db->where('cedula = ', $dataUser->cedula);
+            $this->db->where('codigopremio = ', $codigo);
+            $codData2 = $this->db->get('usuario_serial');
+            if ($codData2->num_rows() > 0) {
+                return "0";
+            }
+        }
+        $test = $this->db->last_query();
         //validamos que ya no haya ganano el usuario
         $this->db->select('id_premio, id, fecha_ganador, asignado');
         $this->db->where('id_usuario = ', $idcedula);
@@ -45,7 +59,16 @@ class Mdl_royal_ruleta extends CI_Model
         }
 
         $this->db->select('id_premio, id, fecha_ganador, asignado');
-        $this->db->where('codigo = ',$codigo );
+        $this->db->where('codigo = ', $codigo);
+        $codData2 = $this->db->get('ruleta_asigna_premios');
+        if ($codData2->num_rows() > 0) {
+            return "0";
+        }
+        // validamos que esten ganando desde el mimso IP
+        $ip = $_SERVER['REMOTE_ADDR'];
+
+        $this->db->select('id_premio, id, fecha_ganador, asignado, ip');
+        $this->db->where('ip = ', $ip);
         $codData2 = $this->db->get('ruleta_asigna_premios');
         if ($codData2->num_rows() > 0) {
             return "0";
@@ -112,8 +135,8 @@ class Mdl_royal_ruleta extends CI_Model
     function buscarUser($id)
     {
         $this->db->select('*');
-        $this->db->from($this->registro);
-        $this->db->where('id_user', $id);
+        $this->db->from('royal_usuarios');
+        $this->db->where('id', $id);
         $consulta = $this->db->get();
         if ($consulta->num_rows() > 0)
             return current($consulta->result());
