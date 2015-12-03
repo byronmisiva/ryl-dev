@@ -39,7 +39,7 @@ window.onload = function () {
 //funciones scriptcam
 $(document).ready(function () {
     // si se usa el internet explorer 8 0 7 no funciona
-    if((navigator.appVersion.indexOf("MSIE 7.")!=-1) || (navigator.appVersion.indexOf("MSIE 8.")!=-1)) {
+    if ((navigator.appVersion.indexOf("MSIE 7.") != -1) || (navigator.appVersion.indexOf("MSIE 8.") != -1)) {
         $('#registro').hide();
         $('#internet-explorer').removeClass("hidden").show();
     }
@@ -113,23 +113,23 @@ $(document).ready(function () {
 
     $('.ganacamiseta .btn-pierde3, .ganagorra .btn-pierde3, .ganaentrada .btn-pierde3,.ganacuaderno .btn-pierde3, .pierde .btn-pierde3').click(function (e) {
         e.preventDefault();
-         // evito que se repita la cedula
+        // evito que se repita la cedula
         var str = window.location.href;
         var n = str.search($('#cedula').val());
 
-        if (n > 0 ) {
+        if (n > 0) {
             window.location.replace(window.location.href)
         } else {
-            window.location.replace(window.location.href  + $('#cedula').val())
+            window.location.replace(window.location.href + $('#cedula').val())
         }
 //        location.reload(true);
     });
 
     var str = window.location.href;
     var res = str.split("/");
-    var resol = res[res.length -1]
-    if ( resol.length  > 0 ) {
-        $('.js--triggerInstruccionesInicio').click() ;
+    var resol = res[res.length - 1]
+    if (resol.length > 0) {
+        $('.js--triggerInstruccionesInicio').click();
         $('#cedula').val(resol);
         verificarParticipante(resol);
     } else {
@@ -209,6 +209,13 @@ $(document).ready(function () {
          $('#box-codigo1').val("")*/
 
     });
+
+    $( "#box-codigo1" ).focus(function() {
+        $( ".poplote" ).fadeIn();
+    }).focusout(function() {
+        $( ".poplote" ).fadeOut();
+    });
+
 
 
 });
@@ -345,7 +352,12 @@ function cierre() {
             $('.ganacuaderno').removeClass("hidden").fadeIn();
         }
         //graba participacion
-        $.post(accion + controladorApp + "/grabaEvento", {codigo: $('#box-codigo1').val(), cedula: $('#cedula').val(), idvalidador: idvalidador, premioganado: premioganado})
+        $.post(accion + controladorApp + "/grabaEvento", {
+            codigo: $('#box-codigo1').val(),
+            cedula: $('#cedula').val(),
+            idvalidador: idvalidador,
+            premioganado: premioganado
+        })
             .done(function (data) {
                 if (data == 'F') {
                     // mostrarCodigoErrado()
@@ -375,7 +387,7 @@ function iniciaFormulario() {
     $("#registroform").submit(function (event) {
             event.preventDefault();
             //si campos registro no estan visibles y estan llenos por recarga pagina los mostramos
-            if (seguirFormulario == 1 ) {
+            if (seguirFormulario == 1) {
                 var url = accion + controladorApp + "/register";
                 $.ajax({
                         url: url,
@@ -433,7 +445,7 @@ function verificarParticipante(cedula) {
 function mostrarFormRegistro() {
     $('#complete_register').removeClass("hidden").show();
     $('.portabotones').removeClass("hidden").show();
-    if (($('#nombre').val() == '') || ($('#apellido').val() == '') || ($('#ciudad').val() == '') || ($('#mail').val() == '') || ($('#telefono').val() == '') ) {
+    if (($('#nombre').val() == '') || ($('#apellido').val() == '') || ($('#ciudad').val() == '') || ($('#mail').val() == '') || ($('#telefono').val() == '')) {
         $('#nombre').val("");
         $('#apellido').val("");
         $('#mail').val("");
@@ -446,7 +458,7 @@ function mostrarFormCompleto(data) {
     $('#complete_register').removeClass("hidden").show();
     $('.portabotones').removeClass("hidden").show();
     var data = JSON.parse(data);
-    if (($('#nombre').val() == '') || ($('#apellido').val() == '') || ($('#ciudad').val() == '') || ($('#mail').val() == '') || ($('#telefono').val() == '') ) {
+    if (($('#nombre').val() == '') || ($('#apellido').val() == '') || ($('#ciudad').val() == '') || ($('#mail').val() == '') || ($('#telefono').val() == '')) {
         $('#nombre').val(data['nombre']);
         $('#apellido').val(data['apellido']);
         $('#mail').val(data['mail']);
