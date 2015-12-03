@@ -28,8 +28,8 @@
     <meta property="og:title" content="Gana con Royal">
     <meta property="og:type" content="article">
     <!--    <meta property="og:url" content="http://www.ganaconroyal.com">-->
-    <meta property="og:url" content="http://royal.misiva.com.ec/index">
-    <meta property="og:image" content="http://royal.misiva.com.ec/imagenes/royal_ruleta/facebook.jpg">
+    <meta property="og:url" content="http://www.ganaconroyal.com">
+    <meta property="og:image" content="http://www.ganaconroyal.com/imagenes/royal_ruleta/facebook.jpg">
     <meta property="og:site_name" content="GanaConRoyal">
     <!--<meta property="fb:admins" content="100001543332907">-->
     <meta property="og:description"
