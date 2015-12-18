@@ -63,7 +63,7 @@
 </div>-->
 
 
-<div id="registro" class="  seccion fondo-registro hidden-xs">
+<div id="registro" class="  seccion fondo-registro hidden-xs cent">
 
     <div class="texto-info js--triggerInstruccionesInicio">
     </div>
