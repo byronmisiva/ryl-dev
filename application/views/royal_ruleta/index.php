@@ -210,7 +210,6 @@
     </div>
 </div>
 
-
 <div id="home" class="hidden seccion fondo-home hidden-xs">
 
     <div class="fondo-home2 home ">
