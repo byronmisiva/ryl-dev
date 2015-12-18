@@ -12,8 +12,6 @@
     <script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
-    <link href="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.css" rel="stylesheet" type="text/css"/>
-    <script src="<?php echo base_url() ?>js/royal_ruleta/si/jquery.si.js" type="text/javascript"></script>
 
     <script src="<?php echo base_url() ?>js/royal_ruleta/jquery.maskedinput.min.js" type="text/javascript"></script>
 
@@ -28,7 +26,7 @@
     <meta property="og:title" content="Gana con Royal">
     <meta property="og:type" content="article">
     <!--    <meta property="og:url" content="http://www.ganaconroyal.com">-->
-    <meta property="og:url" content="http://www.ganaconroyal.com">
+    <meta property="og:url" content="http://www.ganaconroyal.com/">
     <meta property="og:image" content="http://www.ganaconroyal.com/imagenes/royal_ruleta/facebook.jpg">
     <meta property="og:site_name" content="GanaConRoyal">
     <!--<meta property="fb:admins" content="100001543332907">-->
@@ -51,8 +49,7 @@
 
 </head>
 
-<body>
-
+<body style="background-color: #00bce6">
 <audio id="bgAudio" autoplay="autoplay" loop="loop"></audio>
 
 <!--<div>
@@ -62,8 +59,13 @@
     <button onclick="document.getElementById('player').volume -= 0.1">Vol- </button>
 </div>-->
 
+<div id="movil" class="hidden-lg hidden-md hidden-sm hidden">
+    <div class="fondo-movil">
+        <img src="imagenes/royal_ruleta/vista-mobile.jpg" width="100%">
+    </div>
+</div>
 
-<div id="registro" class="  seccion fondo-registro hidden-xs cent">
+<div id="registro" class="seccion fondo-registro  ">
 
     <div class="texto-info js--triggerInstruccionesInicio">
     </div>
@@ -75,13 +77,12 @@
                 <div class="btn-compartir js--triggerCompartir"></div>
             </a>
         </div>
-
         <div class="cabecerahome">
-            <div class="container center-block">
+            <div class="container center-block logo-home">
                 <img src="imagenes/royal_ruleta/snoopy-registro/background-a.png"
                      class="img-responsive center-img logoregistro">
             </div>
-            <div class="container center-block">
+            <!--<div class="container center-block">
                 <div class="col-md-12 col-sm-12">
                     <div class="  col-md-offset-2    col-xs-12 col-md-8 col-sm-12">
                         <div class="titulares-registro titulares text-center">
@@ -91,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <!--        <div class="container center-block">-->
         <div class=" ">
@@ -103,8 +104,7 @@
                     <div class="col-sm-offset-3 col-md-offset-3 col-xs-offset-3  col-md-8 col-sm-8 col-xs-8">
                         <form id="registroform"
                               action=""
-                              method="post"
-                              enctype="multipart/form-data">
+                              method="post" >
                             <ul class="login_wid">
                                 <li class="li-form">
                                     <div class="col-md-3 col-sm-3 col-xs-3 margen-0 right tit-form">
@@ -170,14 +170,18 @@
                                         <div class="col-md-3 col-sm-3 col-xs-3 margen-0 tit-form">
                                             Lote:
                                         </div>
-                                        <div class="col-md-9 col-sm-9 col-xs-9 margen-0">
+                                        <div class="poplote ">
+                                            <img src="imagenes/royal_ruleta/snoopy-registro/empaque_codigo.jpg" class="img-circle img-responsive separador10">
+                                        </div>
+                                        <div id="example" class="col-md-9 col-sm-9 col-xs-9 margen-0 " data-toggle="popover" data-placement="top" data-content="¡Código Incorrecto!">
                                             <input class="box-text" type="text" id="box-codigo1" name="box-codigo1"
-                                                   maxlength="10"
+                                                   maxlength="12"
                                                    required="required">
                                         </div>
-
-
                                     </li>
+
+
+
                                     <li class="text-center li-form">
                                         <div class="portabotones center-block ">
                                             <input type="submit" value="Continuar" name="login"
@@ -205,7 +209,6 @@
         </div>
     </div>
 </div>
-
 
 <div id="home" class="hidden seccion fondo-home hidden-xs">
 
@@ -292,12 +295,21 @@
             <img src="imagenes/royal_ruleta/snoopy-juego/gana_entrada.png" class="img-responsive center-img">
         </div>
     </div>
+    <div class="container vertical-center ganacuaderno  hidden">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="botones-juego">
+                <div class="btn-pierde1"></div>
+                <div class="btn-pierde2"></div>
+                <div class="btn-pierde3"></div>
+            </div>
+            <img src="imagenes/royal_ruleta/snoopy-juego/gana_cuaderno.png" class="img-responsive center-img">
+        </div>
+    </div>
 </div>
 
-
-<div id="movil" class="hidden-lg hidden-md hidden-sm">
-    <div class="fondo-movil">
-        <img src="imagenes/royal_ruleta/vista-mobile.jpg" width="100%">
+<div id="internet-explorer" class="hidden" style="background-color: #cccccc">
+    <div class="fondo-internet-explorer center-block  ">
+        <img src="imagenes/royal_ruleta/vista-internet-explorer.png" class="img-responsive">
     </div>
 </div>
 
@@ -306,6 +318,7 @@
         <img src="imagenes/royal_ruleta/snoopy-juego/legales.png" class="img-responsive center-img">
     </div>
 </div>
+
 <div id="instrucciones" class="hidden seccion hidden-xs">
     <div class="container vertical-center">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -313,6 +326,22 @@
         </div>
     </div>
 </div>
+
+<div class="hidden">
+    <img src="imagenes/royal_ruleta/snoopy-juego/boton.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/snopy-frente.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/snoppy-feliz.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_cereza.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_frambuesa.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_limon.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_naranja.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/gelatina_uva.png">
+    <img src="imagenes/royal_ruleta/snoopy-juego/background-only.jpg">
+    <img src="imagenes/royal_ruleta/snoopy-juego/background2.png">
+    <img src="imagenes/royal_ruleta/snoopy-registro/background2.png">
+    <img src="imagenes/royal_ruleta/snoopy-registro/background.jpg">
+</div>
+
 <script type="text/javascript">
     var dir = window.document.URL;
     var dir2 = encodeURIComponent(dir);
@@ -332,21 +361,26 @@
         {name: 'apellido', display: 'apellido', rules: 'required'},
         {name: 'ciudad', display: 'ciudad', rules: 'required'},
         {name: 'cedula', display: 'cedula', rules: 'required|numeric||max_length[10]'},
-        {name: 'telefono', display: 'telefono', rules: 'required|numeric|max_length[10]'},
+        {name: 'telefono', display: 'telefono', rules: 'required|numeric|min_length[7]|max_length[10]'},
         {name: 'mail', display: 'mail', rules: 'required|valid_email'}
     ];
 
-    var validator = new FormValidator('register', rules, function (errors, event) {
+    var validator = new FormValidator('registroform', rules, function (errors, event) {
+        seguirFormulario = 1 ;
         if (errors.length > 0) {
             var errorString = '';
             for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
-                $('#' + errors[i].id).val("");
-                $('#' + errors[i].id).css({"color": "#42332a"});
-                errorString += errors[i].id + "<br>";
+                //$('#' + errors[i].id).val("");
+                //$('#' + errors[i].id).css({"color": "#42332a"});
+                errorString += errors[i].message + "<br>";
+                //console.log (errors)
             }
             ;
-            alert("REGISTROS NO COMPLETADOS");
+            $('#mensaje-envio').html(errorString)
+
+            seguirFormulario = 0;
         } else {
+
             $(".btn-continuar-registro").hide();
             $("#submit").hide();
             enviarForma('register');
@@ -356,6 +390,8 @@
     var dis = "<?php  echo $data['dispositivo'];?>";
 </script>
 <script>
+
+
     //Google Analitics
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
